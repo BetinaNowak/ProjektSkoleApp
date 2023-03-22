@@ -1,1 +1,1 @@
-# ProjektSkoleApp
+# SkoleApp
