@@ -377,8 +377,8 @@
                                     <segue destination="ATU-0S-knh" kind="show" id="0B9-wA-cIs"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zh-iv-sMe" userLabel="Main Stack View">
-                                <rect key="frame" x="16" y="293" width="350" height="344"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dx6-p4-DNZ">
+                                <rect key="frame" x="20" y="266" width="337" height="424"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
@@ -393,7 +393,7 @@
                         <outlet property="SpoergsmaalLabel" destination="4dN-hv-yQQ" id="V6b-9e-bKT"/>
                         <outlet property="SpoergsmaalSubLabel" destination="c80-if-E0I" id="tdD-CX-8aP"/>
                         <outlet property="SpoergsmaalSubLabelIcon" destination="Du7-Er-Oi3" id="X8f-8r-g8E"/>
-                        <outlet property="mainStackView" destination="0zh-iv-sMe" id="kK1-8c-psi"/>
+                        <outlet property="stackView" destination="dx6-p4-DNZ" id="XUQ-Hc-YwZ"/>
                         <segue destination="ATU-0S-knh" kind="show" id="12s-Zc-Ttw"/>
                     </connections>
                 </viewController>
