@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F27D69629C9A69F0091325A /* NewSpoergsmaalViewController.swift */; };
 		2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F27D69C29CC34360091325A /* CollectionViewController.swift */; };
+		2F31E60E29CC52100022D38D /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F31E60D29CC52100022D38D /* SubmitAnswer.swift */; };
 		2F8C857629C99B590051B396 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857529C99B590051B396 /* fonts */; };
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		2F27D69629C9A69F0091325A /* NewSpoergsmaalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpoergsmaalViewController.swift; sourceTree = "<group>"; };
 		2F27D69C29CC34360091325A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		2F31E60D29CC52100022D38D /* SubmitAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
 		2F8C857529C99B590051B396 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				CF2B5DC429CB31AA006478B4 /* Answers2.swift */,
 				CF2B5DC629CB31B6006478B4 /* Answers3.swift */,
 				CF2B5DCD29CB3852006478B4 /* Answers4.swift */,
+				2F31E60D29CC52100022D38D /* SubmitAnswer.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */,
 				2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */,
 				CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */,
+				2F31E60E29CC52100022D38D /* SubmitAnswer.swift in Sources */,
 				2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
 				CFF9CD9D29C451E3002ED77D /* Network.swift in Sources */,

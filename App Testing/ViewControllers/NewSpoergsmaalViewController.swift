@@ -83,6 +83,9 @@ class NewSpoergsmaalViewController: UIViewController{
             self.AnswersArray = Answers
             self.displayAnswerButtons()
         }
+        
+        ApiService.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-svar.php")!, params: ["key":"value"])
+
 
     }
         
