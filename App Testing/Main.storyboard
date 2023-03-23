@@ -459,8 +459,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-Ti-cj1" userLabel="Main Stack View">
-                                <rect key="frame" x="21" y="289" width="350" height="344"/>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-Ti-cj1" userLabel="Main Stack View">
+                                <rect key="frame" x="21" y="289" width="344" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
