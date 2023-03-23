@@ -16,11 +16,12 @@ class NewSpoergsmaalViewController: UIViewController{
     @IBOutlet weak var SpoergsmaalSubLabel: UILabel!
     
     @IBOutlet weak var SpoergsmaalSubLabelIcon: UIImageView!
-    @IBOutlet weak var mainStackView: UIStackView!
-    //@IBOutlet weak var SvarButton: UIButton!
     
+    @IBOutlet weak var stackView: UIStackView!
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
+    var objectsArray = [String]()
+    let cellIdentifier = "cell"
     
     //@IBAction func SvarButtonClicked(_ sender: Any) {
       //  SpoergsmaalLabel.text = String(QuestionsArray[1].spoergsmaal_tekst!)
@@ -28,7 +29,7 @@ class NewSpoergsmaalViewController: UIViewController{
     //}
     
     //MARK: View Making methods
-    func makeButtonWithAnswer(text:String) -> UIButton {
+    /*func makeButtonWithAnswer(text:String) -> UIButton {
         let answerButton = UIButton(type: UIButton.ButtonType.system)
         answerButton.frame = CGRect(x: 80, y: 80, width: 50, height: 10)
         answerButton.layer.borderWidth = 2
@@ -41,25 +42,23 @@ class NewSpoergsmaalViewController: UIViewController{
         answerButton.setTitle(text, for: .normal)
         answerButton.setTitleColor(.black, for: .normal)
         return answerButton
-    }
-    
-    /*func displayAnswerButtons(count:Int){
-        for i in 0...count{
-            let titleString = String(AnswersArray[i].svar_tekst!)
-            //let titleString = String(format:"Hello Button %i",i)
-            let button = makeButtonWithAnswer(text:titleString)
-            mainStackView.addArrangedSubview(button)
-        }
     }*/
     
-    
-    func displayAnswerButtons(count:Int){
+    func displayAnswerButtons(){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){
             let titleString = String(AnswersArray[i].svar_tekst!)
-            //let titleString = String(format:"Hello Button %i",i)
-            let button = makeButtonWithAnswer(text:titleString)
-            mainStackView.addArrangedSubview(button)
+            //let button = makeButtonWithAnswer(text:titleString)
+            
+            self.objectsArray.append(titleString)
         }
+            
+            let items: [[String]] = [
+                objectsArray
+            ]
+            let controller = CollectionViewController(items: items)
+            controller.view.translatesAutoresizingMaskIntoConstraints = false
+            stackView?.addArrangedSubview(controller.view)
+            addChild(controller)
     }
     
     
@@ -82,47 +81,11 @@ class NewSpoergsmaalViewController: UIViewController{
         
         NetworkServiceAnswers.sharedObj.getAnswers { (Answers) in
             self.AnswersArray = Answers
-            self.displayAnswerButtons(count: 1)
+            self.displayAnswerButtons()
         }
-        
-        
-        mainStackView.spacing = 1.0
-        //mainStackView.addArrangedSubview(makeButtonWithAnswer(text:"Hello,Button"))
-        //mainStackView.addArrangedSubview(makeButtonWithAnswer(text:"Hello,Button 2"))
 
     }
         
     }
     
-    
-    // Selected?
-    /*
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedInfo = InfoArray[indexPath.row]
-        performSegue(withIdentifier: "segue", sender: self)
-    }
-    
-    // Delete?
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete
-        {
-            self.InfoArray.remove(at: indexPath.row)
-            self.infoTable.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
-    // Go to detail view (not made)
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? InfoVC
-        {
-            destinationVC.info = selectedInfo
-        }
-    }*/
-    
-    
-
-
-
-
-
-
+  
