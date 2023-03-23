@@ -20,10 +20,11 @@ extension UICollectionViewLayout {
 }
 
 class CollectionViewController : UICollectionViewController {
-    private let items: [[String]]
+    private let items: [[[String : Any]]]
     
-    init(items: [[String]]) {
+    init(items: [[[String : Any]]]) {
         self.items = items
+        //print(self.items)
         super.init(collectionViewLayout: UICollectionViewLayout.fixedSpacedFlowLayout())
     }
     
@@ -48,7 +49,11 @@ class CollectionViewController : UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.cellIdentifier, for: indexPath) as! LabelCell
-        cell.button.setTitle(items[indexPath.section][indexPath.item], for: .normal)
+        //print(items[indexPath.section][indexPath.item]["title"]!)
+        let titleString = items[indexPath.section][indexPath.item]["title"]! as? String
+        let titleInt = items[indexPath.section][indexPath.item]["id"]! as? Int
+        cell.button.setTitle(titleString!, for: .normal)
+        cell.button.tag = titleInt!
         return cell
     }
 }
