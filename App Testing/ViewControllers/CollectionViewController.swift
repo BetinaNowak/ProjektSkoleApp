@@ -95,13 +95,22 @@ extension CollectionViewController {
             button.configuration = .plain()
             button.layer.cornerRadius = 20
             button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.systemGray5.cgColor
+            button.layer.borderColor = UIColor.white.cgColor
             button.configuration!.contentInsets = NSDirectionalEdgeInsets(top: 10.0, leading: 22.0, bottom: 10.0, trailing: 22.0)
+            
+            // Shadow
+            button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
+            button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowRadius = 4.0
+            button.layer.masksToBounds = false
             
             //State dependent properties title and title color
             button.setTitleColor(.black, for: .normal)
             button.translatesAutoresizingMaskIntoConstraints = false
             return button
+            
+            
         }()
         
         
