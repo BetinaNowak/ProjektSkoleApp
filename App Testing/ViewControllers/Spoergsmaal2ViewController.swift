@@ -25,28 +25,8 @@ class Spoergsmaal2ViewController: UIViewController {
     //MARK: View Making methods
     func makeButtonWithAnswer(text:String) -> UIButton {
         let answerButton = UIButton(type: UIButton.ButtonType.system)
-        
         answerButton.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
-        answerButton.backgroundColor = UIColor.white
-        answerButton.configuration = .plain()
-        answerButton.layer.cornerRadius = 20
-        answerButton.layer.borderWidth = 1
-        answerButton.layer.borderColor = UIColor.white.cgColor
-        answerButton.configuration!.contentInsets = NSDirectionalEdgeInsets(top: 12.0, leading: 8.0, bottom: 12.0, trailing: 8.0)
-        
-        // Shadow
-        answerButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
-        answerButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        answerButton.layer.shadowOpacity = 0.3
-        answerButton.layer.shadowRadius = 4.0
-        answerButton.layer.masksToBounds = false
-
         //answerButton.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
-        answerButton.configuration = .plain()
-        answerButton.layer.cornerRadius = 20
-        answerButton.layer.borderWidth = 1
-        answerButton.layer.borderColor = UIColor.systemGray5.cgColor
-        answerButton.configuration!.contentInsets = NSDirectionalEdgeInsets(top: 10.0, leading: 22.0, bottom: 10.0, trailing: 22.0)
         
         //State dependent properties title and title color
         answerButton.setTitle(text, for: .normal)
