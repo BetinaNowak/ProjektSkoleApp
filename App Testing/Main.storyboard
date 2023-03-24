@@ -374,7 +374,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="ATU-0S-knh" kind="show" id="0B9-wA-cIs"/>
+                                    <segue destination="ATU-0S-knh" kind="show" identifier="collectingUserAnswers" id="0B9-wA-cIs"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dx6-p4-DNZ">
@@ -1295,7 +1295,7 @@
         <segue reference="o8z-bb-Uq6"/>
         <segue reference="wMI-hi-Xmd"/>
         <segue reference="UMh-5d-9T9"/>
-        <segue reference="12s-Zc-Ttw"/>
+        <segue reference="0B9-wA-cIs"/>
         <segue reference="Lb3-7B-MQG"/>
         <segue reference="ccz-Tg-KLu"/>
         <segue reference="omF-V9-OMd"/>

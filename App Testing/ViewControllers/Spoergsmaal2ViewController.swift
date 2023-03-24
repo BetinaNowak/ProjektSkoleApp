@@ -21,6 +21,9 @@ class Spoergsmaal2ViewController: UIViewController {
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
     
+    var name: String?
+    var SelectedAnswersArray =  [[String? : Int?]]()
+    
     
     //MARK: View Making methods
         func makeButtonWithAnswer(text:String) -> UIButton {
@@ -85,6 +88,9 @@ class Spoergsmaal2ViewController: UIViewController {
         }
         
         mainStackView.spacing = 1.0
+        
+        print(name!)
+        print(SelectedAnswersArray)
 
     }
 

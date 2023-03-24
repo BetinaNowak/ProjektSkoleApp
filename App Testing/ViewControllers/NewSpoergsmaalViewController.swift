@@ -23,21 +23,19 @@ class NewSpoergsmaalViewController: UIViewController{
     var objectsArray = [[String : Any]]()
     let cellIdentifier = "cell"
     
-    //MARK: View Making methods
-    /*func makeButtonWithAnswer(text:String) -> UIButton {
-        let answerButton = UIButton(type: UIButton.ButtonType.system)
-        answerButton.frame = CGRect(x: 80, y: 80, width: 50, height: 10)
-        answerButton.layer.borderWidth = 2
-        answerButton.layer.cornerRadius = 5
-        answerButton.layer.borderColor = UIColor.black.cgColor
-        
-        //answerButton.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
-        
-        //State dependent properties title and title color
-        answerButton.setTitle(text, for: .normal)
-        answerButton.setTitleColor(.black, for: .normal)
-        return answerButton
-    }*/
+    var name: String?
+    var SelectedAnswersArray =  [[String? : Int?]]()
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "collectingUserAnswers"){
+                    let displayVC = segue.destination as! Spoergsmaal2ViewController
+                    displayVC.name = "hello"
+                    //displayVC.SelectedAnswersArray = self.SelectedAnswersArray
+                    //print(displayVC.SelectedAnswersArray)
+
+            }
+      }
     
     func displayAnswerButtons(){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){

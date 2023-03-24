@@ -94,7 +94,7 @@ extension CollectionViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }() */
-        let button:  UIButton = {
+        lazy var button:  UIButton = {
             let button =  UIButton(type: UIButton.ButtonType.system)
             button.backgroundColor = UIColor.white
             button.configuration = .plain()
@@ -106,9 +106,29 @@ extension CollectionViewController {
             //State dependent properties title and title color
             button.setTitleColor(.black, for: .normal)
             button.translatesAutoresizingMaskIntoConstraints = false
+            button.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
             return button
         }()
         
+        var SelectedAnswersArray = [[String? : Int?]]()
+
+        @objc func pressedAction(_ sender: UIButton) {
+           // do your stuff here
+            //print("you clicked on button \(sender.tag)")
+            var tempArray = [String:Int]()
+            tempArray = [
+                String("bruger_id"): 1,
+                String("spoergsmaal_id"): 1,
+                String("svar_id"): sender.tag
+            ]
+            
+            SelectedAnswersArray.append(tempArray)
+            print(SelectedAnswersArray)
+            let otherVC = NewSpoergsmaalViewController()
+            otherVC.SelectedAnswersArray =  SelectedAnswersArray
+        }
         
     }
+    
 }
+
