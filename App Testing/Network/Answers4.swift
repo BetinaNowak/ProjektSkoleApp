@@ -19,7 +19,7 @@ class NetworkServiceAnswers4 {
         if let data = data {
           do {
             let decodedata = try JSONDecoder().decode(Answers.self, from: data)
-            print(String(data: data, encoding: .utf8 )!)
+            //print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)
           } catch {
             print(error.localizedDescription)
