@@ -6,15 +6,12 @@
 //
 
 import UIKit
-import SDWebImage
 
 class PostsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     
     @IBOutlet weak var postsCollectionView: UICollectionView!
-    
-    
     
     var PostsArray = [Opslag]()
     
@@ -26,10 +23,9 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         postsCollectionView.register(PostsCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
             view.addSubview(postsCollectionView)
         
-        
-        downloadJSON() {
+        NetworkServicePosts.sharedObj.getPosts { (Opslag) in
+            self.PostsArray = Opslag
             self.postsCollectionView.reloadData()
-            print("succes")
         }
         
         postsCollectionView.delegate = self
@@ -49,11 +45,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             
             destinationVC.post = selectedItem
         }
-        
-        
-        /*if let desination = segue.destination as? SinglePostViewController {
-            desination.post = PostsArray[collectionView.indexPathsForSelectedItems.item]*/
-        }
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -64,64 +56,56 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return PostsArray.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PostsCollectionViewCell
-        cell.backgroundColor = UIColor.red
+
         
-        
-        
-        let title = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: 50))
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: 220))
             title.text = String(PostsArray[indexPath.row].titel!)
-            title.font = UIFont(name: "AvenirNext-Bold", size: 15)
+            title.font = UIFont(name: "AvenirNext-Bold", size: 16)
             title.textAlignment = .center
             cell.contentView.addSubview(title)
+        
+
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 220))
+        
+            let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
+    
+            imageView.downloadedFrom(from: imgUrl)
+        
+            //imageView.contentMode = .scaleAspectFill
+            cell.contentView.addSubview(imageView)
         
         
         return cell
     }
-    
-    
+}
 
-    /*func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPost", sender: self)
-        /*
-         let selectedPost = PostsArray[indexPath.item]
-         print(selectedPost)
-         */
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let desination = segue.destination as? SinglePostViewController {
-            desination.post = PostsArray[collectionView.indexPathsForSelectedItems.item]
-        }
-    }*/
-    
 
-    
-    func downloadJSON(completed: @escaping() -> ()) {
-        let url = URL(string: "http://test-postnord.dk/api-get-opslag.php")
-        URLSession.shared.dataTask(with: url!) { data, response, err in
-            
-            if err == nil {
-                do {
-                    self.PostsArray = try JSONDecoder().decode([Opslag].self, from: data!)
-                }
-                catch {
-                    print("Error fetching data")
-                }
-                
-                DispatchQueue.main.async {
-                    completed()
-                }
+
+extension UIImageView {
+    func downloadedFrom(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
             }
         }.resume()
     }
-    
-
+    func downloadedFrom(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }
