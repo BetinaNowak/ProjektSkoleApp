@@ -28,7 +28,7 @@ class ApiService
         request.httpMethod = "POST"
 
         let postString = self.getPostString(params: params)
-        //print(postString)
+        print(postString)
         request.httpBody = postString.data(using: .utf8)
 
         var result:(message:String, data:Data?) = (message: "Fail", data: nil)

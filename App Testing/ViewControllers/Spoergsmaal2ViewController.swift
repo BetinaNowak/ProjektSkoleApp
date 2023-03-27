@@ -67,7 +67,8 @@ class Spoergsmaal2ViewController: UIViewController {
     
     @objc func pressedAction(_ sender: UIButton) {
        // do your stuff here
-        //print("you clicked on button \(sender.tag)")
+        sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+        sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
         var tempArray = [String:Int]()
         tempArray = [
             String("bruger_id"): 1,

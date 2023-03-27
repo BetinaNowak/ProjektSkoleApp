@@ -137,7 +137,9 @@ extension CollectionViewController {
             ]
             
             SelectedAnswersArray.append(tempArray)
+            UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
             UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+            print(SelectedAnswersArray)
 
         }
         

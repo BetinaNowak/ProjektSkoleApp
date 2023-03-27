@@ -365,7 +365,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="ATU-0S-knh" kind="show" id="0B9-wA-cIs"/>
+                                    <segue destination="ATU-0S-knh" kind="show" identifier="collectingUserAnswers" id="0B9-wA-cIs"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dx6-p4-DNZ">
@@ -385,7 +385,7 @@
                         <outlet property="SpoergsmaalSubLabel" destination="c80-if-E0I" id="tdD-CX-8aP"/>
                         <outlet property="SpoergsmaalSubLabelIcon" destination="Du7-Er-Oi3" id="X8f-8r-g8E"/>
                         <outlet property="stackView" destination="dx6-p4-DNZ" id="XUQ-Hc-YwZ"/>
-                        <segue destination="ATU-0S-knh" kind="show" id="12s-Zc-Ttw"/>
+                        <segue destination="ATU-0S-knh" kind="show" identifier="" id="12s-Zc-Ttw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41e-ua-x1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -421,7 +421,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="kNW-JE-4ie" kind="show" id="OnJ-jX-6Xa"/>
+                                    <segue destination="kNW-JE-4ie" kind="show" identifier="collectingUserAnswers2" id="OnJ-jX-6Xa"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="lightbulb" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-11-dmM">
@@ -496,7 +496,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="7dO-Mx-eNb" kind="show" id="FDV-av-N9p"/>
+                                    <segue destination="7dO-Mx-eNb" kind="show" identifier="collectingUserAnswers3" id="FDV-av-N9p"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="hand.raised.fingers.spread" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-C0-ZBq" userLabel="Spoergsmaal3 Icon">
@@ -593,7 +593,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="mgz-Fd-mo8" kind="show" id="TbI-oe-RV9"/>
+                                    <segue destination="mgz-Fd-mo8" kind="show" identifier="collectingUserAnswers4" id="TbI-oe-RV9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1321,7 +1321,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-Dr-tfW">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="294"/>
+                                <rect key="frame" x="0.0" y="-1" width="393" height="294"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1478,8 +1478,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cpN-8H-dZq"/>
-        <segue reference="d8B-5t-LWd"/>
-        <segue reference="12s-Zc-Ttw"/>
+        <segue reference="o8z-bb-Uq6"/>
+        <segue reference="0B9-wA-cIs"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
         <segue reference="omF-V9-OMd"/>
