@@ -9,22 +9,26 @@ import Foundation
 
 class ApiService
 {
-    static func getPostString(params:[String:Any]) -> String
+    static func getPostString(params:[[String? : Int?]]) -> String
     {
         var data = [String]()
-        for(key, value) in params
-        {
-            data.append(key + "=\(value)")
+        for i in stride(from: 0, to: params.count, by: 1){
+            for(key, value) in params[i]
+            {
+                data.append(key! + String(i+1) + "=\(value!)")
+            }
         }
+        
         return data.map { String($0) }.joined(separator: "&")
     }
 
-    static func callPost(url:URL, params:[String:Any])
+    static func callPost(url:URL, params:[[String? : Int?]])
     {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
         let postString = self.getPostString(params: params)
+        //print(postString)
         request.httpBody = postString.data(using: .utf8)
 
         var result:(message:String, data:Data?) = (message: "Fail", data: nil)

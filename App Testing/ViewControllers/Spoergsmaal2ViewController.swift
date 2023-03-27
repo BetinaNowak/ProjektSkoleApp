@@ -21,12 +21,23 @@ class Spoergsmaal2ViewController: UIViewController {
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
     
-    var name: String?
     var SelectedAnswersArray =  [[String? : Int?]]()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "collectingUserAnswers2"){
+                    let displayVC = segue.destination as! Spoergsmaal3ViewController
+                    let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
+
+                    displayVC.SelectedAnswersArray = SelectedAnswersArray!
+                    print(displayVC.SelectedAnswersArray)
+
+            }
+      }
+
     
     
     //MARK: View Making methods
-        func makeButtonWithAnswer(text:String) -> UIButton {
+    func makeButtonWithAnswer(text:String, id:Int) -> UIButton {
             let answerButton = UIButton(type: UIButton.ButtonType.system)
             
             answerButton.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
@@ -48,16 +59,35 @@ class Spoergsmaal2ViewController: UIViewController {
             //State dependent properties title and title color
             answerButton.setTitle(text, for: .normal)
             answerButton.setTitleColor(.black, for: .normal)
+            answerButton.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
+            answerButton.tag = id
+
             return answerButton
         }
     
-    
+    @objc func pressedAction(_ sender: UIButton) {
+       // do your stuff here
+        //print("you clicked on button \(sender.tag)")
+        var tempArray = [String:Int]()
+        tempArray = [
+            String("bruger_id"): 1,
+            String("spoergsmaal_id"): 2,
+            String("svar_id"): sender.tag
+        ]
+        
+        SelectedAnswersArray.append(tempArray)
+        UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+        UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+        print(SelectedAnswersArray)
+
+    }
     
     func displayAnswerButtons(count:Int){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){
             let titleString = String(AnswersArray[i].svar_tekst!)
+            let titleInt = Int(AnswersArray[i].id!)
             //let titleString = String(format:"Hello Button %i",i)
-            let button = makeButtonWithAnswer(text:titleString)
+            let button = makeButtonWithAnswer(text:titleString, id:titleInt)
             mainStackView.addArrangedSubview(button)
         }
     }
@@ -88,9 +118,6 @@ class Spoergsmaal2ViewController: UIViewController {
         }
         
         mainStackView.spacing = 1.0
-        
-        print(name!)
-        print(SelectedAnswersArray)
 
     }
 

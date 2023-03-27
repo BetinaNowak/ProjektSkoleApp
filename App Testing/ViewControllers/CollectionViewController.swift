@@ -98,10 +98,18 @@ extension CollectionViewController {
             let button =  UIButton(type: UIButton.ButtonType.system)
             button.backgroundColor = UIColor.white
             button.configuration = .plain()
+            button.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
             button.layer.cornerRadius = 20
             button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.systemGray5.cgColor
+            button.layer.borderColor = UIColor.white.cgColor
             button.configuration!.contentInsets = NSDirectionalEdgeInsets(top: 10.0, leading: 22.0, bottom: 10.0, trailing: 22.0)
+            
+            // Shadow
+            button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
+            button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowRadius = 4.0
+            button.layer.masksToBounds = false
             
             //State dependent properties title and title color
             button.setTitleColor(.black, for: .normal)
@@ -114,7 +122,9 @@ extension CollectionViewController {
 
         @objc func pressedAction(_ sender: UIButton) {
            // do your stuff here
-            //print("you clicked on button \(sender.tag)")
+            sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+            sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+
             var tempArray = [String:Int]()
             tempArray = [
                 String("bruger_id"): 1,
@@ -123,9 +133,8 @@ extension CollectionViewController {
             ]
             
             SelectedAnswersArray.append(tempArray)
-            print(SelectedAnswersArray)
-            let otherVC = NewSpoergsmaalViewController()
-            otherVC.SelectedAnswersArray =  SelectedAnswersArray
+            UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+
         }
         
     }

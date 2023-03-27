@@ -23,16 +23,16 @@ class NewSpoergsmaalViewController: UIViewController{
     var objectsArray = [[String : Any]]()
     let cellIdentifier = "cell"
     
-    var name: String?
     var SelectedAnswersArray =  [[String? : Int?]]()
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "collectingUserAnswers"){
                     let displayVC = segue.destination as! Spoergsmaal2ViewController
-                    displayVC.name = "hello"
-                    //displayVC.SelectedAnswersArray = self.SelectedAnswersArray
-                    //print(displayVC.SelectedAnswersArray)
+                    let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
+
+                    displayVC.SelectedAnswersArray = SelectedAnswersArray!
+                    print(displayVC.SelectedAnswersArray)
 
             }
       }
@@ -82,8 +82,6 @@ class NewSpoergsmaalViewController: UIViewController{
             self.AnswersArray = Answers
             self.displayAnswerButtons()
         }
-        
-        ApiService.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-svar.php")!, params: ["key":"value"])
 
 
     }
