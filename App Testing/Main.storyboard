@@ -837,7 +837,7 @@
         <!--Posts View Controller2-->
         <scene sceneID="pq2-0n-tzL">
             <objects>
-                <viewController id="jOm-B3-LjR" customClass="PostsViewController2" sceneMemberID="viewController">
+                <viewController id="jOm-B3-LjR" customClass="PostsViewController2" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OxY-8d-yKp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1010,10 +1010,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="mgz-Fd-mo8" id="Paq-kE-Ddh"/>
-                                    <outlet property="delegate" destination="mgz-Fd-mo8" id="rbQ-Ru-Tvh"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SD3-My-JZU"/>
@@ -1023,8 +1019,7 @@
                         <barButtonItem key="leftBarButtonItem" id="fc0-Oc-p1m"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="postsCollectionView" destination="45S-yO-54b" id="Dlo-hJ-HmU"/>
-                        <outlet property="postsCollectionView2" destination="45S-yO-54b" id="jRb-dl-NTW"/>
+                        <outlet property="postsCollectionView2" destination="45S-yO-54b" id="chy-pl-Gee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wr5-pm-hW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

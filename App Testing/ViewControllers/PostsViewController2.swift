@@ -10,6 +10,7 @@ import UIKit
 class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
+    
     @IBOutlet weak var postsCollectionView2: UICollectionView!
     
     var PostsArray = [Opslag]()
