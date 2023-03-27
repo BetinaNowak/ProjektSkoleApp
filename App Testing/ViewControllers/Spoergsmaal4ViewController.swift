@@ -21,10 +21,24 @@ class Spoergsmaal4ViewController: UIViewController {
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
     
-    
+    var SelectedAnswersArray =  [[String? : Int?]]()
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "collectingUserAnswers4"){
+            let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
+                   /* let displayVC = segue.destination as! XXXXXX
+                    let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
+
+                    displayVC.SelectedAnswersArray = SelectedAnswersArray!
+                    print(displayVC.SelectedAnswersArray)
+                    */
+                // Send the responses to the DB
+            ApiService.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-svar.php")!, params: SelectedAnswersArray!)
+            }
+      }
     
     //MARK: View Making methods
-    func makeButtonWithAnswer(text:String) -> UIButton {
+    func makeButtonWithAnswer(text:String, id:Int) -> UIButton {
         let answerButton = UIButton(type: UIButton.ButtonType.system)
         answerButton.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
         answerButton.backgroundColor = UIColor.white
@@ -45,15 +59,35 @@ class Spoergsmaal4ViewController: UIViewController {
         //State dependent properties title and title color
         answerButton.setTitle(text, for: .normal)
         answerButton.setTitleColor(.black, for: .normal)
+        answerButton.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
+        answerButton.tag = id
+
         return answerButton
+    }
+    
+    @objc func pressedAction(_ sender: UIButton) {
+       // do your stuff here
+        //print("you clicked on button \(sender.tag)")
+        var tempArray = [String:Int]()
+        tempArray = [
+            String("bruger_id"): 1,
+            String("spoergsmaal_id"): 4,
+            String("svar_id"): sender.tag
+        ]
+        
+        SelectedAnswersArray.append(tempArray)
+        UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+        UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+        print(SelectedAnswersArray)
+
     }
     
     
     func displayAnswerButtons(count:Int){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){
             let titleString = String(AnswersArray[i].svar_tekst!)
-            //let titleString = String(format:"Hello Button %i",i)
-            let button = makeButtonWithAnswer(text:titleString)
+            let titleInt = Int(AnswersArray[i].id!)
+            let button = makeButtonWithAnswer(text:titleString, id:titleInt)
             mainStackView.addArrangedSubview(button)
         }
     }

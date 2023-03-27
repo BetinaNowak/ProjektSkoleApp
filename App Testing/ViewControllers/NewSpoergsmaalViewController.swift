@@ -20,13 +20,11 @@ class NewSpoergsmaalViewController: UIViewController{
     @IBOutlet weak var stackView: UIStackView!
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
-    var objectsArray = [String]()
+    var objectsArray = [[String : Any]]()
     let cellIdentifier = "cell"
     
-    //@IBAction func SvarButtonClicked(_ sender: Any) {
-      //  SpoergsmaalLabel.text = String(QuestionsArray[1].spoergsmaal_tekst!)
+    var SelectedAnswersArray =  [[String? : Int?]]()
 
-    //}
     
     //MARK: View Making methods
     func makeButtonWithAnswer(text:String) -> UIButton {
@@ -51,17 +49,32 @@ class NewSpoergsmaalViewController: UIViewController{
         return answerButton
     }
     
-    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "collectingUserAnswers"){
+                    let displayVC = segue.destination as! Spoergsmaal2ViewController
+                    let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
+
+                    displayVC.SelectedAnswersArray = SelectedAnswersArray!
+                    print(displayVC.SelectedAnswersArray)
+
+            }
+      }
     
     func displayAnswerButtons(){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){
+            let titleInt = Int(AnswersArray[i].id!)
             let titleString = String(AnswersArray[i].svar_tekst!)
             //let button = makeButtonWithAnswer(text:titleString)
+            var tempArray = [String:Any]()
+            tempArray = [
+                String("id"): titleInt,
+                String("title") : titleString
+            ]
             
-            self.objectsArray.append(titleString)
+            objectsArray.append(tempArray)
         }
             
-            let items: [[String]] = [
+            let items: [[[String : Any]]] = [
                 objectsArray
             ]
             let controller = CollectionViewController(items: items)
@@ -92,6 +105,7 @@ class NewSpoergsmaalViewController: UIViewController{
             self.AnswersArray = Answers
             self.displayAnswerButtons()
         }
+
 
     }
         

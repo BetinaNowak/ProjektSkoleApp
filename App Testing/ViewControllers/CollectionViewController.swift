@@ -20,10 +20,11 @@ extension UICollectionViewLayout {
 }
 
 class CollectionViewController : UICollectionViewController {
-    private let items: [[String]]
+    private let items: [[[String : Any]]]
     
-    init(items: [[String]]) {
+    init(items: [[[String : Any]]]) {
         self.items = items
+        //print(self.items)
         super.init(collectionViewLayout: UICollectionViewLayout.fixedSpacedFlowLayout())
     }
     
@@ -48,7 +49,11 @@ class CollectionViewController : UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.cellIdentifier, for: indexPath) as! LabelCell
-        cell.button.setTitle(items[indexPath.section][indexPath.item], for: .normal)
+        //print(items[indexPath.section][indexPath.item]["title"]!)
+        let titleString = items[indexPath.section][indexPath.item]["title"]! as? String
+        let titleInt = items[indexPath.section][indexPath.item]["id"]! as? Int
+        cell.button.setTitle(titleString!, for: .normal)
+        cell.button.tag = titleInt!
         return cell
     }
 }
@@ -89,10 +94,11 @@ extension CollectionViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }() */
-        let button:  UIButton = {
+        lazy var button:  UIButton = {
             let button =  UIButton(type: UIButton.ButtonType.system)
             button.backgroundColor = UIColor.white
             button.configuration = .plain()
+            button.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
             button.layer.cornerRadius = 20
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.white.cgColor
@@ -107,12 +113,35 @@ extension CollectionViewController {
             
             //State dependent properties title and title color
             button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.font =  UIFont(name: "Montserrat Bold", size: 20)
+
             button.translatesAutoresizingMaskIntoConstraints = false
+            button.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
             return button
             
             
         }()
         
+        var SelectedAnswersArray = [[String? : Int?]]()
+
+        @objc func pressedAction(_ sender: UIButton) {
+           // do your stuff here
+            sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+            sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+
+            var tempArray = [String:Int]()
+            tempArray = [
+                String("bruger_id"): 1,
+                String("spoergsmaal_id"): 1,
+                String("svar_id"): sender.tag
+            ]
+            
+            SelectedAnswersArray.append(tempArray)
+            UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+
+        }
         
     }
+    
 }
+
