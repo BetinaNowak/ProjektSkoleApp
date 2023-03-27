@@ -113,6 +113,8 @@ extension CollectionViewController {
             
             //State dependent properties title and title color
             button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.font =  UIFont(name: "Montserrat Bold", size: 20)
+
             button.translatesAutoresizingMaskIntoConstraints = false
             button.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
             return button
