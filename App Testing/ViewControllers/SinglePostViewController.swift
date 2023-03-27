@@ -10,7 +10,9 @@ import UIKit
 class SinglePostViewController: UIViewController {
 
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var singleImageView: UIImageView!
+    
     
     @IBOutlet weak var singleTitelLabel: UILabel!
     @IBOutlet weak var beskrivelseLabel: UILabel!
@@ -43,10 +45,35 @@ class SinglePostViewController: UIViewController {
         postnrLabel.text = post?.post_nr
         byLabel.text = post?.by
         
-//        singleImageView.contentMode = .scaleAspectFill
-        //singleImageView.translatesAutoresizingMaskIntoConstraints = false
-        singleImageView.layer.cornerRadius = 10
-//        singleImageView.clipsToBounds = true
+        
+        // Shadow
+        /*singleImageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
+        singleImageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        singleImageView.layer.shadowOpacity = 0.6
+        singleImageView.layer.shadowRadius = 6.0
+        
+        
+        singleImageView.layer.masksToBounds = false
+        singleImageView.layer.cornerRadius = 20*/
+        //singleImageView.clipsToBounds = true
+        
+        
+        containerView.clipsToBounds = false
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOpacity = 1
+        singleImageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        containerView.layer.shadowRadius = 30
+        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: 20).cgPath
+        containerView.backgroundColor = UIColor.clear
+        
+        singleImageView.backgroundColor = UIColor.clear
+        singleImageView.clipsToBounds = true
+        singleImageView.layer.cornerRadius = 20
+        
+        
+        containerView.addSubview(singleImageView)
+        
+        
         
         let imgUrl = "http://test-postnord.dk" + (post?.cover_billede)!
         
@@ -57,7 +84,7 @@ class SinglePostViewController: UIViewController {
 
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFill) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -71,7 +98,7 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFill) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }

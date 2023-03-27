@@ -9,17 +9,6 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Bold.ttf">
-            <string>Montserrat-Bold</string>
-        </array>
-        <array key="Montserrat-Medium.ttf">
-            <string>Montserrat-Medium</string>
-        </array>
-        <array key="Montserrat-SemiBold.ttf">
-            <string>Montserrat-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Table2-->
         <scene sceneID="tne-QT-ifu">
@@ -42,16 +31,16 @@
                                 <color key="tintColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Velkommen til ... !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNn-dz-buM">
-                                <rect key="frame" x="48" y="546" width="219" height="30"/>
+                                <rect key="frame" x="48" y="546" width="210" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Log ind med dit UNI log ind for at komme igang" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="100" baselineAdjustment="none" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-NW-c7Q">
                                 <rect key="frame" x="48" y="566" width="329" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -60,8 +49,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Log Ind" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log ind" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -71,7 +60,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Hej med dig!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs1-fs-ssJ">
                                 <rect key="frame" x="69" y="352" width="255" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -105,16 +94,16 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gz-21-hkh">
-                                <rect key="frame" x="44" y="126" width="97" height="37"/>
+                                <rect key="frame" x="44" y="126" width="89" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Er du elev eller forælder?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqn-WC-Mtd">
-                                <rect key="frame" x="44" y="192" width="233" height="22"/>
+                                <rect key="frame" x="44" y="192" width="211" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -125,7 +114,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Jeg er elev" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -139,7 +128,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Jeg er forælder" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -196,7 +185,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="tintColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brugernavn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9rM-nU-zlA">
@@ -204,13 +193,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="tintColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log ind" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA6-h8-6ta">
                                 <rect key="frame" x="38" y="113" width="276" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -221,7 +210,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log ind" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -262,7 +251,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Kom igang!          " cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -279,7 +268,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Før vi går rigtig i gang vil vi gerne vide lidt om dig og dine interesser for at give dig de bedste resultater for netop dig." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-gq-qn6">
                                 <rect key="frame" x="46" y="226" width="313" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -290,7 +279,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Spring over" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -298,19 +287,19 @@
                                     <segue destination="jOm-B3-LjR" kind="show" id="KJC-ST-jdE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hej Matilde!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aP-ni-Kua">
-                                <rect key="frame" x="101" y="136" width="188" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Du kan vælge at springe over og tilføje infomationerne senere. Det er altid muligt at justere dem." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-Ej-smB">
                                 <rect key="frame" x="51" y="325" width="308" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hej Matilde!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aP-ni-Kua">
+                                <rect key="frame" x="108" y="136" width="180" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -349,14 +338,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4dN-hv-yQQ">
                                 <rect key="frame" x="20" y="126" width="269" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sub label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c80-if-E0I">
                                 <rect key="frame" x="53" y="237" width="304" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -371,7 +360,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrow.right" catalog="system"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Videre " imagePadding="10" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -427,7 +416,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrow.right" catalog="system"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Videre " imagePadding="10" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -444,14 +433,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fmp-ZH-vJr" userLabel="Spoergsmaal2 Label">
                                 <rect key="frame" x="29" y="126" width="285" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d24-gP-1aK" userLabel="Spoergsmaal2 Sub Label">
                                 <rect key="frame" x="29" y="238" width="304" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -502,7 +491,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrow.right" catalog="system"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Videre " imagePadding="10" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -518,14 +507,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kkb-IP-Deo" userLabel="Spoergsmaal3 Label">
                                 <rect key="frame" x="29" y="135" width="285" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z7k-uQ-ZWa" userLabel="Spoergsmaal3 Sub Label">
                                 <rect key="frame" x="29" y="247" width="304" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -579,14 +568,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OJw-Dj-q9M" userLabel="Spoergsmaal4 Label">
                                 <rect key="frame" x="35" y="126" width="285" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bs8-Wu-ar3" userLabel="Spoergsmaal4 Sub Label">
                                 <rect key="frame" x="35" y="238" width="304" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -599,7 +588,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrow.right" catalog="system"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Videre " imagePadding="10" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -655,28 +644,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Færdig!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLV-nt-VOb">
                                 <rect key="frame" x="27" y="170" width="174" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Udfra de spørgsmål du har besvaret har vi fundet frem til disse fag der kunne have din interresse." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgK-vm-UQo">
                                 <rect key="frame" x="27" y="239" width="344" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praktik og lærepladser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEH-gH-Rrh">
                                 <rect key="frame" x="27" y="359" width="285" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uddannelse- og jobmuligheder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-b8-old">
                                 <rect key="frame" x="27" y="684" width="208" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -777,7 +766,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6j-BH-IpM">
                                 <rect key="frame" x="284" y="698" width="85" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="13"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="se flere ">
@@ -817,7 +806,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At8-ve-OzY">
                                 <rect key="frame" x="279" y="370" width="85" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="13"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="se flere ">
@@ -845,10 +834,10 @@
             </objects>
             <point key="canvasLocation" x="8238.9312977099235" y="0.0"/>
         </scene>
-        <!--View11-->
+        <!--Posts View Controller2-->
         <scene sceneID="pq2-0n-tzL">
             <objects>
-                <viewController id="jOm-B3-LjR" customClass="View11" sceneMemberID="viewController">
+                <viewController id="jOm-B3-LjR" customClass="PostsViewController2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OxY-8d-yKp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -856,14 +845,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Klar til udforskning!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51w-XR-Ykz">
                                 <rect key="frame" x="26" y="166" width="341" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her finder du virksomheder der tilbyder en praktikperiode eller læreplads, samt uddannelse- og jobmuligheder." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b35-Hx-8kM">
-                                <rect key="frame" x="26" y="250" width="377" height="110"/>
+                                <rect key="frame" x="26" y="250" width="377" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -951,17 +940,40 @@
                                     <segue destination="a83-KP-cJM" kind="show" id="d8B-5t-LWd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praktik og lærepladser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-2R-zn1">
-                                <rect key="frame" x="26" y="382" width="285" height="56"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="chevron.forward.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-DV-APp">
+                                <rect key="frame" x="350" y="710" width="13" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                <color key="tintColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uddannelse- og jobmuligheder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QD9-cA-tmg">
+                                <rect key="frame" x="26" y="689" width="208" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wD-Rn-dCF">
+                                <rect key="frame" x="278" y="703" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="se flere ">
+                                    <color key="titleColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praktik og lærepladser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-2R-zn1">
+                                <rect key="frame" x="26" y="361" width="285" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-js-g9j">
-                                <rect key="frame" x="278" y="393" width="85" height="35"/>
+                                <rect key="frame" x="278" y="372" width="85" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="13"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="se flere ">
@@ -970,28 +982,39 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="chevron.forward.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wtk-Xy-QWs">
-                                <rect key="frame" x="350" y="405" width="13" height="13"/>
+                                <rect key="frame" x="350" y="384" width="13" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uddannelse- og jobmuligheder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QD9-cA-tmg">
-                                <rect key="frame" x="26" y="689" width="208" height="63"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="45S-yO-54b" userLabel="Posts Collection View 2">
+                                <rect key="frame" x="26" y="425" width="366" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wD-Rn-dCF">
-                                <rect key="frame" x="283" y="703" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="se flere ">
-                                    <color key="titleColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xxy-Cd-Jc4">
+                                    <size key="itemSize" width="164" height="236"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="3SA-Y2-HkW" customClass="PostsCollectionViewCell2" customModule="App_Testing" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="164" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NMy-7j-VBs">
+                                            <rect key="frame" x="0.0" y="0.0" width="164" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="164" height="236"/>
+                                        <connections>
+                                            <segue destination="WGp-Bg-lHY" kind="show" identifier="showPost" id="cpN-8H-dZq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="mgz-Fd-mo8" id="Paq-kE-Ddh"/>
+                                    <outlet property="delegate" destination="mgz-Fd-mo8" id="rbQ-Ru-Tvh"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SD3-My-JZU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -999,10 +1022,14 @@
                     <navigationItem key="navigationItem" style="editor" id="Zem-ax-OJV">
                         <barButtonItem key="leftBarButtonItem" id="fc0-Oc-p1m"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="postsCollectionView" destination="45S-yO-54b" id="Dlo-hJ-HmU"/>
+                        <outlet property="postsCollectionView2" destination="45S-yO-54b" id="jRb-dl-NTW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wr5-pm-hW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9201" y="132"/>
+            <point key="canvasLocation" x="9200.7633587786258" y="131.69014084507043"/>
         </scene>
         <!--View12-->
         <scene sceneID="Uem-zG-ZGn">
@@ -1021,14 +1048,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praktik &amp; lærepladser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPA-z8-RyD">
                                 <rect key="frame" x="31" y="128" width="329" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her finder du virksomheder der tilbyder en praktikperiode eller læreplads" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2g-qO-gPC">
                                 <rect key="frame" x="31" y="219" width="308" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1137,7 +1164,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bliv klogere på dine uddannelsesmuligheder samt hvilke job du kan få efterfølgende." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlI-Sk-W0n">
                                 <rect key="frame" x="32" y="200" width="329" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1234,7 +1261,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uddannelse- og jobmuligheder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fal-e6-acn">
                                 <rect key="frame" x="32" y="146" width="329" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1264,7 +1291,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dine notifikationer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebv-tc-8UN">
                                 <rect key="frame" x="16" y="210" width="342" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1298,9 +1325,17 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-64-yYF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="SLl-ra-vQB">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-Dr-tfW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="294"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </containerView>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="SLl-ra-vQB">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="318"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="319" id="T9Q-jD-tv2"/>
                                 </constraints>
@@ -1310,16 +1345,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="ul6-Xg-b4e"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Om praktikforløbet" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPb-YQ-zds">
-                                <rect key="frame" x="28" y="326" width="313" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om praktikforløbet" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPb-YQ-zds">
+                                <rect key="frame" x="28" y="369" width="313" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1329,16 +1364,8 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beskrivelse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQl-eL-gS8" userLabel="beskrivelseLabel">
-                                <rect key="frame" x="28" y="368" width="313" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OAJ-1e-R9S">
@@ -1350,7 +1377,7 @@
                                 <rect key="frame" x="69" y="607" width="194" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1363,7 +1390,7 @@
                                 <rect key="frame" x="69" y="641" width="194" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1376,7 +1403,7 @@
                                 <rect key="frame" x="69" y="675" width="194" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1389,7 +1416,7 @@
                                 <rect key="frame" x="69" y="709" width="194" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1397,7 +1424,7 @@
                                 <rect key="frame" x="69" y="732" width="194" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1405,7 +1432,18 @@
                                 <rect key="frame" x="69" y="753" width="194" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beskrivelse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQl-eL-gS8" userLabel="beskrivelseLabel">
+                                <rect key="frame" x="28" y="399" width="313" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1415,8 +1453,8 @@
                         <constraints>
                             <constraint firstItem="gPb-YQ-zds" firstAttribute="leading" secondItem="0Sa-64-yYF" secondAttribute="leadingMargin" constant="12" id="Ftv-Lt-IZ4"/>
                             <constraint firstItem="wL1-df-9LN" firstAttribute="centerX" secondItem="SLl-ra-vQB" secondAttribute="centerX" constant="-12" id="OKy-yL-Fwn"/>
-                            <constraint firstItem="wL1-df-9LN" firstAttribute="top" secondItem="gPb-YQ-zds" secondAttribute="bottom" constant="-115" id="PWb-ha-AFh"/>
-                            <constraint firstItem="gPb-YQ-zds" firstAttribute="top" secondItem="SLl-ra-vQB" secondAttribute="bottom" constant="8" id="Pz3-Mr-4xY"/>
+                            <constraint firstItem="wL1-df-9LN" firstAttribute="top" secondItem="gPb-YQ-zds" secondAttribute="bottom" constant="-146" id="PWb-ha-AFh"/>
+                            <constraint firstItem="gPb-YQ-zds" firstAttribute="top" secondItem="SLl-ra-vQB" secondAttribute="bottom" constant="51" id="Pz3-Mr-4xY"/>
                             <constraint firstAttribute="trailing" secondItem="SLl-ra-vQB" secondAttribute="trailing" id="aA4-Hy-LPY"/>
                             <constraint firstItem="wL1-df-9LN" firstAttribute="centerY" secondItem="0Sa-64-yYF" secondAttribute="centerY" constant="-156.5" id="dlb-KE-x13"/>
                             <constraint firstItem="SLl-ra-vQB" firstAttribute="leading" secondItem="0Sa-64-yYF" secondAttribute="leading" id="ehT-hx-vVP"/>
@@ -1429,6 +1467,7 @@
                         <outlet property="adresseLabel" destination="5WJ-W1-WEx" id="CEk-IU-fbr"/>
                         <outlet property="beskrivelseLabel" destination="LQl-eL-gS8" id="JIu-Zx-zIq"/>
                         <outlet property="byLabel" destination="eNp-p8-jjJ" id="XE5-qI-AkA"/>
+                        <outlet property="containerView" destination="miZ-Dr-tfW" id="p7V-Hr-yYK"/>
                         <outlet property="emailLabel" destination="AFE-v3-84A" id="Dbi-63-dCV"/>
                         <outlet property="postnrLabel" destination="cAE-rR-osQ" id="ZBB-vt-x7e"/>
                         <outlet property="singleImageView" destination="SLl-ra-vQB" id="BU4-LP-Ldm"/>
@@ -1443,7 +1482,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9rw-SX-abz"/>
+        <segue reference="cpN-8H-dZq"/>
+        <segue reference="d8B-5t-LWd"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
