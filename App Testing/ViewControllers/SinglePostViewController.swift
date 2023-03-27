@@ -25,6 +25,7 @@ class SinglePostViewController: UIViewController {
         //singleTitelLabel.text = selectedPost
         singleTitelLabel.text = post?.titel
         
+        singleImageView.contentMode = .scaleAspectFill
         
         let imgUrl = "http://test-postnord.dk" + (post?.cover_billede)!
         

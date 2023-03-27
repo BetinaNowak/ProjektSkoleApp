@@ -61,31 +61,42 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PostsCollectionViewCell
-
         
-        let title = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: 220))
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: cell.bounds.size.height))
+        
+            let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
+            imageView.downloadedFrom(from: imgUrl)
+        
+            imageView.contentMode = .scaleAspectFill
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.layer.cornerRadius = 10
+            imageView.clipsToBounds = true
+            cell.contentView.addSubview(imageView)
+        
+        
+        
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: 100))
             title.text = String(PostsArray[indexPath.row].titel!)
             title.font = UIFont(name: "AvenirNext-Bold", size: 16)
+            title.textColor = UIColor.white
             title.textAlignment = .center
+            title.contentMode = .scaleAspectFit
             cell.contentView.addSubview(title)
         
 
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 220))
-        
-            let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
-    
-            imageView.downloadedFrom(from: imgUrl)
-        
-            //imageView.contentMode = .scaleAspectFill
-            cell.contentView.addSubview(imageView)
-        
         
         return cell
     }
 }
+
+
+
+
 
 
 
