@@ -26,7 +26,30 @@ class NewSpoergsmaalViewController: UIViewController{
     var SelectedAnswersArray =  [[String? : Int?]]()
 
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //MARK: View Making methods
+    func makeButtonWithAnswer(text:String) -> UIButton {
+        let answerButton = UIButton(type: UIButton.ButtonType.system)
+        answerButton.frame = CGRect(x: 80, y: 80, width: 50, height: 10)
+        answerButton.backgroundColor = UIColor.white
+        answerButton.configuration = .plain()
+        answerButton.layer.borderWidth = 2
+        answerButton.layer.cornerRadius = 5
+        answerButton.layer.borderColor = UIColor.white.cgColor
+        
+        // Shadow
+        answerButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
+        answerButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        answerButton.layer.shadowOpacity = 0.3
+        answerButton.layer.shadowRadius = 4.0
+        answerButton.layer.masksToBounds = false
+        
+        //State dependent properties title and title color
+        answerButton.setTitle(text, for: .normal)
+        answerButton.setTitleColor(.black, for: .normal)
+        return answerButton
+    }
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "collectingUserAnswers"){
                     let displayVC = segue.destination as! Spoergsmaal2ViewController
                     let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]

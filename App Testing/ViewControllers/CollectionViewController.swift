@@ -118,6 +118,8 @@ extension CollectionViewController {
             button.translatesAutoresizingMaskIntoConstraints = false
             button.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
             return button
+            
+            
         }()
         
         var SelectedAnswersArray = [[String? : Int?]]()
