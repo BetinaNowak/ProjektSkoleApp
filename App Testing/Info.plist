@@ -6,13 +6,6 @@
 	<array>
 		<string></string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Montserrat-SemiBold.ttf</string>
-		<string>Montserrat-Bold.ttf</string>
-	</array>
-	<key>Item 0</key>
-	<string>Montserrat-VariableFont_wght.ttf</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

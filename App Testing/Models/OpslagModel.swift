@@ -24,6 +24,7 @@ struct Opslag: Codable {
     var cover_billede: String?
     var telefon: String?
     var email: String?
+    var virksomhedsnavn: String?
 }
 
 typealias Posts = [Opslag]
