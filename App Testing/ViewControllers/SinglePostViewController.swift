@@ -13,6 +13,7 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var singleImageView: UIImageView!
     @IBOutlet weak var singleTitelLabel: UILabel!
     
+    @IBOutlet weak var beskrivelseLabel: UILabel!
     
     var selectedPost: String?
     
@@ -21,11 +22,18 @@ class SinglePostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
+        
         //singleTitelLabel.text = selectedPost
         singleTitelLabel.text = post?.titel
+        beskrivelseLabel.text = post?.beskrivelse
         
-        singleImageView.contentMode = .scaleAspectFill
+//        singleImageView.contentMode = .scaleAspectFill
+        //singleImageView.translatesAutoresizingMaskIntoConstraints = false
+        singleImageView.layer.cornerRadius = 10
+//        singleImageView.clipsToBounds = true
         
         let imgUrl = "http://test-postnord.dk" + (post?.cover_billede)!
         

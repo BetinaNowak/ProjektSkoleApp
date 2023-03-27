@@ -12,6 +12,8 @@
 		2F8C857629C99B590051B396 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857529C99B590051B396 /* fonts */; };
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
+		CF08C5D829D1758100D10050 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF08C5D729D1758000D10050 /* Montserrat-VariableFont_wght.ttf */; };
+		CF08C5DA29D1758900D10050 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF08C5D929D1758900D10050 /* Montserrat-VariableFont_wght.ttf */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -43,6 +45,8 @@
 		2F8C857529C99B590051B396 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
+		CF08C5D729D1758000D10050 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-VariableFont_wght.ttf"; path = "../../../../Downloads/Montserrat 2/Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		CF08C5D929D1758900D10050 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-VariableFont_wght.ttf"; path = "../../../../Downloads/Montserrat 2/Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		CFF9CD8729C451A0002ED77D /* App Testing */ = {
 			isa = PBXGroup;
 			children = (
+				CF08C5D729D1758000D10050 /* Montserrat-VariableFont_wght.ttf */,
+				CF08C5D929D1758900D10050 /* Montserrat-VariableFont_wght.ttf */,
 				CF2B5DC929CB325E006478B4 /* Models */,
 				CF2B5DBF29CB313F006478B4 /* Network */,
 				CF2B5DCA29CB32AB006478B4 /* ViewControllers */,
@@ -224,6 +230,8 @@
 				2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */,
 				CFF9CD9229C451A2002ED77D /* Assets.xcassets in Resources */,
 				2F8C857629C99B590051B396 /* fonts in Resources */,
+				CF08C5DA29D1758900D10050 /* Montserrat-VariableFont_wght.ttf in Resources */,
+				CF08C5D829D1758100D10050 /* Montserrat-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

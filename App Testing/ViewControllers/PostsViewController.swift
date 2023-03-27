@@ -71,11 +71,20 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
             let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
             imageView.downloadedFrom(from: imgUrl)
-        
+    
+
             imageView.contentMode = .scaleAspectFill
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.layer.cornerRadius = 10
             imageView.clipsToBounds = true
+        
+        // Shadow
+        imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
+        imageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        imageView.layer.shadowOpacity = 0.5
+        imageView.layer.shadowRadius = 7.0
+        
+        
             cell.contentView.addSubview(imageView)
         
         
