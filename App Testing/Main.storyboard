@@ -848,7 +848,6 @@
         <!--View11-->
         <scene sceneID="pq2-0n-tzL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wr5-pm-hW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="jOm-B3-LjR" customClass="View11" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OxY-8d-yKp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -1001,6 +1000,7 @@
                         <barButtonItem key="leftBarButtonItem" id="fc0-Oc-p1m"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wr5-pm-hW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9201" y="132"/>
         </scene>
@@ -1410,6 +1410,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="HSF-Vn-mcW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gPb-YQ-zds" firstAttribute="leading" secondItem="0Sa-64-yYF" secondAttribute="leadingMargin" constant="12" id="Ftv-Lt-IZ4"/>
@@ -1425,15 +1426,15 @@
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="bLQ-Ef-OkK"/>
                     <connections>
-                        <outlet property="adresseLabel" destination="5WJ-W1-WEx" id="US0-QB-ELV"/>
+                        <outlet property="adresseLabel" destination="5WJ-W1-WEx" id="CEk-IU-fbr"/>
                         <outlet property="beskrivelseLabel" destination="LQl-eL-gS8" id="JIu-Zx-zIq"/>
-                        <outlet property="byLabel" destination="eNp-p8-jjJ" id="gUY-pm-yZY"/>
-                        <outlet property="emailLabel" destination="AFE-v3-84A" id="mpW-pr-h6D"/>
-                        <outlet property="postnrLabel" destination="cAE-rR-osQ" id="8dk-1I-d6T"/>
+                        <outlet property="byLabel" destination="eNp-p8-jjJ" id="XE5-qI-AkA"/>
+                        <outlet property="emailLabel" destination="AFE-v3-84A" id="Dbi-63-dCV"/>
+                        <outlet property="postnrLabel" destination="cAE-rR-osQ" id="ZBB-vt-x7e"/>
                         <outlet property="singleImageView" destination="SLl-ra-vQB" id="BU4-LP-Ldm"/>
                         <outlet property="singleTitelLabel" destination="wL1-df-9LN" id="shK-hY-4ur"/>
-                        <outlet property="telefonLabel" destination="KfI-z9-fsR" id="kae-3K-iYz"/>
-                        <outlet property="virksomhedsnavnLabel" destination="xwA-I4-hfT" id="I5L-Le-9bK"/>
+                        <outlet property="telefonLabel" destination="KfI-z9-fsR" id="Vrw-gr-no1"/>
+                        <outlet property="virksomhedsnavnLabel" destination="xwA-I4-hfT" id="2YQ-d4-aed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvZ-lI-LRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

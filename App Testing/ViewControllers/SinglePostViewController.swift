@@ -11,9 +11,16 @@ class SinglePostViewController: UIViewController {
 
     
     @IBOutlet weak var singleImageView: UIImageView!
-    @IBOutlet weak var singleTitelLabel: UILabel!
     
+    @IBOutlet weak var singleTitelLabel: UILabel!
     @IBOutlet weak var beskrivelseLabel: UILabel!
+    @IBOutlet weak var virksomhedsnavnLabel: UILabel!
+    @IBOutlet weak var telefonLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var adresseLabel: UILabel!
+    @IBOutlet weak var postnrLabel: UILabel!
+    @IBOutlet weak var byLabel: UILabel!
+    
     
     var selectedPost: String?
     
@@ -29,6 +36,12 @@ class SinglePostViewController: UIViewController {
         //singleTitelLabel.text = selectedPost
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
+        virksomhedsnavnLabel.text = post?.virksomhedsnavn
+        telefonLabel.text = post?.telefon
+        emailLabel.text = post?.email
+        adresseLabel.text = post?.adresse_1
+        postnrLabel.text = post?.post_nr
+        byLabel.text = post?.by
         
 //        singleImageView.contentMode = .scaleAspectFill
         //singleImageView.translatesAutoresizingMaskIntoConstraints = false
