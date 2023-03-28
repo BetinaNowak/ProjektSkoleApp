@@ -6,6 +6,7 @@
 //
 
 import UIKit
+var SelectedAnswersArrayLocal = [[String? : Int?]]()
 
 extension UICollectionViewLayout {
     static func fixedSpacedFlowLayout() -> UICollectionViewLayout {
@@ -122,28 +123,44 @@ extension CollectionViewController {
             
         }()
         
-        var SelectedAnswersArray = [[String? : Int?]]()
 
         @objc func pressedAction(_ sender: UIButton) {
            // do your stuff here
-            sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-            sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-
-            var tempArray = [String:Int]()
-            tempArray = [
-                String("bruger_id"): 1,
-                String("spoergsmaal_id"): 1,
-                String("svar_id"): sender.tag
-            ]
-            
-            SelectedAnswersArray.append(tempArray)
-            UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
-            UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
-            print(SelectedAnswersArray)
-
+            if(SelectedAnswersArrayLocal.count == 3){
+                sender.shake()
+            } else {
+                sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                
+                
+                var tempArray = [String:Int]()
+                tempArray = [
+                    String("bruger_id"): 1,
+                    String("spoergsmaal_id"): 1,
+                    String("svar_id"): sender.tag
+                ]
+                
+                
+                
+                SelectedAnswersArrayLocal.append(tempArray)
+                UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                UserDefaults.standard.set(SelectedAnswersArrayLocal, forKey: "SelectedAnswersArray")
+            }
         }
         
     }
     
 }
 
+extension UIView {
+
+    // Using SpringWithDamping
+    func shake(duration: TimeInterval = 0.5, xValue: CGFloat = 12, yValue: CGFloat = 0) {
+        self.transform = CGAffineTransform(translationX: xValue, y: yValue)
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transform = CGAffineTransform.identity
+        }, completion: nil)
+
+    }
+
+}
