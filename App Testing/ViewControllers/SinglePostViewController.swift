@@ -24,8 +24,6 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var byLabel: UILabel!
     
     
-    var selectedPost: String?
-    
     var post: Opslag?
     
     
@@ -34,8 +32,6 @@ class SinglePostViewController: UIViewController {
         
         
         
-        
-        //singleTitelLabel.text = selectedPost
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
         virksomhedsnavnLabel.text = post?.virksomhedsnavn
@@ -46,18 +42,7 @@ class SinglePostViewController: UIViewController {
         byLabel.text = post?.by
         
         
-        // Shadow
-        /*singleImageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
-        singleImageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        singleImageView.layer.shadowOpacity = 0.6
-        singleImageView.layer.shadowRadius = 6.0
-        
-        
-        singleImageView.layer.masksToBounds = false
-        singleImageView.layer.cornerRadius = 20*/
-        //singleImageView.clipsToBounds = true
-        
-        
+        // Image styling
         containerView.clipsToBounds = false
         containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.layer.shadowOpacity = 1

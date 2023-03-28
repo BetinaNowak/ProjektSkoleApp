@@ -21,6 +21,8 @@
 		CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DCF29CB387B006478B4 /* Spoergsmaal4ViewController.swift */; };
 		CFA3790829D19DDB005F80C3 /* PostsCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790729D19DDB005F80C3 /* PostsCollectionViewCell2.swift */; };
 		CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */; };
+		CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */; };
+		CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */; };
 		CFB4F61829CC5422006D42AF /* OpslagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61729CC5422006D42AF /* OpslagModel.swift */; };
 		CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61929CC5542006D42AF /* Posts.swift */; };
 		CFB4F61C29CC55FD006D42AF /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61B29CC55FD006D42AF /* PostsViewController.swift */; };
@@ -53,6 +55,8 @@
 		CF2B5DCF29CB387B006478B4 /* Spoergsmaal4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spoergsmaal4ViewController.swift; sourceTree = "<group>"; };
 		CFA3790729D19DDB005F80C3 /* PostsCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCell2.swift; sourceTree = "<group>"; };
 		CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController2.swift; sourceTree = "<group>"; };
+		CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsViewController.swift; sourceTree = "<group>"; };
+		CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsTableViewCell.swift; sourceTree = "<group>"; };
 		CFB4F61729CC5422006D42AF /* OpslagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpslagModel.swift; sourceTree = "<group>"; };
 		CFB4F61929CC5542006D42AF /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		CFB4F61B29CC55FD006D42AF /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */,
 				CFB4F62E29CDDED0006D42AF /* PostsCollectionViewCell.swift */,
 				CFA3790729D19DDB005F80C3 /* PostsCollectionViewCell2.swift */,
+				CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */,
+				CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				CFA3790829D19DDB005F80C3 /* PostsCollectionViewCell2.swift in Sources */,
 				CFF9CDAF29CB0523002ED77D /* Spoergsmaal2ViewController.swift in Sources */,
 				CFB4F61829CC5422006D42AF /* OpslagModel.swift in Sources */,
+				CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */,
 				CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */,
 				2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */,
 				2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */,
@@ -257,6 +264,7 @@
 				CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */,
 				CF2B5DC729CB31B6006478B4 /* Answers3.swift in Sources */,
 				CF2B5DCE29CB3852006478B4 /* Answers4.swift in Sources */,
+				CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */,
 				CFB4F62F29CDDED0006D42AF /* PostsCollectionViewCell.swift in Sources */,
 				CFF9CD8B29C451A0002ED77D /* SceneDelegate.swift in Sources */,
 				CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */,
