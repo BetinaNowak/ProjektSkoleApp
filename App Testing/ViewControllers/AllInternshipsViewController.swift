@@ -59,16 +59,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
         cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
         
-        /*let image: Opslag
-        image = PostsArray[indexPath.row]
-        let string = "http://test-postnord.dk" + (image.cover_billede!)
-        let url = URL(string: string)
-        cell.internshipImageView.downloadedimg(from: url!, contentMode: .scaleAspectFill )*/
         
-        cell.cellView.layer.cornerRadius = 10
-        
+        // Image styling
         cell.internshipImageView.round(corners: [.topLeft,.bottomLeft], radius: 10, borderColor: .clear, borderWidth: 0)
-        
+        cell.cellView.layer.cornerRadius = 10
         cell.cellView.layer.shadowColor = UIColor.black.cgColor
         cell.cellView.layer.shadowOpacity = 0.3
         cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -78,10 +72,12 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         return cell
     }
+    
 
 }
 
 
+// Make it possible to round selected corners
 extension UIView
 {
 
@@ -110,7 +106,7 @@ func round(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor, borderW
 }
 
 
-
+// Load images
 extension UIImageView {
     func downloadedimg(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode
