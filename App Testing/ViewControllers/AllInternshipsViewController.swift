@@ -54,6 +54,13 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         cell.internshipImageView.round(corners: [.topLeft,.bottomLeft], radius: 10, borderColor: .clear, borderWidth: 0)
         
+        cell.cellView.layer.shadowColor = UIColor.black.cgColor
+        cell.cellView.layer.shadowOpacity = 0.3
+        cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.cellView.layer.shadowRadius = 5
+        cell.cellView.layer.shadowPath = UIBezierPath(roundedRect: cell.cellView.bounds, cornerRadius: 10).cgPath
+        
+        
         return cell
     }
 
