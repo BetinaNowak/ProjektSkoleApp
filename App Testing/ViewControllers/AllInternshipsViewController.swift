@@ -31,6 +31,19 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
+    
+    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+        if let destination = seque.destination as? SinglePostViewController {
+            destination.post = PostsArray[internshipsTableView.indexPathForSelectedRow!.row]
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showPost", sender: self)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PostsArray.count
     }
@@ -43,12 +56,14 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         cell.varighedLabel.text = PostsArray[indexPath.row].varighed
         cell.byLabel.text = PostsArray[indexPath.row].by
         
+        let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
+        cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
         
-        let image: Opslag
+        /*let image: Opslag
         image = PostsArray[indexPath.row]
         let string = "http://test-postnord.dk" + (image.cover_billede!)
         let url = URL(string: string)
-        cell.internshipImageView.downloadedimg(from: url!, contentMode: .scaleAspectFill )
+        cell.internshipImageView.downloadedimg(from: url!, contentMode: .scaleAspectFill )*/
         
         cell.cellView.layer.cornerRadius = 10
         

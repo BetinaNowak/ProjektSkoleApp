@@ -1256,6 +1256,7 @@
                     <navigationItem key="navigationItem" style="editor" id="dsw-cs-B9i"/>
                     <connections>
                         <outlet property="internshipsTableView" destination="zla-R8-RYB" id="BWF-EM-eso"/>
+                        <segue destination="WGp-Bg-lHY" kind="show" identifier="showPost" id="vJO-VM-3Rj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tr-qk-avN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1591,7 +1592,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cpN-8H-dZq"/>
+        <segue reference="vJO-VM-3Rj"/>
         <segue reference="o8z-bb-Uq6"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
