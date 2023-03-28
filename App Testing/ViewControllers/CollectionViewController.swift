@@ -126,19 +126,23 @@ extension CollectionViewController {
 
         @objc func pressedAction(_ sender: UIButton) {
            // do your stuff here
-            if(SelectedAnswersArrayLocal.count == 3){
+            var tempArray = [String:Int]()
+            tempArray = [
+                String("bruger_id"): 1,
+                String("spoergsmaal_id"): 1,
+                String("svar_id"): sender.tag
+            ]
+            if(SelectedAnswersArrayLocal.contains(tempArray)){
+                sender.backgroundColor = UIColor.white
+                sender.layer.borderColor = UIColor.white.cgColor
+                SelectedAnswersArrayLocal.removeAll(where: { $0 == tempArray })
+                UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                UserDefaults.standard.set(SelectedAnswersArrayLocal, forKey: "SelectedAnswersArray")
+            } else if (SelectedAnswersArrayLocal.count == 3){
                 sender.shake()
             } else {
                 sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
                 sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-                
-                
-                var tempArray = [String:Int]()
-                tempArray = [
-                    String("bruger_id"): 1,
-                    String("spoergsmaal_id"): 1,
-                    String("svar_id"): sender.tag
-                ]
                 
                 SelectedAnswersArrayLocal.append(tempArray)
                 UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
