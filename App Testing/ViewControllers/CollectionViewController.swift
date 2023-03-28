@@ -6,6 +6,7 @@
 //
 
 import UIKit
+var SelectedAnswersArrayLocal = [[String? : Int?]]()
 
 extension UICollectionViewLayout {
     static func fixedSpacedFlowLayout() -> UICollectionViewLayout {
@@ -20,10 +21,11 @@ extension UICollectionViewLayout {
 }
 
 class CollectionViewController : UICollectionViewController {
-    private let items: [[String]]
+    private let items: [[[String : Any]]]
     
-    init(items: [[String]]) {
+    init(items: [[[String : Any]]]) {
         self.items = items
+        //print(self.items)
         super.init(collectionViewLayout: UICollectionViewLayout.fixedSpacedFlowLayout())
     }
     
@@ -48,7 +50,11 @@ class CollectionViewController : UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.cellIdentifier, for: indexPath) as! LabelCell
-        cell.button.setTitle(items[indexPath.section][indexPath.item], for: .normal)
+        //print(items[indexPath.section][indexPath.item]["title"]!)
+        let titleString = items[indexPath.section][indexPath.item]["title"]! as? String
+        let titleInt = items[indexPath.section][indexPath.item]["id"]! as? Int
+        cell.button.setTitle(titleString!, for: .normal)
+        cell.button.tag = titleInt!
         return cell
     }
 }
@@ -89,10 +95,11 @@ extension CollectionViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }() */
-        let button:  UIButton = {
+        lazy var button:  UIButton = {
             let button =  UIButton(type: UIButton.ButtonType.system)
             button.backgroundColor = UIColor.white
             button.configuration = .plain()
+            button.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
             button.layer.cornerRadius = 20
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.white.cgColor
@@ -107,12 +114,55 @@ extension CollectionViewController {
             
             //State dependent properties title and title color
             button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.font =  UIFont(name: "Montserrat Bold", size: 20)
+
             button.translatesAutoresizingMaskIntoConstraints = false
+            button.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
             return button
             
             
         }()
         
+
+        @objc func pressedAction(_ sender: UIButton) {
+           // do your stuff here
+            var tempArray = [String:Int]()
+            tempArray = [
+                String("bruger_id"): 1,
+                String("spoergsmaal_id"): 1,
+                String("svar_id"): sender.tag
+            ]
+            if(SelectedAnswersArrayLocal.contains(tempArray)){
+                sender.backgroundColor = UIColor.white
+                sender.layer.borderColor = UIColor.white.cgColor
+                SelectedAnswersArrayLocal.removeAll(where: { $0 == tempArray })
+                UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                UserDefaults.standard.set(SelectedAnswersArrayLocal, forKey: "SelectedAnswersArray")
+            } else if (SelectedAnswersArrayLocal.count == 3){
+                sender.shake()
+            } else {
+                sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                
+                SelectedAnswersArrayLocal.append(tempArray)
+                UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                UserDefaults.standard.set(SelectedAnswersArrayLocal, forKey: "SelectedAnswersArray")
+            }
+        }
         
     }
+    
+}
+
+extension UIView {
+
+    // Using SpringWithDamping
+    func shake(duration: TimeInterval = 0.5, xValue: CGFloat = 12, yValue: CGFloat = 0) {
+        self.transform = CGAffineTransform(translationX: xValue, y: yValue)
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transform = CGAffineTransform.identity
+        }, completion: nil)
+
+    }
+
 }

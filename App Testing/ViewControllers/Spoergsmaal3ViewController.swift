@@ -21,10 +21,24 @@ class Spoergsmaal3ViewController: UIViewController {
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
     
+    var SelectedAnswersArray =  [[String? : Int?]]()
+    var ButtonsArray = [UIButton]()
+
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "collectingUserAnswers3"){
+                    let displayVC = segue.destination as! Spoergsmaal4ViewController
+                    let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
+
+                    displayVC.SelectedAnswersArray = SelectedAnswersArray!
+                    print(displayVC.SelectedAnswersArray)
+
+            }
+      }
+
     
     //MARK: View Making methods
-    func makeButtonWithAnswer(text:String) -> UIButton {
+    func makeButtonWithAnswer(text:String, id:Int) -> UIButton {
         let answerButton = UIButton(type: UIButton.ButtonType.system)
         answerButton.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
         answerButton.backgroundColor = UIColor.white
@@ -45,7 +59,56 @@ class Spoergsmaal3ViewController: UIViewController {
         //State dependent properties title and title color
         answerButton.setTitle(text, for: .normal)
         answerButton.setTitleColor(.black, for: .normal)
+        answerButton.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
+        answerButton.tag = id
+        ButtonsArray.append(answerButton)
+
         return answerButton
+    }
+    
+    
+    @objc func pressedAction(_ sender: UIButton) {
+       // do your stuff here
+        styleButtons(tag: sender.tag)
+        print(SelectedAnswersArray)
+    }
+    
+    func styleButtons(tag:Int){
+        let tag = tag
+        for button in ButtonsArray {
+            if(button.tag != tag) {
+                button.backgroundColor = UIColor.white
+                button.layer.borderColor = UIColor.white.cgColor
+                var tempArray = [String:Int]()
+                tempArray = [
+                    String("bruger_id"): 1,
+                    String("spoergsmaal_id"): 3,
+                    String("svar_id"): button.tag
+                ]
+                if(SelectedAnswersArray.contains(tempArray)) {
+                    SelectedAnswersArray.removeAll(where: { $0 == tempArray })
+                    UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                    UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                }
+                
+                view.layoutIfNeeded()
+            } else {
+                button.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                button.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                var tempArray = [String:Int]()
+                tempArray = [
+                    String("bruger_id"): 1,
+                    String("spoergsmaal_id"): 3,
+                    String("svar_id"): tag
+                ]
+                if(!SelectedAnswersArray.contains(tempArray)) {
+                    SelectedAnswersArray.append(tempArray)
+                    UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                    UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                }
+                view.layoutIfNeeded()
+            }
+        }
     }
     
     
@@ -53,8 +116,8 @@ class Spoergsmaal3ViewController: UIViewController {
     func displayAnswerButtons(count:Int){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){
             let titleString = String(AnswersArray[i].svar_tekst!)
-            //let titleString = String(format:"Hello Button %i",i)
-            let button = makeButtonWithAnswer(text:titleString)
+            let titleInt = Int(AnswersArray[i].id!)
+            let button = makeButtonWithAnswer(text:titleString, id:titleInt)
             mainStackView.addArrangedSubview(button)
         }
     }
