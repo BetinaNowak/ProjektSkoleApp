@@ -980,6 +980,9 @@
                                     <color key="titleColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Qz2-NH-Qa4" kind="show" id="g1I-Ws-6jC"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="chevron.forward.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wtk-Xy-QWs">
                                 <rect key="frame" x="350" y="384" width="13" height="13"/>
@@ -1592,8 +1595,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vJO-VM-3Rj"/>
-        <segue reference="o8z-bb-Uq6"/>
+        <segue reference="cpN-8H-dZq"/>
+        <segue reference="d8B-5t-LWd"/>
+        <segue reference="g1I-Ws-6jC"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
