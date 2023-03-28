@@ -30,6 +30,9 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
         
         postsCollectionView2.delegate = self
         postsCollectionView2.dataSource = self
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -58,11 +58,10 @@ class SinglePostViewController: UIViewController {
         
         containerView.addSubview(singleImageView)
         
-        
-        
         let imgUrl = "http://test-postnord.dk" + (post?.cover_billede)!
-        
         singleImageView.downloaded(from: imgUrl)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         
     }
 }

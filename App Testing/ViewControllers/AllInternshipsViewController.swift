@@ -27,6 +27,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         internshipsTableView.delegate = self
         internshipsTableView.dataSource = self
         
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        
+        
     }
     
     
