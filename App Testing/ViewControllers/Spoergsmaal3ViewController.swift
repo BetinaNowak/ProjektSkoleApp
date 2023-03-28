@@ -22,6 +22,8 @@ class Spoergsmaal3ViewController: UIViewController {
     var AnswersArray = [Svar]()
     
     var SelectedAnswersArray =  [[String? : Int?]]()
+    var ButtonsArray = [UIButton]()
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "collectingUserAnswers3"){
@@ -59,26 +61,54 @@ class Spoergsmaal3ViewController: UIViewController {
         answerButton.setTitleColor(.black, for: .normal)
         answerButton.addTarget(self, action: #selector(pressedAction(_:)), for: .touchUpInside)
         answerButton.tag = id
+        ButtonsArray.append(answerButton)
+
         return answerButton
     }
     
     
     @objc func pressedAction(_ sender: UIButton) {
        // do your stuff here
-        sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-        sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-        var tempArray = [String:Int]()
-        tempArray = [
-            String("bruger_id"): 1,
-            String("spoergsmaal_id"): 3,
-            String("svar_id"): sender.tag
-        ]
-        
-        SelectedAnswersArray.append(tempArray)
-        UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
-        UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+        styleButtons(tag: sender.tag)
         print(SelectedAnswersArray)
-
+    }
+    
+    func styleButtons(tag:Int){
+        let tag = tag
+        for button in ButtonsArray {
+            if(button.tag != tag) {
+                button.backgroundColor = UIColor.white
+                button.layer.borderColor = UIColor.white.cgColor
+                var tempArray = [String:Int]()
+                tempArray = [
+                    String("bruger_id"): 1,
+                    String("spoergsmaal_id"): 3,
+                    String("svar_id"): button.tag
+                ]
+                if(SelectedAnswersArray.contains(tempArray)) {
+                    SelectedAnswersArray.removeAll(where: { $0 == tempArray })
+                    UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                    UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                }
+                
+                view.layoutIfNeeded()
+            } else {
+                button.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                button.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                var tempArray = [String:Int]()
+                tempArray = [
+                    String("bruger_id"): 1,
+                    String("spoergsmaal_id"): 3,
+                    String("svar_id"): tag
+                ]
+                if(!SelectedAnswersArray.contains(tempArray)) {
+                    SelectedAnswersArray.append(tempArray)
+                    UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                    UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                }
+                view.layoutIfNeeded()
+            }
+        }
     }
     
     

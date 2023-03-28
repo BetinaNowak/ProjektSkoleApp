@@ -140,8 +140,6 @@ extension CollectionViewController {
                     String("svar_id"): sender.tag
                 ]
                 
-                
-                
                 SelectedAnswersArrayLocal.append(tempArray)
                 UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
                 UserDefaults.standard.set(SelectedAnswersArrayLocal, forKey: "SelectedAnswersArray")

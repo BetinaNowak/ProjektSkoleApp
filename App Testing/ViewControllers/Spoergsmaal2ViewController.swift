@@ -68,17 +68,29 @@ class Spoergsmaal2ViewController: UIViewController {
     @objc func pressedAction(_ sender: UIButton) {
        // do your stuff here
         styleButtons(tag: sender.tag)
+        print(SelectedAnswersArray)
     }
     
     func styleButtons(tag:Int){
         let tag = tag
         for button in ButtonsArray {
             if(button.tag != tag) {
-                print("no match")
                 button.backgroundColor = UIColor.white
                 button.layer.borderColor = UIColor.white.cgColor
+                var tempArray = [String:Int]()
+                tempArray = [
+                    String("bruger_id"): 1,
+                    String("spoergsmaal_id"): 2,
+                    String("svar_id"): button.tag
+                ]
+                if(SelectedAnswersArray.contains(tempArray)) {
+                    SelectedAnswersArray.removeAll(where: { $0 == tempArray })
+                    UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                    UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                }
+                
+                view.layoutIfNeeded()
             } else {
-                print("match")
                 button.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
                 button.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
                 var tempArray = [String:Int]()
@@ -87,10 +99,11 @@ class Spoergsmaal2ViewController: UIViewController {
                     String("spoergsmaal_id"): 2,
                     String("svar_id"): tag
                 ]
-                
-                SelectedAnswersArray.append(tempArray)
-                UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
-                UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                if(!SelectedAnswersArray.contains(tempArray)) {
+                    SelectedAnswersArray.append(tempArray)
+                    UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
+                    UserDefaults.standard.set(SelectedAnswersArray, forKey: "SelectedAnswersArray")
+                }
                 view.layoutIfNeeded()
             }
         }
@@ -117,7 +130,7 @@ class Spoergsmaal2ViewController: UIViewController {
                     self.Spoergsmaal2Label.text = String(self.QuestionsArray[1].spoergsmaal_tekst!)
             // if the max_antal_svar is greater than 1, display the message
             if(Int(self.QuestionsArray[1].max_antal_svar!) > 1){
-                self.Spoergsmaal2SubLabel.text = "Du kan vælge op til " + String(self.QuestionsArray[0].max_antal_svar!) + " svar"
+                self.Spoergsmaal2SubLabel.text = "Du kan vælge op til " + String(self.QuestionsArray[1].max_antal_svar!) + " svar"
             } else {
                 self.Spoergsmaal2SubLabel.isHidden = true
                 //self.SpoergsmaalSubLabelIcon.isHidden = true
