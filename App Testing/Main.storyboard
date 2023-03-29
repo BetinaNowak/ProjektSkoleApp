@@ -850,7 +850,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her finder du virksomheder der tilbyder en praktikperiode eller læreplads, samt uddannelse- og jobmuligheder." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b35-Hx-8kM">
-                                <rect key="frame" x="26" y="250" width="377" height="90"/>
+                                <rect key="frame" x="26" y="250" width="341" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -1131,7 +1131,7 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her finder du virksomheder der tilbyder en praktikperiode eller læreplads" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2g-qO-gPC">
-                                <rect key="frame" x="31" y="198" width="308" height="59"/>
+                                <rect key="frame" x="31" y="198" width="329" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -1754,9 +1754,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZZk-tL-N98"/>
-        <segue reference="9rw-SX-abz"/>
-        <segue reference="EFf-eU-Q9n"/>
+        <segue reference="cpN-8H-dZq"/>
+        <segue reference="d8B-5t-LWd"/>
+        <segue reference="g1I-Ws-6jC"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
