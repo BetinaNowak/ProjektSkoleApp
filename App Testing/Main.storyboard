@@ -782,20 +782,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ubT-5Z-KnU">
-                                    <size key="itemSize" width="164" height="236"/>
+                                    <size key="itemSize" width="200" height="236"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="gEZ-Qa-S8O" customClass="PostsCollectionViewCell" customModule="App_Testing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="164" height="236"/>
+                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="200" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JIa-1T-HX3">
-                                            <rect key="frame" x="0.0" y="0.0" width="164" height="236"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="236"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="164" height="236"/>
+                                        <size key="customSize" width="200" height="236"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -993,21 +993,23 @@
                                 <rect key="frame" x="26" y="425" width="366" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xxy-Cd-Jc4">
-                                    <size key="itemSize" width="164" height="236"/>
+                                    <size key="itemSize" width="200" height="236"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="3SA-Y2-HkW" customClass="PostsCollectionViewCell2" customModule="App_Testing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="164" height="236"/>
+                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="200" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NMy-7j-VBs">
-                                            <rect key="frame" x="0.0" y="0.0" width="164" height="236"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="236"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="164" height="236"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="200" height="236"/>
                                         <connections>
                                             <segue destination="WGp-Bg-lHY" kind="show" identifier="showPost" id="cpN-8H-dZq"/>
                                         </connections>
@@ -1439,7 +1441,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-Dr-tfW">
-                                <rect key="frame" x="-2" y="-1" width="394" height="294"/>
+                                <rect key="frame" x="-3" y="-1" width="394" height="294"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1453,17 +1455,8 @@
                                     <constraint firstAttribute="height" constant="319" id="T9Q-jD-tv2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL1-df-9LN" userLabel="titelLabel">
-                                <rect key="frame" x="28" y="245" width="313" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="ul6-Xg-b4e"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om praktikforløbet" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPb-YQ-zds">
-                                <rect key="frame" x="28" y="369" width="313" height="22"/>
+                                <rect key="frame" x="28" y="370" width="313" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -1560,16 +1553,40 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-Ol-rTA">
+                                <rect key="frame" x="64" y="165" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="336-zn-93Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL1-df-9LN" userLabel="titelLabel">
+                                            <rect key="frame" x="-36" y="19" width="313" height="30.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="313" id="f7A-ft-Lye"/>
+                                                <constraint firstAttribute="height" constant="30.333333333333329" id="ul6-Xg-b4e"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wL1-df-9LN" firstAttribute="top" secondItem="336-zn-93Z" secondAttribute="top" constant="19" id="MG8-bj-Gnf"/>
+                                        <constraint firstItem="wL1-df-9LN" firstAttribute="centerY" secondItem="336-zn-93Z" secondAttribute="centerY" constant="-29.833333333333336" id="f2B-Qr-2AV"/>
+                                        <constraint firstItem="wL1-df-9LN" firstAttribute="leading" secondItem="336-zn-93Z" secondAttribute="leading" constant="-36" id="hyx-wf-7x7"/>
+                                        <constraint firstItem="wL1-df-9LN" firstAttribute="centerX" secondItem="336-zn-93Z" secondAttribute="centerX" id="n4h-22-SAZ"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HSF-Vn-mcW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gPb-YQ-zds" firstAttribute="leading" secondItem="0Sa-64-yYF" secondAttribute="leadingMargin" constant="12" id="Ftv-Lt-IZ4"/>
-                            <constraint firstItem="wL1-df-9LN" firstAttribute="centerX" secondItem="SLl-ra-vQB" secondAttribute="centerX" constant="-12" id="OKy-yL-Fwn"/>
-                            <constraint firstItem="wL1-df-9LN" firstAttribute="top" secondItem="gPb-YQ-zds" secondAttribute="bottom" constant="-146" id="PWb-ha-AFh"/>
                             <constraint firstItem="gPb-YQ-zds" firstAttribute="top" secondItem="SLl-ra-vQB" secondAttribute="bottom" constant="51" id="Pz3-Mr-4xY"/>
                             <constraint firstAttribute="trailing" secondItem="SLl-ra-vQB" secondAttribute="trailing" id="aA4-Hy-LPY"/>
-                            <constraint firstItem="wL1-df-9LN" firstAttribute="centerY" secondItem="0Sa-64-yYF" secondAttribute="centerY" constant="-156.5" id="dlb-KE-x13"/>
                             <constraint firstItem="SLl-ra-vQB" firstAttribute="leading" secondItem="0Sa-64-yYF" secondAttribute="leading" id="ehT-hx-vVP"/>
                             <constraint firstAttribute="trailing" secondItem="SLl-ra-vQB" secondAttribute="trailing" id="n0A-pt-krO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gPb-YQ-zds" secondAttribute="trailing" constant="36" id="vuz-sR-BXX"/>
@@ -1579,6 +1596,7 @@
                     <connections>
                         <outlet property="adresseLabel" destination="5WJ-W1-WEx" id="CEk-IU-fbr"/>
                         <outlet property="beskrivelseLabel" destination="LQl-eL-gS8" id="JIu-Zx-zIq"/>
+                        <outlet property="blurView" destination="Ihv-Ol-rTA" id="fpn-10-TlF"/>
                         <outlet property="byLabel" destination="eNp-p8-jjJ" id="XE5-qI-AkA"/>
                         <outlet property="containerView" destination="miZ-Dr-tfW" id="p7V-Hr-yYK"/>
                         <outlet property="emailLabel" destination="AFE-v3-84A" id="Dbi-63-dCV"/>
@@ -1595,9 +1613,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cpN-8H-dZq"/>
-        <segue reference="d8B-5t-LWd"/>
-        <segue reference="g1I-Ws-6jC"/>
+        <segue reference="w90-gX-v78"/>
+        <segue reference="cxI-5U-Zwn"/>
+        <segue reference="EFf-eU-Q9n"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>

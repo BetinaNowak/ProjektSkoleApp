@@ -12,7 +12,7 @@ class SinglePostViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var singleImageView: UIImageView!
-    
+    @IBOutlet weak var blurView: UIVisualEffectView!
     
     @IBOutlet weak var singleTitelLabel: UILabel!
     @IBOutlet weak var beskrivelseLabel: UILabel!
@@ -54,6 +54,10 @@ class SinglePostViewController: UIViewController {
         singleImageView.backgroundColor = UIColor.clear
         singleImageView.clipsToBounds = true
         singleImageView.layer.cornerRadius = 20
+        
+        // Blur view styling
+        blurView.layer.cornerRadius = 20
+        blurView.clipsToBounds = true
         
         
         containerView.addSubview(singleImageView)
