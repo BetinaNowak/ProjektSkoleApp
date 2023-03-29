@@ -23,6 +23,8 @@
 		CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */; };
 		CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */; };
 		CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */; };
+		CFAFF3A829D43C2700733F3A /* AllEducationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */; };
+		CFAFF3AA29D43C4A00733F3A /* AllEducationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFF3A929D43C4A00733F3A /* AllEducationsTableViewCell.swift */; };
 		CFB4F61829CC5422006D42AF /* OpslagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61729CC5422006D42AF /* OpslagModel.swift */; };
 		CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61929CC5542006D42AF /* Posts.swift */; };
 		CFB4F61C29CC55FD006D42AF /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61B29CC55FD006D42AF /* PostsViewController.swift */; };
@@ -57,6 +59,8 @@
 		CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController2.swift; sourceTree = "<group>"; };
 		CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsViewController.swift; sourceTree = "<group>"; };
 		CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsTableViewCell.swift; sourceTree = "<group>"; };
+		CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEducationsViewController.swift; sourceTree = "<group>"; };
+		CFAFF3A929D43C4A00733F3A /* AllEducationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEducationsTableViewCell.swift; sourceTree = "<group>"; };
 		CFB4F61729CC5422006D42AF /* OpslagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpslagModel.swift; sourceTree = "<group>"; };
 		CFB4F61929CC5542006D42AF /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		CFB4F61B29CC55FD006D42AF /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				CFA3790729D19DDB005F80C3 /* PostsCollectionViewCell2.swift */,
 				CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */,
 				CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */,
+				CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */,
+				CFAFF3A929D43C4A00733F3A /* AllEducationsTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 				CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */,
 				CFF9CDAD29CAF337002ED77D /* SvarModel.swift in Sources */,
 				CFB4F62929CDC61A006D42AF /* SinglePostViewController.swift in Sources */,
+				CFAFF3AA29D43C4A00733F3A /* AllEducationsTableViewCell.swift in Sources */,
 				CFF9CD8929C451A0002ED77D /* AppDelegate.swift in Sources */,
 				CFB4F61C29CC55FD006D42AF /* PostsViewController.swift in Sources */,
 				CFA3790829D19DDB005F80C3 /* PostsCollectionViewCell2.swift in Sources */,
@@ -262,6 +269,7 @@
 				CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */,
 				CF2B5DCC29CB354C006478B4 /* Spoergsmaal3ViewController.swift in Sources */,
 				CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */,
+				CFAFF3A829D43C2700733F3A /* AllEducationsViewController.swift in Sources */,
 				CF2B5DC729CB31B6006478B4 /* Answers3.swift in Sources */,
 				CF2B5DCE29CB3852006478B4 /* Answers4.swift in Sources */,
 				CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */,
