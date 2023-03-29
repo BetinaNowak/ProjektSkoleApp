@@ -23,6 +23,9 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var postnrLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
     
+    @IBOutlet weak var headerByLabel: UILabel!
+    @IBOutlet weak var headerVarighedLabel: UILabel!
+    
     
     var post: Opslag?
     
@@ -40,6 +43,9 @@ class SinglePostViewController: UIViewController {
         adresseLabel.text = post?.adresse_1
         postnrLabel.text = post?.post_nr
         byLabel.text = post?.by
+        
+        headerByLabel.text = post?.by
+        headerVarighedLabel.text = post?.varighed
         
         
         // Image styling
