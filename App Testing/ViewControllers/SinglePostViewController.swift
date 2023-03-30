@@ -24,6 +24,14 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var byLabel: UILabel!
     @IBOutlet weak var ansoegButton: UIButton!
     
+    @IBOutlet weak var successPopUp: UIView!
+    
+    @IBOutlet weak var closePopUpButton: UIButton!
+    
+    @IBAction func closePopUp(_ sender: Any) {
+        successPopUp.isHidden = true
+        
+    }
     
     var selectedPost: String?
     
@@ -50,6 +58,25 @@ class SinglePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // successpopup
+        successPopUp.layer.cornerRadius = 24
+
+        //only apply the blur if the user hasn't disabled transparency effects
+        if !UIAccessibility.isReduceTransparencyEnabled {
+            view.backgroundColor = .white
+
+            let blurEffect = UIBlurEffect(style: .light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+            view.insertSubview(blurEffectView, at: 17)
+            
+        } else {
+            view.backgroundColor = .black
+        }
+        
         
         //singleTitelLabel.text = selectedPost
         singleTitelLabel.text = post?.titel
@@ -60,7 +87,7 @@ class SinglePostViewController: UIViewController {
         adresseLabel.text = post?.adresse_1
         postnrLabel.text = post?.post_nr
         byLabel.text = post?.by
-        ansoegButton.tag = post!.id!
+        //ansoegButton.tag = post!.id!
         
         
         // Shadow

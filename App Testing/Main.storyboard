@@ -1415,6 +1415,21 @@
             </objects>
             <point key="canvasLocation" x="8251.1450381679388" y="-1346.4788732394368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="O6d-yx-0DU">
+            <objects>
+                <viewController id="UFe-Fa-QKE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Qc-VT-9Ja">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aNj-0J-hZ7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2D-5v-fJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8930" y="-1327"/>
+        </scene>
         <!--Single Post View Controller-->
         <scene sceneID="avL-Tn-N5G">
             <objects>
@@ -1553,6 +1568,40 @@
                                     <segue destination="gcY-A2-To4" kind="show" id="Ng7-94-sMF"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyk-Yo-WEG">
+                                <rect key="frame" x="28" y="215" width="335" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tak for din ansøgning!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHh-Zs-qr6">
+                                        <rect key="frame" x="83" y="44" width="181" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXe-0y-vLy">
+                                        <rect key="frame" x="24" y="122" width="286" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Din ansøgning er blevet oprettet som en begivenhed.                                                                                                  Husk at kontakte virksomheden ang. din afsendte ansøgning.</string>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7h-Mc-JL0">
+                                        <rect key="frame" x="283" y="8" width="42" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="WGp-Bg-lHY" eventType="touchUpInside" id="wpE-ON-eEj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HSF-Vn-mcW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1574,11 +1623,13 @@
                         <outlet property="ansoegButton" destination="S7l-9f-L0R" id="CZp-Ut-Yo9"/>
                         <outlet property="beskrivelseLabel" destination="LQl-eL-gS8" id="JIu-Zx-zIq"/>
                         <outlet property="byLabel" destination="eNp-p8-jjJ" id="XE5-qI-AkA"/>
+                        <outlet property="closePopUpButton" destination="f7h-Mc-JL0" id="fmA-Vm-JmW"/>
                         <outlet property="containerView" destination="miZ-Dr-tfW" id="p7V-Hr-yYK"/>
                         <outlet property="emailLabel" destination="AFE-v3-84A" id="Dbi-63-dCV"/>
                         <outlet property="postnrLabel" destination="cAE-rR-osQ" id="ZBB-vt-x7e"/>
                         <outlet property="singleImageView" destination="SLl-ra-vQB" id="BU4-LP-Ldm"/>
                         <outlet property="singleTitelLabel" destination="wL1-df-9LN" id="shK-hY-4ur"/>
+                        <outlet property="successPopUp" destination="tyk-Yo-WEG" id="AiZ-uN-e4F"/>
                         <outlet property="telefonLabel" destination="KfI-z9-fsR" id="Vrw-gr-no1"/>
                         <outlet property="virksomhedsnavnLabel" destination="xwA-I4-hfT" id="2YQ-d4-aed"/>
                     </connections>
@@ -1618,6 +1669,7 @@
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="rectangle.portrait.fill" catalog="system" width="115" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

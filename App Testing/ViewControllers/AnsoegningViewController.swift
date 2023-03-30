@@ -35,6 +35,8 @@ class AnsoegningViewController: UIViewController {
         
         // Send the responses
         SendApplication.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-ansoegning.php")!, params: ansoegningArray)
+        _ = navigationController?.popViewController(animated: true)
+
     }
     
     override func viewDidLoad() {
