@@ -40,7 +40,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         postsCollectionView.delegate = self
         postsCollectionView.dataSource = self
         
-        self.navigationController?.navigationBar.tintColor = UIColor.black
+        //self.navigationController?.navigationBar.tintColor = UIColor.black
         
     
     }

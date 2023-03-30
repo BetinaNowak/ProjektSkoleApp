@@ -823,7 +823,9 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" style="editor" id="7Ed-jP-f6H"/>
+                    <navigationItem key="navigationItem" style="editor" id="Dm0-JY-Url">
+                        <barButtonItem key="leftBarButtonItem" id="krh-8t-Eqc"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="postsCollectionView" destination="SYh-XZ-FoZ" id="FLs-Bg-K8M"/>
@@ -1757,10 +1759,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cpN-8H-dZq"/>
-        <segue reference="d8B-5t-LWd"/>
-        <segue reference="rvY-nZ-fw3"/>
-        <segue reference="g1I-Ws-6jC"/>
+        <segue reference="w90-gX-v78"/>
+        <segue reference="cxI-5U-Zwn"/>
+        <segue reference="gdi-Ur-3CK"/>
+        <segue reference="EFf-eU-Q9n"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
