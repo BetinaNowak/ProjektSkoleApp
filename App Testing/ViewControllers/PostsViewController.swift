@@ -13,30 +13,37 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var postsCollectionView: UICollectionView!
     
     var PostsArray = [Opslag]()
+
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
         postsCollectionView.register(PostsCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
             view.addSubview(postsCollectionView)
         
-        NetworkServicePosts.sharedObj.getPosts { (Opslag) in
+        
+        // Fetch internship posts
+        NetworkServicePostsInternship.sharedObj.getInternshipPosts { (Opslag) in
             self.PostsArray = Opslag
             self.postsCollectionView.reloadData()
         }
+        
+        // Fetch education posts
+        /*NetworkServicePostsEducation.sharedObj.getEducationPosts { (Opslag) in
+            self.PostsArray = Opslag
+            self.postsCollectionView.reloadData()
+        }*/
+        
         
         postsCollectionView.delegate = self
         postsCollectionView.dataSource = self
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
-        
-
+    
     }
-    
-    
     
     
     
@@ -74,29 +81,28 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PostsCollectionViewCell
         
-        
-        
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: cell.bounds.size.height))
-        
+            
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.bounds.size.width, height: cell.bounds.size.height))
+            
             // Image view
             let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
             imageView.downloadedFrom(from: imgUrl)
-    
-
+            
+            
             imageView.contentMode = .scaleAspectFill
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.layer.cornerRadius = 20
             imageView.clipsToBounds = true
-        
+            
             // Shadow
             imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
             imageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
             imageView.layer.shadowOpacity = 0.5
             imageView.layer.shadowRadius = 7.0
-        
+            
             cell.contentView.addSubview(imageView)
-        
-        
+            
+            
             // Blur effect
             let blurEffect = UIBlurEffect(style: .regular)
             let visualEffectView = UIVisualEffectView(effect: blurEffect)
@@ -115,8 +121,8 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             title.textAlignment = .left
             title.contentMode = .scaleAspectFit
             cell.contentView.addSubview(title)
-        
-        
+            
+            
             // Location
             let location = UILabel(frame: CGRect(x: 35, y: 175, width: cell.bounds.size.width, height: 20))
             location.text = String(PostsArray[indexPath.row].by!)
@@ -131,8 +137,8 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             locationImageView.image = UIImage(systemName: "mappin.circle.fill")
             location.addSubview(locationImageView)
             locationImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+            
+            
             // Duration
             let duration = UILabel(frame: CGRect(x: 35, y: 200, width: cell.bounds.size.width, height: 20))
             duration.text = String(PostsArray[indexPath.row].varighed!)
@@ -147,9 +153,10 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             durationImageView.image = UIImage(systemName: "clock.fill")
             duration.addSubview(durationImageView)
             durationImageView.translatesAutoresizingMaskIntoConstraints = false
-
+            
+            
+            return cell
         
-        return cell
     }
 }
 
