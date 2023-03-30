@@ -107,8 +107,8 @@ class SinglePostViewController: UIViewController {
         singleImageView.layer.cornerRadius = 20
         
         // Blur view styling
-        blurView.layer.cornerRadius = 20
-        blurView.clipsToBounds = true
+        //blurView.layer.cornerRadius = 20
+        //blurView.clipsToBounds = true
         
         
         containerView.addSubview(singleImageView)
