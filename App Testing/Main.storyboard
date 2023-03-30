@@ -962,6 +962,9 @@
                                     <color key="titleColor" red="0.9529411793" green="0.73333334920000004" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Crm-yz-EDJ" kind="show" id="rvY-nZ-fw3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praktik og lærepladser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-2R-zn1">
                                 <rect key="frame" x="26" y="361" width="285" height="56"/>
@@ -1271,7 +1274,7 @@
         <!--All Educations View Controller-->
         <scene sceneID="YgC-HM-Bw2">
             <objects>
-                <viewController id="Crm-yz-EDJ" customClass="AllEducationsViewController" sceneMemberID="viewController">
+                <viewController id="Crm-yz-EDJ" customClass="AllEducationsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wO7-wd-j4F">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1556,7 +1559,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miZ-Dr-tfW">
-                                <rect key="frame" x="-2" y="-1" width="395" height="294"/>
+                                <rect key="frame" x="-4" y="-2" width="395" height="292"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1671,7 +1674,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-Ol-rTA">
                                 <rect key="frame" x="68" y="165" width="257" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="336-zn-93Z">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="336-zn-93Z">
                                     <rect key="frame" x="0.0" y="0.0" width="257" height="128"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1699,7 +1702,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL1-df-9LN" userLabel="titelLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL1-df-9LN" userLabel="titelLabel">
                                             <rect key="frame" x="19" y="8" width="205" height="53"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="205" id="f7A-ft-Lye"/>
@@ -1754,9 +1757,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w90-gX-v78"/>
-        <segue reference="cxI-5U-Zwn"/>
-        <segue reference="EFf-eU-Q9n"/>
+        <segue reference="cpN-8H-dZq"/>
+        <segue reference="d8B-5t-LWd"/>
+        <segue reference="rvY-nZ-fw3"/>
+        <segue reference="g1I-Ws-6jC"/>
         <segue reference="12s-Zc-Ttw"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
