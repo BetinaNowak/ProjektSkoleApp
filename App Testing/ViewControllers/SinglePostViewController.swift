@@ -22,18 +22,62 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var adresseLabel: UILabel!
     @IBOutlet weak var postnrLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var ansoegButton: UIButton!
     
-    @IBOutlet weak var headerByLabel: UILabel!
-    @IBOutlet weak var headerVarighedLabel: UILabel!
+    //@IBOutlet weak var headerByLabel: UILabel!
+    //@IBOutlet weak var headerVarighedLabel: UILabel!
+
+    @IBOutlet weak var successPopUp: UIView!
     
+    @IBOutlet weak var closePopUpButton: UIButton!
+    
+    @IBAction func closePopUp(_ sender: Any) {
+        successPopUp.isHidden = true
+        view.viewWithTag(9)?.removeFromSuperview()
+    }
     
     var post: Opslag?
+        
+    var postId: Int?
+    var postTitel: String?
+    var postEmail: String?
+    var postVirksomhedsnavn: String?
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        postId = post!.id!
+        postTitel = post!.titel!
+        postEmail = post!.email!
+        postVirksomhedsnavn = post!.virksomhedsnavn!
+        if let AnsoegningViewController = segue.destination as? AnsoegningViewController {
+            AnsoegningViewController.postId = self.postId!
+            AnsoegningViewController.postTitel = self.postTitel!
+            AnsoegningViewController.postEmail = self.postEmail!
+            AnsoegningViewController.postVirksomhedsnavn = self.postVirksomhedsnavn!
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // successpopup
+        successPopUp.layer.cornerRadius = 24
+
+        //only apply the blur if the user hasn't disabled transparency effects
+        if !UIAccessibility.isReduceTransparencyEnabled {
+            view.backgroundColor = .white
+
+            let blurEffect = UIBlurEffect(style: .light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.tag = 9
+
+            view.insertSubview(blurEffectView, at: 17)
+            
+        } else {
+            view.backgroundColor = .black
+        }
         
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
@@ -43,9 +87,10 @@ class SinglePostViewController: UIViewController {
         adresseLabel.text = post?.adresse_1
         postnrLabel.text = post?.post_nr
         byLabel.text = post?.by
+        //ansoegButton.tag = post!.id!
         
-        headerByLabel.text = post?.by
-        headerVarighedLabel.text = post?.varighed
+        //headerByLabel.text = post?.by
+        //headerVarighedLabel.text = post?.varighed
         
         
         // Image styling
@@ -62,8 +107,8 @@ class SinglePostViewController: UIViewController {
         singleImageView.layer.cornerRadius = 20
         
         // Blur view styling
-        blurView.layer.cornerRadius = 20
-        blurView.clipsToBounds = true
+        //blurView.layer.cornerRadius = 20
+        //blurView.clipsToBounds = true
         
         
         containerView.addSubview(singleImageView)
