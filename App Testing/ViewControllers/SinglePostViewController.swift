@@ -22,17 +22,33 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var adresseLabel: UILabel!
     @IBOutlet weak var postnrLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var ansoegButton: UIButton!
     
     
     var selectedPost: String?
     
     var post: Opslag?
+        
+    var postId: Int?
+    var postTitel: String?
+    var postEmail: String?
+    var postVirksomhedsnavn: String?
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        postId = post!.id!
+        postTitel = post!.titel!
+        postEmail = post!.email!
+        postVirksomhedsnavn = post!.virksomhedsnavn!
+        if let AnsoegningViewController = segue.destination as? AnsoegningViewController {
+            AnsoegningViewController.postId = self.postId!
+            AnsoegningViewController.postTitel = self.postTitel!
+            AnsoegningViewController.postEmail = self.postEmail!
+            AnsoegningViewController.postVirksomhedsnavn = self.postVirksomhedsnavn!
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         
         //singleTitelLabel.text = selectedPost
@@ -44,6 +60,7 @@ class SinglePostViewController: UIViewController {
         adresseLabel.text = post?.adresse_1
         postnrLabel.text = post?.post_nr
         byLabel.text = post?.by
+        ansoegButton.tag = post!.id!
         
         
         // Shadow
