@@ -105,6 +105,8 @@ class NewSpoergsmaalViewController: UIViewController{
             self.AnswersArray = Answers
             self.displayAnswerButtons()
         }
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
 
 
     }

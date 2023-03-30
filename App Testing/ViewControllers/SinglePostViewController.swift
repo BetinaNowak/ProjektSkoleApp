@@ -12,7 +12,7 @@ class SinglePostViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var singleImageView: UIImageView!
-    
+    @IBOutlet weak var blurView: UIVisualEffectView!
     
     @IBOutlet weak var singleTitelLabel: UILabel!
     @IBOutlet weak var beskrivelseLabel: UILabel!
@@ -23,8 +23,9 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var postnrLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
     
+    @IBOutlet weak var headerByLabel: UILabel!
+    @IBOutlet weak var headerVarighedLabel: UILabel!
     
-    var selectedPost: String?
     
     var post: Opslag?
     
@@ -34,8 +35,6 @@ class SinglePostViewController: UIViewController {
         
         
         
-        
-        //singleTitelLabel.text = selectedPost
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
         virksomhedsnavnLabel.text = post?.virksomhedsnavn
@@ -45,19 +44,11 @@ class SinglePostViewController: UIViewController {
         postnrLabel.text = post?.post_nr
         byLabel.text = post?.by
         
-        
-        // Shadow
-        /*singleImageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.50).cgColor
-        singleImageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        singleImageView.layer.shadowOpacity = 0.6
-        singleImageView.layer.shadowRadius = 6.0
+        headerByLabel.text = post?.by
+        headerVarighedLabel.text = post?.varighed
         
         
-        singleImageView.layer.masksToBounds = false
-        singleImageView.layer.cornerRadius = 20*/
-        //singleImageView.clipsToBounds = true
-        
-        
+        // Image styling
         containerView.clipsToBounds = false
         containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.layer.shadowOpacity = 1
@@ -70,14 +61,17 @@ class SinglePostViewController: UIViewController {
         singleImageView.clipsToBounds = true
         singleImageView.layer.cornerRadius = 20
         
+        // Blur view styling
+        blurView.layer.cornerRadius = 20
+        blurView.clipsToBounds = true
+        
         
         containerView.addSubview(singleImageView)
         
-        
-        
         let imgUrl = "http://test-postnord.dk" + (post?.cover_billede)!
-        
         singleImageView.downloaded(from: imgUrl)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         
     }
 }
