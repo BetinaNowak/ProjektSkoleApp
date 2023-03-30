@@ -19,7 +19,7 @@ class AllEducationsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkServicePosts.sharedObj.getPosts { (Opslag) in
+        NetworkServicePostsEducation.sharedObj.getEducationPosts { (Opslag) in
             self.PostsArray = Opslag
             self.educationsTableView.reloadData()
         }

@@ -19,10 +19,11 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkServicePosts.sharedObj.getPosts { (Opslag) in
+        NetworkServicePostsInternship.sharedObj.getInternshipPosts { (Opslag) in
             self.PostsArray = Opslag
             self.internshipsTableView.reloadData()
         }
+        
         
         internshipsTableView.delegate = self
         internshipsTableView.dataSource = self
