@@ -30,7 +30,7 @@ class SinglePostViewController: UIViewController {
     
     @IBAction func closePopUp(_ sender: Any) {
         successPopUp.isHidden = true
-        
+        view.viewWithTag(9)?.removeFromSuperview()
     }
     
     var selectedPost: String?
@@ -70,6 +70,7 @@ class SinglePostViewController: UIViewController {
             //always fill the view
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.tag = 9
 
             view.insertSubview(blurEffectView, at: 17)
             
