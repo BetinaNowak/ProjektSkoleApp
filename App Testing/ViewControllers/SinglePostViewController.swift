@@ -59,8 +59,8 @@ class SinglePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // successpopup
-        successPopUp.layer.cornerRadius = 24
+        // successpopup start
+        /*successPopUp.layer.cornerRadius = 24
 
         //only apply the blur if the user hasn't disabled transparency effects
         if !UIAccessibility.isReduceTransparencyEnabled {
@@ -77,7 +77,9 @@ class SinglePostViewController: UIViewController {
             
         } else {
             view.backgroundColor = .black
-        }
+        } */
+        successPopUp.isHidden = true
+        // successpopup end
         
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
