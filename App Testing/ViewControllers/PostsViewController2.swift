@@ -23,10 +23,17 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
         postsCollectionView2.register(PostsCollectionViewCell2.self, forCellWithReuseIdentifier: "cell")
             view.addSubview(postsCollectionView2)
         
-        NetworkServicePosts.sharedObj.getPosts { (Opslag) in
+        // Fetch internship posts
+        NetworkServicePostsInternship.sharedObj.getInternshipPosts { (Opslag) in
             self.PostsArray = Opslag
             self.postsCollectionView2.reloadData()
         }
+        
+        // Fetch education posts
+        /*NetworkServicePostsEducation.sharedObj.getEducationPosts { (Opslag) in
+            self.PostsArray = Opslag
+            self.postsCollectionView2.reloadData()
+        }*/
         
         postsCollectionView2.delegate = self
         postsCollectionView2.dataSource = self
