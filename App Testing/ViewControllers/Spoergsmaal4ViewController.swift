@@ -149,6 +149,9 @@ class Spoergsmaal4ViewController: UIViewController {
         }
         
         mainStackView.spacing = 1.0
+        
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
     }
 
 }
