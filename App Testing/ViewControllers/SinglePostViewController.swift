@@ -43,6 +43,8 @@ class SinglePostViewController: UIViewController {
     var postEmail: String?
     var postVirksomhedsnavn: String?
     
+    var callBack: ((_ status: String)-> Void)?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         postId = post!.id!
         postTitel = post!.titel!
@@ -53,33 +55,45 @@ class SinglePostViewController: UIViewController {
             AnsoegningViewController.postTitel = self.postTitel!
             AnsoegningViewController.postEmail = self.postEmail!
             AnsoegningViewController.postVirksomhedsnavn = self.postVirksomhedsnavn!
+            
+            AnsoegningViewController.callBack = { (status: String) in
+                print(status)
+                // successpopup
+                self.successPopUp.layer.cornerRadius = 24
+                self.successPopUp.isHidden = false
+
+                //only apply the blur if the user hasn't disabled transparency effects
+                if !UIAccessibility.isReduceTransparencyEnabled {
+                    self.view.backgroundColor = .white
+
+                    let blurEffect = UIBlurEffect(style: .light)
+                    let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                    //always fill the view
+                    blurEffectView.frame = self.view.bounds
+                    blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                    blurEffectView.tag = 9
+
+                    self.view.insertSubview(blurEffectView, at: 16)
+                    
+                } else {
+                    self.view.backgroundColor = .black
+                }
+            }
         }
+        
+        /*if let vc = storyboard?.instantiateViewController(withIdentifier: "AnsoegningViewController")as? AnsoegningViewController {
+            vc.callBack = { (status: String) in
+                print(status)
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        }*/
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // successpopup start
-        /*successPopUp.layer.cornerRadius = 24
-
-        //only apply the blur if the user hasn't disabled transparency effects
-        if !UIAccessibility.isReduceTransparencyEnabled {
-            view.backgroundColor = .white
-
-            let blurEffect = UIBlurEffect(style: .light)
-            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            //always fill the view
-            blurEffectView.frame = self.view.bounds
-            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            blurEffectView.tag = 9
-
-            view.insertSubview(blurEffectView, at: 17)
-            
-        } else {
-            view.backgroundColor = .black
-        } */
         successPopUp.isHidden = true
-        // successpopup end
         
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
