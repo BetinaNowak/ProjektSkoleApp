@@ -10,21 +10,39 @@ import UIKit
 class SinglePostViewController: UIViewController {
 
     
+    
     @IBOutlet weak var containerView: UIView!
+    
+    
     @IBOutlet weak var singleImageView: UIImageView!
+    
+    
     @IBOutlet weak var blurView: UIVisualEffectView!
     
     @IBOutlet weak var singleTitelLabel: UILabel!
+    @IBOutlet weak var headerByLabel: UILabel!
+    
+    @IBOutlet weak var headerVarighedLabel: UILabel!
+    
     @IBOutlet weak var beskrivelseLabel: UILabel!
+    
+    
     @IBOutlet weak var virksomhedsnavnLabel: UILabel!
+
     @IBOutlet weak var telefonLabel: UILabel!
+    
+    
     @IBOutlet weak var emailLabel: UILabel!
+    
+    
     @IBOutlet weak var adresseLabel: UILabel!
+    
+    
     @IBOutlet weak var postnrLabel: UILabel!
+
+    
     @IBOutlet weak var byLabel: UILabel!
     
-    @IBOutlet weak var headerByLabel: UILabel!
-    @IBOutlet weak var headerVarighedLabel: UILabel!
     
     
     var post: Opslag?
@@ -33,6 +51,7 @@ class SinglePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.insetsLayoutMarginsFromSafeArea = false
         
         
         singleTitelLabel.text = post?.titel
