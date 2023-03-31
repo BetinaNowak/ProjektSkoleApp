@@ -12,6 +12,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var internshipsTableView: UITableView!
     
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    
 
     var PostsArray = [Opslag]()
     
@@ -24,16 +26,27 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             self.internshipsTableView.reloadData()
         }
         
-        
         internshipsTableView.delegate = self
         internshipsTableView.dataSource = self
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
-        
     }
     
     
+    /*override func viewWillAppear(_ animated: Bool) {
+        self.internshipsTableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        self.internshipsTableView.reloadData()
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentSize" {
+            if let newValue = change?[.newKey] {
+                let newSize = newValue as! CGSize
+                self.tableHeight.constant = newSize.height
+            }
+        }
+    }*/
     
     
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
@@ -47,10 +60,19 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PostsArray.count
     }
+    
+    
+   /* func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }*/
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AllInternshipsTableViewCell
