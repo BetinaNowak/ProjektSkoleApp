@@ -14,11 +14,22 @@ class AllInternshipsTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var cellView: UIView!
+    
+    
     @IBOutlet weak var internshipImageView: UIImageView!
+    
+    
     @IBOutlet weak var titelLabel: UILabel!
+    
+    
     @IBOutlet weak var beskrivelseLabel: UILabel!
+    
+    
     @IBOutlet weak var byLabel: UILabel!
+    
     @IBOutlet weak var varighedLabel: UILabel!
+    
+    
     
     
     override func awakeFromNib() {
