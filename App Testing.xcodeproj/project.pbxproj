@@ -13,6 +13,8 @@
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
+		CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154529DAE0A600D0409E /* SendAnsoegning.swift */; };
+		CF17154A29DAE1C600D0409E /* AnsoegningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -52,6 +54,8 @@
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
+		CF17154529DAE0A600D0409E /* SendAnsoegning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendAnsoegning.swift; sourceTree = "<group>"; };
+		CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnsoegningViewController.swift; path = "../../../../../Downloads/ProjektSkoleApp-new_ansoegning 2/App Testing/ViewControllers/AnsoegningViewController.swift"; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				CF2B5DC629CB31B6006478B4 /* Answers3.swift */,
 				CF2B5DCD29CB3852006478B4 /* Answers4.swift */,
 				CFB4F61929CC5542006D42AF /* Posts.swift */,
+				CF17154529DAE0A600D0409E /* SendAnsoegning.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				CF2B5DCB29CB354C006478B4 /* Spoergsmaal3ViewController.swift */,
 				CF2B5DCF29CB387B006478B4 /* Spoergsmaal4ViewController.swift */,
 				CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */,
+				CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */,
 				CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */,
 				CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */,
 				CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */,
@@ -275,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */,
+				CF17154A29DAE1C600D0409E /* AnsoegningViewController.swift in Sources */,
 				2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */,
+				CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */,
 				CFF9CDAD29CAF337002ED77D /* SvarModel.swift in Sources */,
 				CFB4F62929CDC61A006D42AF /* SinglePostViewController.swift in Sources */,
 				CFAFF3AA29D43C4A00733F3A /* AllEducationsTableViewCell.swift in Sources */,

@@ -73,6 +73,7 @@ class SinglePostViewController: UIViewController {
         postEmail = post!.email!
         postVirksomhedsnavn = post!.virksomhedsnavn!
         if let AnsoegningViewController = segue.destination as? AnsoegningViewController {
+            print("it runs")
             AnsoegningViewController.postId = self.postId!
             AnsoegningViewController.postTitel = self.postTitel!
             AnsoegningViewController.postEmail = self.postEmail!
@@ -85,7 +86,7 @@ class SinglePostViewController: UIViewController {
                 self.successPopUp.isHidden = false
 
                 //only apply the blur if the user hasn't disabled transparency effects
-                if !UIAccessibility.isReduceTransparencyEnabled {
+                /*if !UIAccessibility.isReduceTransparencyEnabled {
                     self.view.backgroundColor = .white
 
                     let blurEffect = UIBlurEffect(style: .light)
@@ -99,7 +100,7 @@ class SinglePostViewController: UIViewController {
                     
                 } else {
                     self.view.backgroundColor = .black
-                }
+                }*/
             }
         }
         
