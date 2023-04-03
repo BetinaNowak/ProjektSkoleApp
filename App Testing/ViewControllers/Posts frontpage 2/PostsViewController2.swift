@@ -14,12 +14,8 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var postsCollectionView1: UICollectionView!
     @IBOutlet weak var postsCollectionView2: UICollectionView!
     
-   // let collectionView1Identifier = "cell1"
-   // let collectionView2Identifier = "cell2"
-    
-    
-    
-    var PostsArray = [Opslag]()
+    var PostsArray1 = [Opslag]()
+    var PostsArray2 = [Opslag]()
     
     
     override func viewDidLoad() {
@@ -35,13 +31,13 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
         
         // Fetch internship posts
         NetworkServicePostsInternship.sharedObj.getInternshipPosts { (Opslag) in
-            self.PostsArray = Opslag
+            self.PostsArray1 = Opslag
             self.postsCollectionView1.reloadData()
         }
         
         // Fetch education posts
         NetworkServicePostsEducation.sharedObj.getEducationPosts { (Opslag) in
-            self.PostsArray = Opslag
+            self.PostsArray2 = Opslag
             self.postsCollectionView2.reloadData()
         }
         
@@ -73,23 +69,28 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedPost = PostsArray[indexPath.item]
         
-        performSegue(withIdentifier: "showPost", sender: selectedPost)
+        if collectionView == self.postsCollectionView1 {
+            let selectedPost = PostsArray1[indexPath.item]
+            performSegue(withIdentifier: "showPost", sender: selectedPost)
+        } else {
+            let selectedPost = PostsArray2[indexPath.item]
+            performSegue(withIdentifier: "showPost", sender: selectedPost)
+        }
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return PostsArray.count
+        //return PostsArray.count
         
-        /*if collectionView == self.postsCollectionView1 {
-            return PostsArray.count
+        if collectionView == self.postsCollectionView1 {
+            return PostsArray1.count
             
         } else {
-            return PostsArray.count
-        }*/
+            return PostsArray2.count
+        }
         
     }
     
@@ -106,7 +107,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell1.bounds.size.width, height: cell1.bounds.size.height))
             
             // Image view
-            let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
+            let imgUrl = "http://test-postnord.dk" + (PostsArray1[indexPath.row].cover_billede!)
             imageView.downloaded(from: imgUrl)
             
             
@@ -136,7 +137,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             // Title
             let title = UILabel(frame: CGRect(x: 15, y: 85, width: cell1.bounds.size.width, height: 20))
-            title.text = String(PostsArray[indexPath.row].titel!)
+            title.text = String(PostsArray1[indexPath.row].titel!)
             title.font = UIFont(name: "AvenirNext-Bold", size: 15)
             title.textColor = UIColor.white
             title.textAlignment = .left
@@ -146,7 +147,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             // Location
             let location = UILabel(frame: CGRect(x: 35, y: 125, width: cell1.bounds.size.width, height: 20))
-            location.text = String(PostsArray[indexPath.row].by!)
+            location.text = String(PostsArray1[indexPath.row].by!)
             location.font = UIFont(name: "AvenirNext-Bold", size: 14)
             location.textColor = UIColor.white
             location.textAlignment = .left
@@ -162,7 +163,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             // Duration
             let duration = UILabel(frame: CGRect(x: 35, y: 150, width: cell1.bounds.size.width, height: 20))
-            duration.text = String(PostsArray[indexPath.row].varighed!)
+            duration.text = String(PostsArray1[indexPath.row].varighed!)
             duration.font = UIFont(name: "AvenirNext-Bold", size: 14)
             duration.textColor = UIColor.white
             duration.textAlignment = .left
@@ -185,7 +186,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell2.bounds.size.width, height: cell2.bounds.size.height))
             
             // Image view
-            let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
+            let imgUrl = "http://test-postnord.dk" + (PostsArray2[indexPath.row].cover_billede!)
             imageView.downloaded(from: imgUrl)
             
             
@@ -215,7 +216,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             // Title
             let title = UILabel(frame: CGRect(x: 15, y: 85, width: cell2.bounds.size.width, height: 20))
-            title.text = String(PostsArray[indexPath.row].titel!)
+            title.text = String(PostsArray2[indexPath.row].titel!)
             title.font = UIFont(name: "AvenirNext-Bold", size: 15)
             title.textColor = UIColor.white
             title.textAlignment = .left
@@ -225,7 +226,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             // Location
             let location = UILabel(frame: CGRect(x: 35, y: 125, width: cell2.bounds.size.width, height: 20))
-            location.text = String(PostsArray[indexPath.row].by!)
+            location.text = String(PostsArray2[indexPath.row].by!)
             location.font = UIFont(name: "AvenirNext-Bold", size: 14)
             location.textColor = UIColor.white
             location.textAlignment = .left
@@ -241,7 +242,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             // Duration
             let duration = UILabel(frame: CGRect(x: 35, y: 150, width: cell2.bounds.size.width, height: 20))
-            duration.text = String(PostsArray[indexPath.row].varighed!)
+            duration.text = String(PostsArray2[indexPath.row].varighed!)
             duration.font = UIFont(name: "AvenirNext-Bold", size: 14)
             duration.textColor = UIColor.white
             duration.textAlignment = .left
