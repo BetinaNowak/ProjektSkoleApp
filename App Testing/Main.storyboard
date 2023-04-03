@@ -445,7 +445,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-Ti-cj1" userLabel="Main Stack View">
-                                <rect key="frame" x="21" y="289" width="356" height="112"/>
+                                <rect key="frame" x="21" y="288" width="356" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
