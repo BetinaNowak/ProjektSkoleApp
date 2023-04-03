@@ -10,6 +10,7 @@ import UIKit
 class AllEducationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    
     @IBOutlet weak var educationsTableView: UITableView!
     
     var PostsArray = [Opslag]()

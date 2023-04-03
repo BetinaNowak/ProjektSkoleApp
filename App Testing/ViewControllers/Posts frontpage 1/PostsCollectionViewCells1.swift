@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostsCollectionViewCell: UICollectionViewCell {
+class PostsCollectionViewCells1: UICollectionViewCell {
     
     var PostsArray = [Opslag]()
     

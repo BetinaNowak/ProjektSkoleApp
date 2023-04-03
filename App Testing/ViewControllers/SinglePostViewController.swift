@@ -10,24 +10,46 @@ import UIKit
 class SinglePostViewController: UIViewController {
 
     
+    
     @IBOutlet weak var containerView: UIView!
+    
+    
     @IBOutlet weak var singleImageView: UIImageView!
+    
+    
     @IBOutlet weak var blurView: UIVisualEffectView!
     
     @IBOutlet weak var singleTitelLabel: UILabel!
+    @IBOutlet weak var headerByLabel: UILabel!
+    
+    @IBOutlet weak var headerVarighedLabel: UILabel!
+    
     @IBOutlet weak var beskrivelseLabel: UILabel!
+    
+    
     @IBOutlet weak var virksomhedsnavnLabel: UILabel!
+
     @IBOutlet weak var telefonLabel: UILabel!
+    
+    
     @IBOutlet weak var emailLabel: UILabel!
+    
+    
     @IBOutlet weak var adresseLabel: UILabel!
+    
+    
     @IBOutlet weak var postnrLabel: UILabel!
+
+    
     @IBOutlet weak var byLabel: UILabel!
     @IBOutlet weak var ansoegButton: UIButton!
     
+
     //@IBOutlet weak var headerByLabel: UILabel!
     //@IBOutlet weak var headerVarighedLabel: UILabel!
 
     @IBOutlet weak var successPopUp: UIView!
+
     
     @IBOutlet weak var closePopUpButton: UIButton!
     
@@ -51,6 +73,7 @@ class SinglePostViewController: UIViewController {
         postEmail = post!.email!
         postVirksomhedsnavn = post!.virksomhedsnavn!
         if let AnsoegningViewController = segue.destination as? AnsoegningViewController {
+            print("it runs")
             AnsoegningViewController.postId = self.postId!
             AnsoegningViewController.postTitel = self.postTitel!
             AnsoegningViewController.postEmail = self.postEmail!
@@ -63,7 +86,7 @@ class SinglePostViewController: UIViewController {
                 self.successPopUp.isHidden = false
 
                 //only apply the blur if the user hasn't disabled transparency effects
-                if !UIAccessibility.isReduceTransparencyEnabled {
+                /*if !UIAccessibility.isReduceTransparencyEnabled {
                     self.view.backgroundColor = .white
 
                     let blurEffect = UIBlurEffect(style: .light)
@@ -77,7 +100,7 @@ class SinglePostViewController: UIViewController {
                     
                 } else {
                     self.view.backgroundColor = .black
-                }
+                }*/
             }
         }
         
@@ -93,7 +116,11 @@ class SinglePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         successPopUp.isHidden = true
+        
+        view.insetsLayoutMarginsFromSafeArea = false
+        
         
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
