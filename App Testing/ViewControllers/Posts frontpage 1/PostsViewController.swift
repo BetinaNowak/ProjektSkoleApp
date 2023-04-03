@@ -70,9 +70,16 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedPost = PostsArray[indexPath.item]
         
-        performSegue(withIdentifier: "showPost", sender: selectedPost)
+        if collectionView == self.postsCollectionView1 {
+            let selectedPost = PostsArray[indexPath.item]
+            
+            performSegue(withIdentifier: "showPost", sender: selectedPost)
+        } else {
+            let selectedPost = PostsArray[indexPath.item]
+            
+            performSegue(withIdentifier: "showPost", sender: selectedPost)
+        }
     }
     
     
@@ -80,10 +87,10 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.postsCollectionView1 {
             return PostsArray.count
-            
         } else {
             return PostsArray.count
         }
+        
     }
     
     

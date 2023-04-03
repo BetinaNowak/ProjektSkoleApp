@@ -1295,6 +1295,10 @@
                                         <size key="customSize" width="200" height="185"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="F3a-kM-YeD" id="AGo-xc-Atz"/>
+                                    <outlet property="delegate" destination="F3a-kM-YeD" id="uMh-mE-0i2"/>
+                                </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mZM-9d-GZL" userLabel="Posts Collection View 2">
                                 <rect key="frame" x="22" y="549" width="371" height="190"/>
@@ -1319,6 +1323,10 @@
                                         <size key="customSize" width="200" height="185"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="F3a-kM-YeD" id="vrq-hS-HsY"/>
+                                    <outlet property="delegate" destination="F3a-kM-YeD" id="7GY-4f-HK2"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Vy-mh-h9N"/>
