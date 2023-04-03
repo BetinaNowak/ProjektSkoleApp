@@ -10,6 +10,7 @@ import UIKit
 class SinglePostViewController: UIViewController {
 
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var containerView: UIView!
     
@@ -20,6 +21,7 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var blurView: UIVisualEffectView!
     
     @IBOutlet weak var singleTitelLabel: UILabel!
+    
     @IBOutlet weak var headerByLabel: UILabel!
     
     @IBOutlet weak var headerVarighedLabel: UILabel!
@@ -39,15 +41,12 @@ class SinglePostViewController: UIViewController {
     
     
     @IBOutlet weak var postnrLabel: UILabel!
-
-    
     @IBOutlet weak var byLabel: UILabel!
-    @IBOutlet weak var ansoegButton: UIButton!
     
+    @IBOutlet weak var ansoegButton: UIButton!
 
-    //@IBOutlet weak var headerByLabel: UILabel!
-    //@IBOutlet weak var headerVarighedLabel: UILabel!
-
+    
+    
     @IBOutlet weak var successPopUp: UIView!
 
     
@@ -80,13 +79,10 @@ class SinglePostViewController: UIViewController {
             AnsoegningViewController.postVirksomhedsnavn = self.postVirksomhedsnavn!
             
             AnsoegningViewController.callBack = { (status: String) in
-                print(status)
-                // successpopup
-                self.successPopUp.layer.cornerRadius = 24
-                self.successPopUp.isHidden = false
-
+                
+                
                 //only apply the blur if the user hasn't disabled transparency effects
-                /*if !UIAccessibility.isReduceTransparencyEnabled {
+               /*if !UIAccessibility.isReduceTransparencyEnabled {
                     self.view.backgroundColor = .white
 
                     let blurEffect = UIBlurEffect(style: .light)
@@ -96,11 +92,17 @@ class SinglePostViewController: UIViewController {
                     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                     blurEffectView.tag = 9
 
-                    self.view.insertSubview(blurEffectView, at: 16)
+                   self.view.insertSubview(blurEffectView, at: -1)
                     
                 } else {
                     self.view.backgroundColor = .black
                 }*/
+                
+                self.scrollView.setContentOffset(CGPointMake(0.0, 0.0), animated: false)
+                
+                // successpopup
+                self.successPopUp.layer.cornerRadius = 24
+                self.successPopUp.isHidden = false
             }
         }
         
@@ -132,8 +134,8 @@ class SinglePostViewController: UIViewController {
         byLabel.text = post?.by
         //ansoegButton.tag = post!.id!
         
-        //headerByLabel.text = post?.by
-        //headerVarighedLabel.text = post?.varighed
+        headerByLabel.text = post?.by
+        headerVarighedLabel.text = post?.varighed
         
         
         // Image styling
@@ -150,8 +152,8 @@ class SinglePostViewController: UIViewController {
         singleImageView.layer.cornerRadius = 20
         
         // Blur view styling
-        //blurView.layer.cornerRadius = 20
-        //blurView.clipsToBounds = true
+        blurView.layer.cornerRadius = 20
+        blurView.clipsToBounds = true
         
         
         containerView.addSubview(singleImageView)
