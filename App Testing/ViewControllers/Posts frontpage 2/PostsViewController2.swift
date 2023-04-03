@@ -82,12 +82,14 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if collectionView == self.postsCollectionView1 {
+        return PostsArray.count
+        
+        /*if collectionView == self.postsCollectionView1 {
             return PostsArray.count
             
         } else {
             return PostsArray.count
-        }
+        }*/
         
     }
     
