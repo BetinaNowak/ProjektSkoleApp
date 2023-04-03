@@ -15,6 +15,7 @@
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
 		2FAD5A1929D5B66000C12AEC /* AnsoegningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1829D5B66000C12AEC /* AnsoegningViewController.swift */; };
 		2FAD5A1B29D5B68600C12AEC /* SendAnsoegning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1A29D5B68600C12AEC /* SendAnsoegning.swift */; };
+		2FAD5A1D29D6E5F000C12AEC /* DisplayAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1C29D6E5F000C12AEC /* DisplayAnswersViewController.swift */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -54,6 +55,7 @@
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
 		2FAD5A1829D5B66000C12AEC /* AnsoegningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnsoegningViewController.swift; path = "../../../../../Desktop/App Testing/ViewControllers/AnsoegningViewController.swift"; sourceTree = "<group>"; };
 		2FAD5A1A29D5B68600C12AEC /* SendAnsoegning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendAnsoegning.swift; path = "../../../../../Desktop/App Testing/Network/SendAnsoegning.swift"; sourceTree = "<group>"; };
+		2FAD5A1C29D6E5F000C12AEC /* DisplayAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAnswersViewController.swift; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				2F27D69C29CC34360091325A /* CollectionViewController.swift */,
 				2F27D69629C9A69F0091325A /* NewSpoergsmaalViewController.swift */,
+				2FAD5A1C29D6E5F000C12AEC /* DisplayAnswersViewController.swift */,
 				CFF9CDAE29CB0523002ED77D /* Spoergsmaal2ViewController.swift */,
 				CF2B5DCB29CB354C006478B4 /* Spoergsmaal3ViewController.swift */,
 				CF2B5DCF29CB387B006478B4 /* Spoergsmaal4ViewController.swift */,
@@ -277,6 +280,7 @@
 				CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */,
 				2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
+				2FAD5A1D29D6E5F000C12AEC /* DisplayAnswersViewController.swift in Sources */,
 				CFF9CD9D29C451E3002ED77D /* Network.swift in Sources */,
 				CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */,
 				CF2B5DCC29CB354C006478B4 /* Spoergsmaal3ViewController.swift in Sources */,

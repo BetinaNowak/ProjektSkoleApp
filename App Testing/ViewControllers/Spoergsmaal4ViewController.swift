@@ -22,7 +22,7 @@ class Spoergsmaal4ViewController: UIViewController {
     var AnswersArray = [Svar]()
     
     var SelectedAnswersArray =  [[String? : Int?]]()
-    var ButtonsArray = [UIButton]()
+    //var ButtonsArray = [UIButton]()
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,7 +39,7 @@ class Spoergsmaal4ViewController: UIViewController {
             }
       }
     
-    //MARK: View Making methods
+    /*//MARK: View Making methods
     func makeButtonWithAnswer(text:String, id:Int) -> UIButton {
         let answerButton = UIButton(type: UIButton.ButtonType.system)
         answerButton.frame = CGRect(x: 30, y: 30, width: 50, height: 10)
@@ -111,17 +111,22 @@ class Spoergsmaal4ViewController: UIViewController {
             }
         }
     }
+    */
     
-    
-    func displayAnswerButtons(count:Int){
+    func displayAnswerButtons(type:String){
         for i in stride(from: 0, to: AnswersArray.count, by: 1){
             let titleString = String(AnswersArray[i].svar_tekst!)
             let titleInt = Int(AnswersArray[i].id!)
-            let button = makeButtonWithAnswer(text:titleString, id:titleInt)
-            mainStackView.addArrangedSubview(button)
+            //let titleString = String(format:"Hello Button %i",i)
+            if(type == "simple"){
+                let button = makeButtonWithAnswerSimple(text:titleString, id:titleInt, spoergsmaal:4)
+                mainStackView.addArrangedSubview(button)
+            } else {
+                //let button = makeButtonWithAnswerMulti(text:titleString, id:titleInt)
+                //mainStackView.addArrangedSubview(button)
+            }
         }
     }
-    
     
     
     
@@ -145,7 +150,11 @@ class Spoergsmaal4ViewController: UIViewController {
         
         NetworkServiceAnswers4.sharedObj.getAnswers { (Answers) in
             self.AnswersArray = Answers
-            self.displayAnswerButtons(count: 1)
+            if(Int(self.QuestionsArray[3].max_antal_svar!) > 1){
+                self.displayAnswerButtons(type:"multi")
+            } else {
+                self.displayAnswerButtons(type:"simple")
+            }
         }
         
         mainStackView.spacing = 1.0

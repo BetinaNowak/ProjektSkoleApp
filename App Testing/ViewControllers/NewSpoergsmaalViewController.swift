@@ -26,7 +26,7 @@ class NewSpoergsmaalViewController: UIViewController{
     var SelectedAnswersArray =  [[String? : Int?]]()
 
     
-    //MARK: View Making methods
+   /* //MARK: View Making methods
     func makeButtonWithAnswer(text:String) -> UIButton {
         let answerButton = UIButton(type: UIButton.ButtonType.system)
         answerButton.frame = CGRect(x: 80, y: 80, width: 50, height: 10)
@@ -47,7 +47,7 @@ class NewSpoergsmaalViewController: UIViewController{
         answerButton.setTitle(text, for: .normal)
         answerButton.setTitleColor(.black, for: .normal)
         return answerButton
-    }
+    } */
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "collectingUserAnswers"){
@@ -99,12 +99,14 @@ class NewSpoergsmaalViewController: UIViewController{
                         self.SpoergsmaalSubLabelIcon.isHidden = true
                     }
                     //self.displayAnswerButtons(count: 1)
+                    NetworkServiceAnswers.sharedObj.getAnswers { (Answers) in
+                        self.AnswersArray = Answers
+                        self.displayAnswerButtons()
+                    }
+            
                 }
         
-        NetworkServiceAnswers.sharedObj.getAnswers { (Answers) in
-            self.AnswersArray = Answers
-            self.displayAnswerButtons()
-        }
+      
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
 
