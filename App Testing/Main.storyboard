@@ -1029,6 +1029,22 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYJ-IR-1GC">
+                                                <rect key="frame" x="0.0" y="-146" width="396" height="1409"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-29-qvg">
+                                                        <rect key="frame" x="150" y="1265" width="96" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Ansøg nu"/>
+                                                        <connections>
+                                                            <segue destination="Qge-sD-rpI" kind="show" id="kyx-y7-ukt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-vz-fmH">
                                                 <rect key="frame" x="46" y="172" width="289" height="212"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1037,14 +1053,6 @@
                                                         <rect key="frame" x="60" y="47" width="181" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORf-qY-sFp">
-                                                        <rect key="frame" x="454" y="116" width="882" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <string key="text">Din ansøgning er blevet oprettet som en begivenhed.                                                                                                  Husk at kontakte virksomheden ang. din afsendte ansøgning.</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1071,15 +1079,6 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-29-qvg">
-                                                <rect key="frame" x="142" y="1022" width="96" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Ansøg nu"/>
-                                                <connections>
-                                                    <segue destination="Qge-sD-rpI" kind="show" id="kyx-y7-ukt"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -1111,6 +1110,7 @@
                     <connections>
                         <outlet property="adresseLabel" destination="qQ2-Ui-dqd" id="vVT-5N-Ejb"/>
                         <outlet property="ansoegButton" destination="LPs-29-qvg" id="tfE-ou-ksk"/>
+                        <outlet property="backgroundView" destination="xYJ-IR-1GC" id="eWh-5d-Ovp"/>
                         <outlet property="beskrivelseLabel" destination="XV2-eM-iyz" id="JWc-VS-xRS"/>
                         <outlet property="blurView" destination="MrJ-cI-ECT" id="RBL-0N-4eB"/>
                         <outlet property="byLabel" destination="aA1-7g-FwQ" id="aiu-od-zsW"/>

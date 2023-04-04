@@ -14,6 +14,8 @@ class SinglePostViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var backgroundView: UIView!
+    
     
     @IBOutlet weak var singleImageView: UIImageView!
     
@@ -46,7 +48,6 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var ansoegButton: UIButton!
 
     
-    
     @IBOutlet weak var successPopUp: UIView!
 
     
@@ -54,6 +55,7 @@ class SinglePostViewController: UIViewController {
     
     @IBAction func closePopUp(_ sender: Any) {
         successPopUp.isHidden = true
+        backgroundView.isHidden = true
         view.viewWithTag(9)?.removeFromSuperview()
     }
     
@@ -82,27 +84,28 @@ class SinglePostViewController: UIViewController {
                 
                 
                 //only apply the blur if the user hasn't disabled transparency effects
-               /*if !UIAccessibility.isReduceTransparencyEnabled {
-                    self.view.backgroundColor = .white
+               if !UIAccessibility.isReduceTransparencyEnabled {
+                    //self.backgroundView.backgroundColor = .white
 
                     let blurEffect = UIBlurEffect(style: .light)
                     let blurEffectView = UIVisualEffectView(effect: blurEffect)
                     //always fill the view
-                    blurEffectView.frame = self.view.bounds
+                    blurEffectView.frame = self.backgroundView.bounds
                     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                    blurEffectView.tag = 9
-
-                   self.view.insertSubview(blurEffectView, at: -1)
+                    blurEffectView.tag = 1
+                   
+                   self.backgroundView.addSubview(blurEffectView)
                     
                 } else {
-                    self.view.backgroundColor = .black
-                }*/
+                    self.backgroundView.backgroundColor = .black
+                }
                 
                 self.scrollView.setContentOffset(CGPointMake(0.0, 0.0), animated: false)
                 
                 // successpopup
                 self.successPopUp.layer.cornerRadius = 24
                 self.successPopUp.isHidden = false
+                self.ansoegButton.isHidden = true
             }
         }
         
