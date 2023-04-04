@@ -121,7 +121,6 @@ class SinglePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         successPopUp.isHidden = true
         
         view.insetsLayoutMarginsFromSafeArea = false
