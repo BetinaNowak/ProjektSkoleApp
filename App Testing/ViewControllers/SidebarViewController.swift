@@ -10,6 +10,8 @@ import UIKit
 class SidebarViewController: UIViewController {
 
     
+    var UsersArray = [Bruger]()
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -19,14 +21,18 @@ class SidebarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Fetch users
+        NetworkServiceUsers.sharedObj.getUsers { (Bruger) in
+            self.UsersArray = Bruger
+            
+            //self.postsCollectionView2.reloadData()
+            //nameLabel.text = UsersArray.fornavn
+        }
 
         
         containerView.clipsToBounds = false
-        /*containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowOpacity = 1
-        profileImage.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        containerView.layer.shadowRadius = 30
-        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: 20).cgPath*/
         containerView.backgroundColor = UIColor.clear
         
         profileImage.backgroundColor = UIColor.clear

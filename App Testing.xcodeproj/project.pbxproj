@@ -43,11 +43,12 @@
 		CFE60A0329DC4C5C00A572BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0229DC4C5C00A572BF /* ProfileViewController.swift */; };
 		CFE60A0529DC4C7000A572BF /* InspirationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */; };
 		CFE60A0729DD3A4600A572BF /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0629DD3A4600A572BF /* SidebarViewController.swift */; };
+		CFE60A0929DD4B4100A572BF /* BrugerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0829DD4B4100A572BF /* BrugerModel.swift */; };
+		CFE60A0B29DD4C0F00A572BF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0A29DD4C0F00A572BF /* Users.swift */; };
 		CFF9CD8929C451A0002ED77D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CD8829C451A0002ED77D /* AppDelegate.swift */; };
 		CFF9CD8B29C451A0002ED77D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CD8A29C451A0002ED77D /* SceneDelegate.swift */; };
 		CFF9CD9229C451A2002ED77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF9CD9129C451A2002ED77D /* Assets.xcassets */; };
 		CFF9CD9529C451A2002ED77D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF9CD9329C451A2002ED77D /* LaunchScreen.storyboard */; };
-		CFF9CD9D29C451E3002ED77D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CD9C29C451E3002ED77D /* Network.swift */; };
 		CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CD9E29C45216002ED77D /* TestModel.swift */; };
 		CFF9CDAD29CAF337002ED77D /* SvarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CDAC29CAF337002ED77D /* SvarModel.swift */; };
 		CFF9CDAF29CB0523002ED77D /* Spoergsmaal2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CDAE29CB0523002ED77D /* Spoergsmaal2ViewController.swift */; };
@@ -89,13 +90,14 @@
 		CFE60A0229DC4C5C00A572BF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationViewController.swift; sourceTree = "<group>"; };
 		CFE60A0629DD3A4600A572BF /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		CFE60A0829DD4B4100A572BF /* BrugerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrugerModel.swift; sourceTree = "<group>"; };
+		CFE60A0A29DD4C0F00A572BF /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CFF9CD8529C451A0002ED77D /* App Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF9CD8829C451A0002ED77D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF9CD8A29C451A0002ED77D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFF9CD9129C451A2002ED77D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF9CD9429C451A2002ED77D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF9CD9629C451A2002ED77D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF9CD9C29C451E3002ED77D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		CFF9CD9E29C45216002ED77D /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		CFF9CDAC29CAF337002ED77D /* SvarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvarModel.swift; sourceTree = "<group>"; };
 		CFF9CDAE29CB0523002ED77D /* Spoergsmaal2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spoergsmaal2ViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +144,6 @@
 		CF2B5DBF29CB313F006478B4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CFF9CD9C29C451E3002ED77D /* Network.swift */,
 				2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */,
 				CF2B5DC029CB316C006478B4 /* Questions.swift */,
 				CF2B5DC229CB31A1006478B4 /* Answers1.swift */,
@@ -151,6 +152,7 @@
 				CF2B5DCD29CB3852006478B4 /* Answers4.swift */,
 				CFB4F61929CC5542006D42AF /* Posts.swift */,
 				CF17154529DAE0A600D0409E /* SendAnsoegning.swift */,
+				CFE60A0A29DD4C0F00A572BF /* Users.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -162,6 +164,7 @@
 				2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */,
 				CFF9CDAC29CAF337002ED77D /* SvarModel.swift */,
 				CFB4F61729CC5422006D42AF /* OpslagModel.swift */,
+				CFE60A0829DD4B4100A572BF /* BrugerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,10 +344,10 @@
 				CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */,
 				2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
-				CFF9CD9D29C451E3002ED77D /* Network.swift in Sources */,
 				CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */,
 				CF2B5DCC29CB354C006478B4 /* Spoergsmaal3ViewController.swift in Sources */,
 				CFE60A0529DC4C7000A572BF /* InspirationViewController.swift in Sources */,
+				CFE60A0B29DD4C0F00A572BF /* Users.swift in Sources */,
 				CFE60A0729DD3A4600A572BF /* SidebarViewController.swift in Sources */,
 				CF73310129DAC2A200E0F500 /* PostsCollectionViewCell1.swift in Sources */,
 				CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */,
@@ -354,6 +357,7 @@
 				CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */,
 				CFB4F62F29CDDED0006D42AF /* PostsCollectionViewCells1.swift in Sources */,
 				CFF9CD8B29C451A0002ED77D /* SceneDelegate.swift in Sources */,
+				CFE60A0929DD4B4100A572BF /* BrugerModel.swift in Sources */,
 				CFE60A0329DC4C5C00A572BF /* ProfileViewController.swift in Sources */,
 				CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */,
 				CF17154F29DC157E00D0409E /* DisplayAnswersViewController.swift in Sources */,
