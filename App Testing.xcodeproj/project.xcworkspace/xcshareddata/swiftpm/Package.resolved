@@ -8,6 +8,15 @@
         "branch" : "master",
         "revision" : "fb50c1d20f24db5322b2f8f379de3618f75fe08e"
       }
+    },
+    {
+      "identity" : "sidemenu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jonkykong/SideMenu.git",
+      "state" : {
+        "revision" : "8bd4fd128923cf5494fa726839af8afe12908ad9",
+        "version" : "6.5.0"
+      }
     }
   ],
   "version" : 2

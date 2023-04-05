@@ -14,6 +14,14 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var postsCollectionView2: UICollectionView!
     
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    
+    @IBAction func buttonAction(_ sender: Any) {
+    }
+    
+    
+    
     var PostsArray1 = [Opslag]()
     var PostsArray2 = [Opslag]()
 
@@ -21,6 +29,9 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuButton.target = self.revealViewController()
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
 
         
         postsCollectionView2.register(PostsCollectionViewCells2.self, forCellWithReuseIdentifier: "cell2")
