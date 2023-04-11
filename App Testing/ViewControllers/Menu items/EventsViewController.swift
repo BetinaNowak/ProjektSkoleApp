@@ -10,8 +10,7 @@ import UIKit
 class EventsViewController: UIViewController {
 
     
-    
-    
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     
     override func viewDidLoad() {

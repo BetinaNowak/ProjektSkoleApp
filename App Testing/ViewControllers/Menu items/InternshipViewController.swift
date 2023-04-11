@@ -11,6 +11,7 @@ class InternshipViewController: UIViewController {
 
     
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()

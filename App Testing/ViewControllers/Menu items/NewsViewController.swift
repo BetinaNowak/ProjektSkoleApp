@@ -10,6 +10,7 @@ import UIKit
 class NewsViewController: UIViewController {
 
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     
     override func viewDidLoad() {

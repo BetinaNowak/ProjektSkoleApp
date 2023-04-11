@@ -161,6 +161,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="EQ7-B5-h5f">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0y-zS-a79">
                                 <rect key="frame" x="13" y="74" width="79" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,13 +176,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubu-Ao-Lwh">
-                                <rect key="frame" x="110" y="85" width="162" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwg-NP-8rA">
                                 <rect key="frame" x="13" y="244" width="134" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -200,6 +197,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="EducationsActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="tYv-Nb-beV"/>
                                     <action selector="menuBtn:" destination="mvL-uV-FlU" eventType="touchUpInside" id="2fH-aw-SQU"/>
                                 </connections>
                             </button>
@@ -221,6 +219,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="calendar.circle.fill" catalog="system" title="Begivenheder" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="EventsActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="hSe-yP-KDL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgy-P0-qhF">
                                 <rect key="frame" x="8" y="576" width="139" height="36"/>
@@ -229,6 +230,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="newspaper.fill" catalog="system" title="Nyheder" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="NewsActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="1fi-Fg-Xe9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFA-Vo-zh8">
                                 <rect key="frame" x="13" y="642" width="138" height="36"/>
@@ -237,6 +241,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="envelope.fill" catalog="system" title="Beskeder" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="MessagesActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="v2e-yr-hVO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WU-FE-oHB">
                                 <rect key="frame" x="8" y="375" width="192" height="40"/>
@@ -246,7 +253,17 @@
                                 <buttonConfiguration key="configuration" style="plain" image="hammer.circle.fill" catalog="system" title="Praktik, læreplads &amp; job" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="InternshipsActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="i1Q-KH-Gti"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubu-Ao-Lwh">
+                                <rect key="frame" x="115" y="85" width="162" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UvA-H8-Xa1"/>
                         <color key="backgroundColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -259,6 +276,11 @@
                         <outlet property="profileImage" destination="EeY-cd-TL2" id="BDV-Q6-mUF"/>
                         <segue destination="XX4-xT-P6h" kind="custom" identifier="profile_segue" customClass="SWRevealViewControllerSeguePushController" id="QiC-RS-hHA"/>
                         <segue destination="ubs-ME-Hvx" kind="custom" identifier="inspiration_segue" customClass="SWRevealViewControllerSeguePushController" id="gIp-fF-cxb"/>
+                        <segue destination="chB-b9-at2" kind="custom" identifier="educations_segue" customClass="SWRevealViewControllerSeguePushController" id="gcJ-rF-gP5"/>
+                        <segue destination="JJr-In-wsU" kind="custom" identifier="internships_segue" customClass="SWRevealViewControllerSeguePushController" id="odd-dA-vQ1"/>
+                        <segue destination="AC4-IT-7Ie" kind="custom" identifier="news_segue" customClass="SWRevealViewControllerSeguePushController" id="XVV-Nx-EUg"/>
+                        <segue destination="C4C-4e-y1M" kind="custom" identifier="events_segue" customClass="SWRevealViewControllerSeguePushController" id="A0P-1W-Lan"/>
+                        <segue destination="bh0-6I-uVU" kind="custom" identifier="messages_segue" customClass="SWRevealViewControllerSeguePushController" id="7dY-Jr-BtI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nP-4l-B3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1907,7 +1929,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5u-A6-wfK">
-                                                <rect key="frame" x="279" y="34.333333333333343" width="46" height="34.666666666666657"/>
+                                                <rect key="frame" x="279" y="34" width="46" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="SSz-Tm-FP9"/>
@@ -1919,7 +1941,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-6P-aWi">
-                                                <rect key="frame" x="318" y="34.333333333333343" width="46" height="34.666666666666657"/>
+                                                <rect key="frame" x="318" y="34" width="46" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="9cf-1T-j5C"/>
@@ -2243,21 +2265,6 @@
             </objects>
             <point key="canvasLocation" x="-3927" y="1804"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qVC-C9-CUt">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOQ-5j-Wrw" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hOE-xS-H6I">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yi7-wD-3hD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1831" y="2327"/>
-        </scene>
         <!--Educations View Controller-->
         <scene sceneID="jIB-KD-fjA">
             <objects>
@@ -2277,10 +2284,18 @@
                         <viewLayoutGuide key="safeArea" id="ELf-nA-Sb8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3AT-RS-3hc">
+                        <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="uGy-52-sMH">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="uGy-52-sMH" id="q3B-0c-3ul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xT4-bV-GBU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-905" y="1554"/>
+            <point key="canvasLocation" x="-906" y="1554"/>
         </scene>
         <!--Internship View Controller-->
         <scene sceneID="FUq-6f-E13">
@@ -2301,10 +2316,50 @@
                         <viewLayoutGuide key="safeArea" id="2qc-Tt-nlI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Kne-aw-fnH">
+                        <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="Wq2-oI-F8g">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="Wq2-oI-F8g" id="mEh-M5-f2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdV-7B-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-906" y="2287"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="TL9-nm-NAY">
+            <objects>
+                <viewController id="YOt-Wi-JhT" customClass="NewsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fI-EJ-ktQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nyheder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-au-iOA">
+                                <rect key="frame" x="85" y="356" width="222" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lin-WZ-NdO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Omp-2d-v8y">
+                        <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="G4i-NY-gXN">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="G4i-NY-gXN" id="Di1-BL-Hxz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M03-lY-i3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1451" y="1554"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="6uh-dG-Tkt">
@@ -2313,28 +2368,152 @@
                     <view key="view" contentMode="scaleToFill" id="Vx4-Z6-21e">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Begivenheder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0U-M9-0dg">
+                                <rect key="frame" x="16" y="356" width="357" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dRK-1U-6aw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0rB-as-Obd">
+                        <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="BbG-g9-pfa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="BbG-g9-pfa" id="9Jj-Ow-aRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LyB-WO-Rzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="2327"/>
+            <point key="canvasLocation" x="1450" y="2287"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="sMD-k4-IBw">
+            <objects>
+                <viewController id="Nz8-Tk-aBH" customClass="MessagesViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULO-nh-gTn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beskeder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-Ha-tHc">
+                                <rect key="frame" x="62" y="332" width="242" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vkh-Xb-Ayy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CpR-Q4-4TG">
+                        <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="1L2-Vf-9Qa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="1L2-Vf-9Qa" id="u3r-pM-7Kv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYD-0U-PqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="3042"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="hfJ-Va-UxR">
+        <scene sceneID="dPp-Y0-FO4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gb2-xn-4FL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JJr-In-wsU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LM7-N1-xx8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vEu-U9-BFt">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P0l-z4-FKt" kind="relationship" relationship="rootViewController" id="5cP-TK-asg"/>
+                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0eS-BG-p45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zt0-cr-uO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1831" y="2287"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jng-m3-oVD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="chB-b9-at2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJd-Sx-bGC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aOA-Yn-hoR" kind="relationship" relationship="rootViewController" id="jjz-w9-6FO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9b-A9-iuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1831" y="1554"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sMh-zw-1aU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AC4-IT-7Ie" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyt-mE-sCw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YOt-Wi-JhT" kind="relationship" relationship="rootViewController" id="Igh-fc-Vwy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVa-jz-W1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="1554"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gAt-1I-5Ir">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C4C-4e-y1M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0e4-Um-fEW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lqH-Zf-7jh" kind="relationship" relationship="rootViewController" id="yD0-Gc-XFm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1m-b8-DAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="2287"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GmZ-gL-30n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bh0-6I-uVU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xXN-8r-K5r">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nz8-Tk-aBH" kind="relationship" relationship="rootViewController" id="mB0-KM-ORo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9N-aX-eeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="3042"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -2370,6 +2549,7 @@
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="menu" width="195" height="420"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
