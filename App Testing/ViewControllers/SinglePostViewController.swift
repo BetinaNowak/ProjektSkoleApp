@@ -125,6 +125,8 @@ class SinglePostViewController: UIViewController {
         
         view.insetsLayoutMarginsFromSafeArea = false
         
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
         
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
