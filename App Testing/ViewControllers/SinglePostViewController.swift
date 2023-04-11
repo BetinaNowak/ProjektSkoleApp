@@ -20,7 +20,11 @@ class SinglePostViewController: UIViewController {
     
     
     @IBOutlet weak var singleImageView: UIImageView!
+<<<<<<< Updated upstream
     
+=======
+
+>>>>>>> Stashed changes
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
@@ -47,8 +51,16 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var postnrLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
     
+<<<<<<< Updated upstream
     @IBOutlet weak var ansoegButton: UIButton!
 
+=======
+
+    
+    @IBOutlet weak var headerByLabel: UILabel!
+    
+    @IBOutlet weak var headerVarighedLabel: UILabel!
+>>>>>>> Stashed changes
     
     @IBOutlet weak var successPopUp: UIView!
 
