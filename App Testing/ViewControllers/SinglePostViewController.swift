@@ -10,8 +10,6 @@ import UIKit
 class SinglePostViewController: UIViewController {
 
     
-    @IBOutlet weak var menuBtn: UIBarButtonItem!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var containerView: UIView!
@@ -20,11 +18,7 @@ class SinglePostViewController: UIViewController {
     
     
     @IBOutlet weak var singleImageView: UIImageView!
-<<<<<<< Updated upstream
     
-=======
-
->>>>>>> Stashed changes
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
@@ -51,16 +45,8 @@ class SinglePostViewController: UIViewController {
     @IBOutlet weak var postnrLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
     
-<<<<<<< Updated upstream
     @IBOutlet weak var ansoegButton: UIButton!
 
-=======
-
-    
-    @IBOutlet weak var headerByLabel: UILabel!
-    
-    @IBOutlet weak var headerVarighedLabel: UILabel!
->>>>>>> Stashed changes
     
     @IBOutlet weak var successPopUp: UIView!
 
@@ -139,8 +125,6 @@ class SinglePostViewController: UIViewController {
         
         view.insetsLayoutMarginsFromSafeArea = false
         
-        self.navigationItem.setHidesBackButton(true, animated: true)
-        
         
         singleTitelLabel.text = post?.titel
         beskrivelseLabel.text = post?.beskrivelse
@@ -182,16 +166,6 @@ class SinglePostViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
     }
-    
-
-    // Function for menu action
-    func setMenuBtn(_ menuBar: UIBarButtonItem) {
-        menuBar.target = revealViewController()
-        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
-    
-    
 }
 
 

@@ -1929,7 +1929,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5u-A6-wfK">
-                                                <rect key="frame" x="279" y="34" width="46" height="35"/>
+                                                <rect key="frame" x="279" y="34.666666666666657" width="46" height="34.333333333333343"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="SSz-Tm-FP9"/>
@@ -1941,7 +1941,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-6P-aWi">
-                                                <rect key="frame" x="318" y="34" width="46" height="35"/>
+                                                <rect key="frame" x="318" y="34.666666666666657" width="46" height="34.333333333333343"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="9cf-1T-j5C"/>
@@ -2198,6 +2198,9 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="lqH-Zf-7jh" kind="show" id="YeF-Kt-uCe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-qr-Iry">
                                 <rect key="frame" x="39" y="491" width="315" height="82"/>
@@ -2212,6 +2215,9 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Nz8-Tk-aBH" kind="show" id="yl2-xV-nr1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqV-A8-0vK">
                                 <rect key="frame" x="39" y="601" width="315" height="82"/>
@@ -2367,7 +2373,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBtn" destination="uGy-52-sMH" id="q3B-0c-3ul"/>
-                        <outlet property="whiteBackground" destination="Tkw-2s-EsY" id="muD-3Y-jwZ"/>
+                        <outlet property="whiteBackground" destination="Tkw-2s-EsY" id="Pid-Bp-Dxl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xT4-bV-GBU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2406,7 +2412,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBtn" destination="Wq2-oI-F8g" id="mEh-M5-f2H"/>
-                        <outlet property="whiteBackground" destination="WAg-Lu-WY7" id="Oaw-pv-dy3"/>
+                        <outlet property="whiteBackground" destination="WAg-Lu-WY7" id="bqb-9z-2pz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdV-7B-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2445,7 +2451,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBtn" destination="G4i-NY-gXN" id="Di1-BL-Hxz"/>
-                        <outlet property="whiteBackground" destination="IAu-Vs-QMt" id="jBi-pG-Ehq"/>
+                        <outlet property="whiteBackground" destination="IAu-Vs-QMt" id="rSe-5W-GuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M03-lY-i3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2484,7 +2490,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBtn" destination="BbG-g9-pfa" id="9Jj-Ow-aRR"/>
-                        <outlet property="whiteBackground" destination="spX-jd-gGr" id="7OR-Xk-t37"/>
+                        <outlet property="whiteBackground" destination="spX-jd-gGr" id="BGa-cy-AHg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LyB-WO-Rzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2523,7 +2529,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBtn" destination="1L2-Vf-9Qa" id="u3r-pM-7Kv"/>
-                        <outlet property="whiteBackground" destination="4Dd-p4-6zG" id="DVw-Ol-IYl"/>
+                        <outlet property="whiteBackground" destination="4Dd-p4-6zG" id="mEV-rI-LTR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYD-0U-PqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2622,7 +2628,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QiC-RS-hHA"/>
+        <segue reference="yl2-xV-nr1"/>
+        <segue reference="YeF-Kt-uCe"/>
+        <segue reference="rdf-hN-E15"/>
         <segue reference="Y6Q-x5-xXe"/>
         <segue reference="mcN-jk-YqO"/>
         <segue reference="bv4-ew-g67"/>

@@ -9,15 +9,23 @@ import UIKit
 
 class InternshipViewController: UIViewController {
 
-    
-    
     @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
+    @IBOutlet weak var whiteBackground: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
        
         setMenuBtn(menuBtn)
+        
+        
+        // Style background
+        whiteBackground.layer.shadowRadius = 6
+        whiteBackground.layer.shadowOpacity = 1
+        whiteBackground.layer.shadowOffset = CGSize(width: 2, height: 2)
+        whiteBackground.layer.shadowColor = UIColor.gray.cgColor
+        
     }
     
 
