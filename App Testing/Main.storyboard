@@ -172,6 +172,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubu-Ao-Lwh">
+                                <rect key="frame" x="110" y="85" width="162" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwg-NP-8rA">
                                 <rect key="frame" x="13" y="244" width="134" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -185,27 +192,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tb-xq-a5K">
-                                <rect key="frame" x="8" y="307" width="168" height="40"/>
+                                <rect key="frame" x="8" y="305" width="181" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Profil"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass.circle.fill" catalog="system" title="Uddannelser" imagePadding="15">
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass.circle.fill" catalog="system" title="Lær om uddannelserne" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ProfileActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="zPB-Ii-RR7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WU-FE-oHB">
-                                <rect key="frame" x="11" y="376" width="119" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Profil"/>
-                                <buttonConfiguration key="configuration" style="plain" image="hammer.circle.fill" catalog="system" title="Praktik" imagePadding="15">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ProfileActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="zzS-bP-NDw"/>
+                                    <action selector="menuBtn:" destination="mvL-uV-FlU" eventType="touchUpInside" id="2fH-aw-SQU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pO-Fb-wsF">
@@ -226,9 +221,6 @@
                                 <buttonConfiguration key="configuration" style="plain" image="calendar.circle.fill" catalog="system" title="Begivenheder" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="InspirationActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="dHZ-0f-Sad"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgy-P0-qhF">
                                 <rect key="frame" x="8" y="576" width="139" height="36"/>
@@ -237,9 +229,6 @@
                                 <buttonConfiguration key="configuration" style="plain" image="newspaper.fill" catalog="system" title="Nyheder" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="InspirationActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="r8q-EB-hhn"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFA-Vo-zh8">
                                 <rect key="frame" x="13" y="642" width="138" height="36"/>
@@ -248,17 +237,16 @@
                                 <buttonConfiguration key="configuration" style="plain" image="envelope.fill" catalog="system" title="Beskeder" imagePadding="15">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="InspirationActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="GMZ-kL-ETv"/>
-                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubu-Ao-Lwh">
-                                <rect key="frame" x="110" y="85" width="162" height="57"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WU-FE-oHB">
+                                <rect key="frame" x="8" y="375" width="192" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Profil"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hammer.circle.fill" catalog="system" title="Praktik, læreplads &amp; job" imagePadding="15">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UvA-H8-Xa1"/>
                         <color key="backgroundColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -274,6 +262,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nP-4l-B3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mvL-uV-FlU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3054.1984732824426" y="1803.5211267605634"/>
         </scene>
@@ -1673,7 +1662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AV-Ft-ZbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10127.480916030534" y="131.69014084507043"/>
+            <point key="canvasLocation" x="9688" y="4"/>
         </scene>
         <!--All Internships View Controller-->
         <scene sceneID="Io5-y7-gYw">
@@ -1901,7 +1890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMo-nq-N38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12990.076335877862" y="798.59154929577471"/>
+            <point key="canvasLocation" x="9688" y="867"/>
         </scene>
         <!--All Educations View Controller-->
         <scene sceneID="pqX-pb-nRQ">
@@ -2134,7 +2123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8n-gK-9yi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13722.900763358779" y="892.95774647887333"/>
+            <point key="canvasLocation" x="8385" y="842"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="wXr-lf-elx">
@@ -2198,7 +2187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eb6-pH-xyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-905" y="1554"/>
+            <point key="canvasLocation" x="-906" y="3042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QWV-bc-Hzi">
@@ -2234,7 +2223,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THk-Pw-ITz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1831" y="1554"/>
+            <point key="canvasLocation" x="-1831" y="3042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rhv-hc-t0p">
@@ -2254,12 +2243,105 @@
             </objects>
             <point key="canvasLocation" x="-3927" y="1804"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qVC-C9-CUt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOQ-5j-Wrw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hOE-xS-H6I">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yi7-wD-3hD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1831" y="2327"/>
+        </scene>
+        <!--Educations View Controller-->
+        <scene sceneID="jIB-KD-fjA">
+            <objects>
+                <viewController id="aOA-Yn-hoR" customClass="EducationsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H83-vc-bX5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lær om uddannelserne" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqS-hv-ywy">
+                                <rect key="frame" x="16" y="344" width="361" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ELf-nA-Sb8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xT4-bV-GBU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-905" y="1554"/>
+        </scene>
+        <!--Internship View Controller-->
+        <scene sceneID="FUq-6f-E13">
+            <objects>
+                <viewController id="P0l-z4-FKt" customClass="InternshipViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4og-Ev-oAc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praktik, læreplads &amp; job" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lic-sh-vWT">
+                                <rect key="frame" x="32" y="309" width="345" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2qc-Tt-nlI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdV-7B-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="2287"/>
+        </scene>
+        <!--Events View Controller-->
+        <scene sceneID="6uh-dG-Tkt">
+            <objects>
+                <viewController id="lqH-Zf-7jh" customClass="EventsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vx4-Z6-21e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dRK-1U-6aw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyB-WO-Rzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="2327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hfJ-Va-UxR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gb2-xn-4FL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LM7-N1-xx8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eS-BG-p45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1831" y="1554"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QiC-RS-hHA"/>
-        <segue reference="Y6Q-x5-xXe"/>
-        <segue reference="mcN-jk-YqO"/>
-        <segue reference="bv4-ew-g67"/>
+        <segue reference="f8U-2a-dwi"/>
+        <segue reference="I2J-ZM-Hdb"/>
+        <segue reference="cwb-9a-gFD"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>

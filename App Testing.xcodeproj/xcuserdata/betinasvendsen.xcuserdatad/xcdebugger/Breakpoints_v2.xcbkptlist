@@ -14,8 +14,8 @@
             filePath = "App Testing/ViewControllers/SidebarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "SidebarViewController"
             landmarkType = "3">
          </BreakpointContent>
