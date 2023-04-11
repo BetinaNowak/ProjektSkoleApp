@@ -307,7 +307,7 @@
                     </view>
                     <connections>
                         <segue destination="Lxx-Db-Rpj" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="VmV-Kf-2H8"/>
-                        <segue destination="XX4-xT-P6h" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="rdf-hN-E15"/>
+                        <segue destination="tKA-z7-1nP" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ZEO-PQ-dJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6G-AN-Co2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -990,7 +990,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yQ-N0-G3e">
-                                <rect key="frame" x="0.0" y="28" width="393" height="44"/>
+                                <rect key="frame" x="-3" y="28" width="395" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="dg5-CS-E1H">
@@ -1009,6 +1009,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
+                        <outlet property="menuBtn" destination="Akd-Fh-tlM" id="6Wp-de-f4x"/>
                         <outlet property="postsCollectionView1" destination="4xd-a4-ngI" id="mAd-BZ-sei"/>
                         <outlet property="postsCollectionView2" destination="FkI-hJ-HIm" id="0d7-ox-F21"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="bv4-ew-g67"/>
@@ -1026,20 +1027,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-zh-8PB">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-zh-8PB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1097"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-G4-dLt">
-                                        <rect key="frame" x="0.0" y="-103" width="393" height="1200"/>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-G4-dLt">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXV-8Q-e1O">
-                                                <rect key="frame" x="0.0" y="44" width="395" height="145"/>
+                                                <rect key="frame" x="0.0" y="259" width="395" height="262"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </containerView>
                                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="uF9-ak-2iU">
-                                                <rect key="frame" x="0.0" y="0.0" width="396" height="352"/>
+                                                <rect key="frame" x="0.0" y="-56" width="396" height="408"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1231,75 +1232,51 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYJ-IR-1GC">
-                                                <rect key="frame" x="0.0" y="-173" width="396" height="1409"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wYW-co-dpJ">
+                                                <rect key="frame" x="-43" y="764" width="482" height="405"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rectangle.portrait.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NUK-Bc-bfc">
-                                                        <rect key="frame" x="-160" y="1143.3333333333333" width="717" height="591"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-29-qvg">
-                                                        <rect key="frame" x="78" y="1200.3333333333333" width="239" height="54"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Ansøg nu" imagePadding="10" cornerStyle="capsule">
-                                                            <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <segue destination="Qge-sD-rpI" kind="show" id="kyx-y7-ukt"/>
-                                                        </connections>
-                                                    </button>
-                                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vix-Cb-I2l">
-                                                        <rect key="frame" x="-5" y="234" width="393" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                        <items>
-                                                            <navigationItem id="ccP-nL-C1I">
-                                                                <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="eG6-bn-edH">
-                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </barButtonItem>
-                                                            </navigationItem>
-                                                        </items>
-                                                    </navigationBar>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
+                                                <color key="tintColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKN-yr-TgD">
+                                                <rect key="frame" x="78" y="810" width="239" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="arrow.right" catalog="system" imagePlacement="trailing" title="Ansøg nu" imagePadding="10" cornerStyle="capsule">
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="Qge-sD-rpI" kind="show" id="iJu-LQ-hYP"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="T5G-U8-cb3"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="3LS-G4-dLt" secondAttribute="bottom" constant="-103" id="1sM-XH-2wq"/>
-                                    <constraint firstAttribute="trailing" secondItem="3LS-G4-dLt" secondAttribute="trailing" id="Dzu-KA-ttv"/>
-                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="leading" secondItem="zQs-zh-8PB" secondAttribute="leading" id="Gvy-sH-6RD"/>
-                                    <constraint firstAttribute="height" constant="1200" id="I2B-vi-hxE"/>
-                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="top" secondItem="zQs-zh-8PB" secondAttribute="top" id="XDA-Bh-Ejn"/>
-                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="centerX" secondItem="zQs-zh-8PB" secondAttribute="centerX" id="vfG-gp-qus"/>
+                                    <constraint firstAttribute="bottom" secondItem="3LS-G4-dLt" secondAttribute="bottom" id="GSx-9O-ysl"/>
+                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="centerY" secondItem="zQs-zh-8PB" secondAttribute="centerY" id="L9q-3C-RSo"/>
+                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="centerX" secondItem="zQs-zh-8PB" secondAttribute="centerX" id="Xbp-Cs-41B"/>
+                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="top" secondItem="zQs-zh-8PB" secondAttribute="top" id="c3R-fc-87c"/>
+                                    <constraint firstItem="3LS-G4-dLt" firstAttribute="leading" secondItem="zQs-zh-8PB" secondAttribute="leading" id="uZI-1n-7WR"/>
+                                    <constraint firstAttribute="trailing" secondItem="3LS-G4-dLt" secondAttribute="trailing" id="yr2-CG-Dsq"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NKm-Y9-hMF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zQs-zh-8PB" firstAttribute="centerY" secondItem="yPV-BH-exM" secondAttribute="centerY" id="0TJ-gt-n9l"/>
-                            <constraint firstItem="zQs-zh-8PB" firstAttribute="trailing" secondItem="yPV-BH-exM" secondAttribute="trailing" id="75m-Hg-t28"/>
-                            <constraint firstAttribute="bottom" secondItem="zQs-zh-8PB" secondAttribute="bottom" id="aOs-cf-tpY"/>
-                            <constraint firstItem="3LS-G4-dLt" firstAttribute="width" secondItem="yPV-BH-exM" secondAttribute="width" id="d7h-yj-UB0"/>
-                            <constraint firstItem="zQs-zh-8PB" firstAttribute="leading" secondItem="yPV-BH-exM" secondAttribute="leading" id="ufe-3x-iaB"/>
+                            <constraint firstItem="zQs-zh-8PB" firstAttribute="leading" secondItem="NKm-Y9-hMF" secondAttribute="leading" id="BQf-nF-bTN"/>
+                            <constraint firstItem="zQs-zh-8PB" firstAttribute="top" secondItem="yPV-BH-exM" secondAttribute="topMargin" id="dKJ-Bo-QkD"/>
+                            <constraint firstItem="zQs-zh-8PB" firstAttribute="centerX" secondItem="yPV-BH-exM" secondAttribute="centerX" id="fkq-wp-rrm"/>
+                            <constraint firstItem="zQs-zh-8PB" firstAttribute="bottom" secondItem="yPV-BH-exM" secondAttribute="bottomMargin" id="mE8-jZ-cfO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="0vv-vW-gfq"/>
+                    <navigationItem key="navigationItem" style="editor" id="qIc-zi-ESQ"/>
                     <size key="freeformSize" width="393" height="1200"/>
                     <connections>
                         <outlet property="adresseLabel" destination="qQ2-Ui-dqd" id="vVT-5N-Ejb"/>
-                        <outlet property="ansoegButton" destination="LPs-29-qvg" id="tfE-ou-ksk"/>
-                        <outlet property="backgroundView" destination="xYJ-IR-1GC" id="eWh-5d-Ovp"/>
                         <outlet property="beskrivelseLabel" destination="XV2-eM-iyz" id="JWc-VS-xRS"/>
                         <outlet property="blurView" destination="MrJ-cI-ECT" id="RBL-0N-4eB"/>
                         <outlet property="byLabel" destination="aA1-7g-FwQ" id="aiu-od-zsW"/>
@@ -1464,7 +1441,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXZ-hy-YBF">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <rect key="frame" x="-2" y="59" width="395" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -1702,9 +1679,10 @@
                         </leftBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="menuBtn" destination="3Tf-Ff-Y1L" id="7DB-bo-g2F"/>
                         <outlet property="postsCollectionView1" destination="fAb-cI-IRD" id="SLx-yc-wV5"/>
                         <outlet property="postsCollectionView2" destination="mZM-9d-GZL" id="COP-ft-sDt"/>
-                        <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="IQ2-D5-HKt"/>
+                        <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="Pmm-1U-Yjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AV-Ft-ZbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1943,6 +1921,7 @@
                     <navigationItem key="navigationItem" style="editor" id="DAb-ln-oyB"/>
                     <connections>
                         <outlet property="internshipsTableView" destination="T7T-q0-D2I" id="zet-vT-CSM"/>
+                        <outlet property="menuBtn" destination="msk-yd-Llx" id="cmA-Oo-Q0d"/>
                         <outlet property="tableHeight" destination="34r-3k-r5m" id="son-kp-ApZ"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="cwb-9a-gFD"/>
                     </connections>
@@ -2189,6 +2168,7 @@
                     <navigationItem key="navigationItem" style="editor" id="hqG-Ip-UD7"/>
                     <connections>
                         <outlet property="educationsTableView" destination="j4G-x9-Xz4" id="ruj-WR-WIK"/>
+                        <outlet property="menuBtn" destination="Zry-Xs-BTL" id="nIU-yE-217"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="tTf-fI-GDe"/>
                     </connections>
                 </viewController>
@@ -2679,10 +2659,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="mB0-KM-ORo"/>
         <segue reference="S97-jx-gUd"/>
-        <segue reference="QiC-RS-hHA"/>
-        <segue reference="Y6Q-x5-xXe"/>
-        <segue reference="mcN-jk-YqO"/>
-        <segue reference="cwb-9a-gFD"/>
+        <segue reference="f8U-2a-dwi"/>
+        <segue reference="I2J-ZM-Hdb"/>
+        <segue reference="tTf-fI-GDe"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>

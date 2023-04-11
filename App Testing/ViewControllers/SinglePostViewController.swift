@@ -10,6 +10,8 @@ import UIKit
 class SinglePostViewController: UIViewController {
 
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var containerView: UIView!
@@ -168,6 +170,16 @@ class SinglePostViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
     }
+    
+
+    // Function for menu action
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+    
+    
 }
 
 

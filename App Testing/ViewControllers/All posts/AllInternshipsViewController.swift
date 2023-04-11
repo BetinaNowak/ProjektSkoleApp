@@ -9,10 +9,13 @@ import UIKit
 
 class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
 
     @IBOutlet weak var internshipsTableView: UITableView!
     
-    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    //@IBOutlet weak var tableHeight: NSLayoutConstraint!
     
 
     var PostsArray = [Opslag]()
@@ -31,6 +34,14 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
+    }
+    
+    
+    // Function for menu action
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
     

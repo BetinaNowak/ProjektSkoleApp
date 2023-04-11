@@ -10,6 +10,10 @@ import UIKit
 class PostsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
+    
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
+    
     @IBOutlet weak var postsCollectionView1: UICollectionView!
     @IBOutlet weak var postsCollectionView2: UICollectionView!
     
@@ -51,6 +55,13 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         //self.navigationController?.navigationBar.tintColor = UIColor.black
         
     
+    }
+    
+    // Function for menu action
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
     
