@@ -26,6 +26,7 @@ class ProfileViewController: UIViewController {
         
         setMenuBtn(menuBtn)
         
+        // Style background
         whiteBackground.layer.shadowRadius = 6
         whiteBackground.layer.shadowOpacity = 1
         whiteBackground.layer.shadowOffset = CGSize(width: 2, height: 2)
