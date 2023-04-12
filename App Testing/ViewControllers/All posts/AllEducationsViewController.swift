@@ -10,8 +10,6 @@ import UIKit
 class AllEducationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    @IBOutlet weak var menuBtn: UIBarButtonItem!
-    
     @IBOutlet weak var educationsTableView: UITableView!
     
     var PostsArray = [Opslag]()
@@ -32,15 +30,6 @@ class AllEducationsViewController: UIViewController, UITableViewDelegate, UITabl
         self.navigationController?.navigationBar.tintColor = UIColor.black
 
     }
-    
-    
-    // Function for menu action
-    func setMenuBtn(_ menuBar: UIBarButtonItem) {
-        menuBar.target = revealViewController()
-        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
-    
 
     
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {

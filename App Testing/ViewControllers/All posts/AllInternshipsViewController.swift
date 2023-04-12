@@ -9,13 +9,8 @@ import UIKit
 
 class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    @IBOutlet weak var menuBtn: UIBarButtonItem!
-    
 
     @IBOutlet weak var internshipsTableView: UITableView!
-    
-    //@IBOutlet weak var tableHeight: NSLayoutConstraint!
     
 
     var PostsArray = [Opslag]()
@@ -34,30 +29,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
+        
     }
-    
-    
-    // Function for menu action
-    func setMenuBtn(_ menuBar: UIBarButtonItem) {
-        menuBar.target = revealViewController()
-        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
-    
-    
-    /*override func viewWillAppear(_ animated: Bool) {
-        self.internshipsTableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
-        self.internshipsTableView.reloadData()
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "contentSize" {
-            if let newValue = change?[.newKey] {
-                let newSize = newValue as! CGSize
-                self.tableHeight.constant = newSize.height
-            }
-        }
-    }*/
     
     
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {

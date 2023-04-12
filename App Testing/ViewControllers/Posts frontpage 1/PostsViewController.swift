@@ -51,9 +51,9 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         postsCollectionView2.delegate = self
         postsCollectionView2.dataSource = self
+
         
-        //self.navigationController?.navigationBar.tintColor = UIColor.black
-        
+        setMenuBtn(menuBtn)
     
     }
     

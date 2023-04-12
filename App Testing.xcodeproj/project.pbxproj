@@ -50,6 +50,7 @@
 		CFE60A0929DD4B4100A572BF /* BrugerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0829DD4B4100A572BF /* BrugerModel.swift */; };
 		CFE60A0B29DD4C0F00A572BF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0A29DD4C0F00A572BF /* Users.swift */; };
 		CFE60A0E29E52ADE00A572BF /* EducationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0D29E52ADE00A572BF /* EducationsViewController.swift */; };
+		CFF8CCBB29E684F600075989 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */; };
 		CFF9CD8929C451A0002ED77D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CD8829C451A0002ED77D /* AppDelegate.swift */; };
 		CFF9CD8B29C451A0002ED77D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9CD8A29C451A0002ED77D /* SceneDelegate.swift */; };
 		CFF9CD9229C451A2002ED77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF9CD9129C451A2002ED77D /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		CFE60A0829DD4B4100A572BF /* BrugerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrugerModel.swift; sourceTree = "<group>"; };
 		CFE60A0A29DD4C0F00A572BF /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CFE60A0D29E52ADE00A572BF /* EducationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationsViewController.swift; sourceTree = "<group>"; };
+		CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		CFF9CD8529C451A0002ED77D /* App Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF9CD8829C451A0002ED77D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF9CD8A29C451A0002ED77D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				CF73310229DAC83800E0F500 /* Posts frontpage 2 */,
 				CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */,
 				CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */,
+				CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */,
 				CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */,
 				CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */,
+				CFF8CCBB29E684F600075989 /* NotificationsViewController.swift in Sources */,
 				2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */,
 				2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */,
 				CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */,
