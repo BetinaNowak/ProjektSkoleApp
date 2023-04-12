@@ -2542,7 +2542,7 @@
         <!--Item-->
         <scene sceneID="cge-Wo-uO6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ond-2O-GDO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ond-2O-GDO" customClass="MainNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="scO-U0-iQ5"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5ol-kT-yuq"/>

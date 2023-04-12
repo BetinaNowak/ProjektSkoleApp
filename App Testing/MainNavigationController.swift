@@ -1,5 +1,5 @@
 //
-//  MainTabBarController.swift
+//  MainNavigationController.swift
 //  App Testing
 //
 //  Created by Betina Svendsen on 12/04/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,5 @@ class MainTabBarController: UITabBarController {
         self.navigationController?.navigationBar.isHidden = true
 
     }
-
 
 }
