@@ -26,6 +26,8 @@ class ProfileViewController: UIViewController {
         
         setMenuBtn(menuBtn)
         
+        navigationItem.setHidesBackButton(true, animated: true)
+        
         // Style background
         whiteBackground.layer.shadowRadius = 6
         whiteBackground.layer.shadowOpacity = 1

@@ -22,6 +22,7 @@
 		CF17154F29DC157E00D0409E /* DisplayAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154E29DC157E00D0409E /* DisplayAnswersViewController.swift */; };
 		CF17155529DC1A2800D0409E /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = CF17155429DC1A2800D0409E /* SideMenu */; };
 		CF17155D29DC41E300D0409E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17155B29DC41E300D0409E /* SWRevealViewController.m */; };
+		CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -77,6 +78,7 @@
 		CF17155A29DC41E200D0409E /* App Testing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App Testing-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF17155B29DC41E300D0409E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		CF17155C29DC41E300D0409E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				CF2B5DCA29CB32AB006478B4 /* ViewControllers */,
 				CFF9CD8829C451A0002ED77D /* AppDelegate.swift */,
 				CFF9CD8A29C451A0002ED77D /* SceneDelegate.swift */,
+				CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */,
 				2F8C857729C9A4FB0051B396 /* Main.storyboard */,
 				CF17155C29DC41E300D0409E /* SWRevealViewController.h */,
 				CF17155B29DC41E300D0409E /* SWRevealViewController.m */,
@@ -351,6 +354,7 @@
 			files = (
 				CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */,
 				CF17154A29DAE1C600D0409E /* AnsoegningViewController.swift in Sources */,
+				CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */,
 				2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */,
 				CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */,
 				CFF9CDAD29CAF337002ED77D /* SvarModel.swift in Sources */,

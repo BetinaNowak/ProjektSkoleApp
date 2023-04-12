@@ -54,6 +54,9 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
 
         
         setMenuBtn(menuBtn)
+        
+        
+        navigationItem.setHidesBackButton(true, animated: true)
     
     }
     

@@ -18,6 +18,7 @@ class Spoergsmaal4ViewController: UIViewController {
     @IBOutlet weak var mainStackView: UIStackView!
     
     
+    
     var QuestionsArray = [Spoergsmaal]()
     var AnswersArray = [Svar]()
     
@@ -79,5 +80,6 @@ class Spoergsmaal4ViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
     }
+    
 
 }
