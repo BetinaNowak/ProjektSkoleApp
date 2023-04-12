@@ -9,8 +9,12 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    @IBOutlet weak var mainTabBar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainTabBar.clipsToBounds = true
 
         self.navigationController?.navigationBar.isHidden = true
 

@@ -1835,7 +1835,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5u-A6-wfK">
-                                                <rect key="frame" x="279" y="34.333333333333343" width="46" height="34.666666666666657"/>
+                                                <rect key="frame" x="279" y="34" width="46" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="SSz-Tm-FP9"/>
@@ -1847,7 +1847,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-6P-aWi">
-                                                <rect key="frame" x="318" y="34.333333333333343" width="46" height="34.666666666666657"/>
+                                                <rect key="frame" x="318" y="34" width="46" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="9cf-1T-j5C"/>
@@ -2056,7 +2056,7 @@
             </objects>
             <point key="canvasLocation" x="9310.6870229007636" y="841.54929577464793"/>
         </scene>
-        <!--Item-->
+        <!--Profile View Controller-->
         <scene sceneID="wXr-lf-elx">
             <objects>
                 <viewController id="ZSx-kx-r19" customClass="ProfileViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
@@ -2146,7 +2146,6 @@
                         <viewLayoutGuide key="safeArea" id="Hfi-93-HB8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mf0-oc-bR6"/>
                     <navigationItem key="navigationItem" id="x9q-Mr-J86">
                         <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="1M0-5g-D2R">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2197,11 +2196,13 @@
             </objects>
             <point key="canvasLocation" x="-906" y="3042"/>
         </scene>
-        <!--Item-->
+        <!--Profil-->
         <scene sceneID="QWV-bc-Hzi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XX4-xT-P6h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nhj-4a-ZRj"/>
+                    <tabBarItem key="tabBarItem" title="Profil" id="nhj-4a-ZRj">
+                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ni-rB-Sio">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -2539,11 +2540,13 @@
             </objects>
             <point key="canvasLocation" x="566" y="3042"/>
         </scene>
-        <!--Item-->
+        <!--Hjem-->
         <scene sceneID="cge-Wo-uO6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ond-2O-GDO" customClass="MainNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="scO-U0-iQ5"/>
+                    <tabBarItem key="tabBarItem" title="Hjem" id="scO-U0-iQ5">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5ol-kT-yuq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bIg-2x-awC">
@@ -2566,11 +2569,16 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" style="editor" id="oVS-v8-hkb"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MZp-lo-Eie">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="MZp-lo-Eie">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="systemUltraThinMaterialLight" backgroundImageContentMode="scaleToFill" stackedItemPositioning="centered">
+                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
+                        <outlet property="mainTabBar" destination="MZp-lo-Eie" id="9I8-9E-2hq"/>
                         <segue destination="ond-2O-GDO" kind="relationship" relationship="viewControllers" id="g3N-Os-6LK"/>
                         <segue destination="XX4-xT-P6h" kind="relationship" relationship="viewControllers" id="yHl-mo-5yi"/>
                     </connections>
@@ -2608,6 +2616,7 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="hammer.circle.fill" catalog="system" width="128" height="123"/>
         <image name="hand.raised.fingers.spread" catalog="system" width="128" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="lightbulb" catalog="system" width="92" height="128"/>
         <image name="lightbulb.fill" catalog="system" width="92" height="128"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
