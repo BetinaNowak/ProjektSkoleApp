@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         setMenuBtn(menuBtn)
-        
+
         navigationItem.setHidesBackButton(true, animated: true)
         
         // Style background
@@ -56,6 +56,7 @@ class ProfileViewController: UIViewController {
         savedPostsBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
         savedPostsBtn.layer.shadowColor = UIColor.gray.cgColor
     }
+    
     
 
     // Function for menu action
