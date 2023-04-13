@@ -20,6 +20,7 @@ class NetworkServiceUsers {
         if let data = data {
           do {
             let decodedata = try JSONDecoder().decode(Users.self, from: data)
+            print(decodedata.count)
             print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)
           } catch {

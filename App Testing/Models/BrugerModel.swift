@@ -13,7 +13,7 @@ struct Bruger: Codable {
     var efternavn: String?
     var email: String?
     var billede: String?
-    var foedselsdato: Date?
+    //var foedselsdato: Date?
     var brugernavn: String?
     var adgangskode: String?
     var skole: String?

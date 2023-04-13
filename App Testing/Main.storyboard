@@ -2528,7 +2528,7 @@
         <!--Single Profile View Controller-->
         <scene sceneID="ckp-Fd-v2u">
             <objects>
-                <viewController id="LUA-Xs-GbV" customClass="SingleProfileViewController" sceneMemberID="viewController">
+                <viewController id="LUA-Xs-GbV" customClass="SingleProfileViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Znq-9P-6zr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2567,7 +2567,7 @@
                                 <rect key="frame" x="26" y="236" width="79" height="78.999999999999886"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-SM-ztZ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-SM-ztZ">
                                         <rect key="frame" x="-1" y="-1" width="79" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -2600,6 +2600,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="KGw-Rm-kbF"/>
+                    <connections>
+                        <outlet property="containerView" destination="Gcp-N0-Hsl" id="7Cw-ip-k7l"/>
+                        <outlet property="gradeTextField" destination="uBt-75-D7E" id="yme-zi-Ieh"/>
+                        <outlet property="nameLabel" destination="oNG-Xe-24F" id="6sF-O2-457"/>
+                        <outlet property="profileImg" destination="lUz-SM-ztZ" id="z59-J0-hWk"/>
+                        <outlet property="schoolTextField" destination="A3r-gR-ZUS" id="Srg-iN-tQ3"/>
+                        <outlet property="whiteBackground" destination="voD-Iz-n0N" id="KQs-zr-uZh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62W-SC-x6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

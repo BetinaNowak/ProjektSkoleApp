@@ -10,7 +10,9 @@ import UIKit
 class SidebarViewController: UIViewController {
 
     
-    var user: Bruger?
+    //var user: Bruger?
+    
+    var user = [Bruger]()
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -22,22 +24,26 @@ class SidebarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        // Fetch users
-        /*NetworkServiceUsers.sharedObj.getUsers { (Bruger) in
-            self.user = Bruger
-        }*/
+        // Fetch user
+        NetworkServiceUsers.sharedObj.getUsers { (Users) in
+            self.user = Users
+            
+            self.nameLabel.text = String(self.user[0].fornavn!) + " " + String(self.user[0].efternavn!)
+            
+            let imgUrl = "http://test-postnord.dk" + (self.user[0].billede!)
+            self.profileImage.downloadedUserImg(from: imgUrl)
+        }
         
         
-        nameLabel.text = user?.fornavn ?? "navn"
-        print(user?.fornavn ?? "navn")
-        
-        
+        // Image style
         containerView.clipsToBounds = false
         containerView.backgroundColor = UIColor.clear
         
         profileImage.backgroundColor = UIColor.clear
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = 40
+        
+        
     }
     
     
