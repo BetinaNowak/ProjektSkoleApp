@@ -41,7 +41,7 @@ class SidebarViewController: UIViewController {
         
         profileImage.backgroundColor = UIColor.clear
         profileImage.clipsToBounds = true
-        profileImage.layer.cornerRadius = 40
+        profileImage.layer.cornerRadius = 33
         
         
     }

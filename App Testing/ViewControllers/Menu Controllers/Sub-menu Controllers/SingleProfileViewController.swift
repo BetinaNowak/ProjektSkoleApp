@@ -12,10 +12,13 @@ class SingleProfileViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
+
     @IBOutlet weak var schoolTextField: UITextField!
-    
     @IBOutlet weak var gradeTextField: UITextField!
+    
+    @IBOutlet weak var adressTextField: UITextField!
+    @IBOutlet weak var postnrTextField: UITextField!
+    @IBOutlet weak var townTextField: UITextField!
     
     @IBOutlet weak var whiteBackground: UIImageView!
     
@@ -35,6 +38,13 @@ class SingleProfileViewController: UIViewController {
             self.schoolTextField.text = String(self.user[0].skole!)
             
             self.gradeTextField.text = String(self.user[0].klassetrin!)
+            
+            self.adressTextField.text = String(self.user[0].adresse_1!)
+            
+            self.postnrTextField.text = String(self.user[0].post_nr!)
+            
+            self.townTextField.text = String(self.user[0].by!)
+            
             
             let imgUrl = "http://test-postnord.dk" + (self.user[0].billede!)
             self.profileImg.downloadUserImg(from: imgUrl)
