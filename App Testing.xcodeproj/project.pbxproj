@@ -24,6 +24,7 @@
 		CF17155D29DC41E300D0409E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17155B29DC41E300D0409E /* SWRevealViewController.m */; };
 		CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */; };
 		CF1B11D329E6CED000519F95 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D229E6CED000519F95 /* MainNavigationController.swift */; };
+		CF1B11D629E7E27F00519F95 /* SingleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -81,6 +82,7 @@
 		CF17155C29DC41E300D0409E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CF1B11D229E6CED000519F95 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProfileViewController.swift; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 			path = "All posts";
 			sourceTree = "<group>";
 		};
+		CF1B11D429E7E23D00519F95 /* Sub-menu Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */,
+			);
+			path = "Sub-menu Controllers";
+			sourceTree = "<group>";
+		};
 		CF2B5DBF29CB313F006478B4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +198,7 @@
 		CF2B5DCA29CB32AB006478B4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CFE60A0C29E52A8A00A572BF /* Menu items */,
+				CFE60A0C29E52A8A00A572BF /* Menu Controllers */,
 				CF17155029DC158800D0409E /* All posts */,
 				CF17154D29DC153300D0409E /* Questions */,
 				CF73310329DAC84C00E0F500 /* Posts frontpage 1 */,
@@ -220,9 +230,10 @@
 			path = "Posts frontpage 1";
 			sourceTree = "<group>";
 		};
-		CFE60A0C29E52A8A00A572BF /* Menu items */ = {
+		CFE60A0C29E52A8A00A572BF /* Menu Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF1B11D429E7E23D00519F95 /* Sub-menu Controllers */,
 				CFE60A0629DD3A4600A572BF /* SidebarViewController.swift */,
 				CFE60A0229DC4C5C00A572BF /* ProfileViewController.swift */,
 				CFE60A0D29E52ADE00A572BF /* EducationsViewController.swift */,
@@ -232,7 +243,7 @@
 				CF0D3CE429E536A200654FD5 /* NewsViewController.swift */,
 				CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */,
 			);
-			path = "Menu items";
+			path = "Menu Controllers";
 			sourceTree = "<group>";
 		};
 		CFF9CD7C29C451A0002ED77D = {
@@ -373,6 +384,7 @@
 				CFE60A0E29E52ADE00A572BF /* EducationsViewController.swift in Sources */,
 				CFF9CDAF29CB0523002ED77D /* Spoergsmaal2ViewController.swift in Sources */,
 				CFB4F61829CC5422006D42AF /* OpslagModel.swift in Sources */,
+				CF1B11D629E7E27F00519F95 /* SingleProfileViewController.swift in Sources */,
 				CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */,
 				CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */,
 				CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */,
