@@ -60,26 +60,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     // Function for dismissing keyboard on tap outside searchbar
     @objc func singleTap(sender: UITapGestureRecognizer) {
         self.searchResultController.searchBar.resignFirstResponder()
-        //self.searchResultController.searchBar.showsCancelButton = false
-        //self.searchResultController.searchBar.endEditing(true)
-        //self.searchResultController = UISearchController(searchResultsController: nil)
-        //self.searchResultController.searchResultsUpdater = self
-        //self.searchResultController.delegate = self
-        self.searchResultController.hidesNavigationBarDuringPresentation = false
-        self.searchResultController.navigationItem.hidesSearchBarWhenScrolling = false
-        //self.searchResultController.searchBar.placeholder = "Søg.."
-        //self.searchResultController.searchBar.delegate = self
-        //self.searchResultController.searchBar.searchBarStyle = .minimal
-        //self.searchResultController.searchBar.tintColor = UIColor.white
         
         self.phoneSearchView.addSubview(self.searchResultController.searchBar)
         self.internshipsTableView.tableHeaderView = self.phoneSearchView
         self.searchResultController.searchBar.showsCancelButton = false
-        
-        //self.searchResultController.navigationItem.searchController = searchResultController
-    
-        //self.searchResultController.searchBar.showsCancelButton = false
-        definesPresentationContext = true
         
     }
     
@@ -87,7 +71,6 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     // Function for setting up the search bar
     func setupSearchController() {
 
-        //self.searchResultController = UISearchController(searchResultsController: nil)
         self.searchResultController.searchResultsUpdater = self
         self.searchResultController.delegate = self
         self.searchResultController.hidesNavigationBarDuringPresentation = false
@@ -99,7 +82,6 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         self.phoneSearchView.addSubview(self.searchResultController.searchBar)
         self.internshipsTableView.tableHeaderView = self.phoneSearchView
-        
         
         //self.searchResultController.navigationItem.searchController = searchResultController
     
