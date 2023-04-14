@@ -54,31 +54,57 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         singleTapGestureRecognizer.isEnabled = true
         singleTapGestureRecognizer.cancelsTouchesInView = false
         self.view.addGestureRecognizer(singleTapGestureRecognizer)
+        
     }
     
     // Function for dismissing keyboard on tap outside searchbar
     @objc func singleTap(sender: UITapGestureRecognizer) {
         self.searchResultController.searchBar.resignFirstResponder()
+        //self.searchResultController.searchBar.showsCancelButton = false
+        //self.searchResultController.searchBar.endEditing(true)
+        //self.searchResultController = UISearchController(searchResultsController: nil)
+        //self.searchResultController.searchResultsUpdater = self
+        //self.searchResultController.delegate = self
+        self.searchResultController.hidesNavigationBarDuringPresentation = false
+        self.searchResultController.navigationItem.hidesSearchBarWhenScrolling = false
+        //self.searchResultController.searchBar.placeholder = "Søg.."
+        //self.searchResultController.searchBar.delegate = self
+        //self.searchResultController.searchBar.searchBarStyle = .minimal
+        //self.searchResultController.searchBar.tintColor = UIColor.white
+        
+        self.phoneSearchView.addSubview(self.searchResultController.searchBar)
+        self.internshipsTableView.tableHeaderView = self.phoneSearchView
+        self.searchResultController.searchBar.showsCancelButton = false
+        
+        //self.searchResultController.navigationItem.searchController = searchResultController
+    
+        //self.searchResultController.searchBar.showsCancelButton = false
+        definesPresentationContext = true
+        
     }
     
     
     // Function for setting up the search bar
     func setupSearchController() {
 
-        self.searchResultController = UISearchController(searchResultsController: nil)
+        //self.searchResultController = UISearchController(searchResultsController: nil)
         self.searchResultController.searchResultsUpdater = self
         self.searchResultController.delegate = self
         self.searchResultController.hidesNavigationBarDuringPresentation = false
+        self.searchResultController.navigationItem.hidesSearchBarWhenScrolling = false
         self.searchResultController.searchBar.placeholder = "Søg.."
         self.searchResultController.searchBar.delegate = self
         self.searchResultController.searchBar.searchBarStyle = .minimal
         self.searchResultController.searchBar.tintColor = UIColor.white
+        
         self.phoneSearchView.addSubview(self.searchResultController.searchBar)
         self.internshipsTableView.tableHeaderView = self.phoneSearchView
-        //self.searchResultController.navigationItem.hidesSearchBarWhenScrolling = true
         
+        
+        //self.searchResultController.navigationItem.searchController = searchResultController
+    
         //self.searchResultController.searchBar.showsCancelButton = false
-        //definesPresentationContext = true
+        definesPresentationContext = true
         
     }
 
