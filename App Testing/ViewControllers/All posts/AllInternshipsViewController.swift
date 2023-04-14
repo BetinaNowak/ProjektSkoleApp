@@ -107,11 +107,22 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
 
     }
     
+    // When searhc cancel button is clicked
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
             filteredPosts = PostsArray
             internshipsTableView.reloadData()
         }
+    
+    // Filter out the posts whose titles do not match the typed in search text
+    private func filterPosts(for searchText: String) {
+      filteredPosts = PostsArray.filter { post in
+        return
+          post.titel!.lowercased().contains(searchText.lowercased())
+      }
+      internshipsTableView.reloadData()
+    }
 
+    
     
     
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
@@ -126,6 +137,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if searchResultController.isActive && searchResultController.searchBar.text != "" {
+            return filteredPosts.count
+        }
         return PostsArray.count
     }
     
@@ -134,6 +149,16 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AllInternshipsTableViewCell
+        
+        
+        let post: Opslag
+        
+        if searchResultController.isActive && searchResultController.searchBar.text != "" {
+            post = filteredPosts[indexPath.row]
+        } else {
+            post = PostsArray[indexPath.row]
+        }
+        
         
         cell.titelLabel.text = PostsArray[indexPath.row].titel
         cell.beskrivelseLabel.text = PostsArray[indexPath.row].beskrivelse
@@ -214,10 +239,13 @@ extension UIImageView {
 
 
 
+// Update search results
 extension AllInternshipsViewController: UISearchResultsUpdating {
-   func updateSearchResults(for searchController: UISearchController) {
-    // TO-DO: Implement here
-  }
+
+       func updateSearchResults(for searchController: UISearchController) {
+         filterPosts(for: searchController.searchBar.text ?? "")
+       }
+  
 }
 
 
