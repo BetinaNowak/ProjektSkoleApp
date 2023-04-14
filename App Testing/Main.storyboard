@@ -1669,9 +1669,21 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="440" id="34r-3k-r5m"/>
                                                 </constraints>
+                                                <view key="tableHeaderView" contentMode="scaleToFill" id="jwz-Hm-bkO" userLabel="Search">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-We-Fos" userLabel="Phone Search View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="49"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="153" id="Yki-ed-lwE" customClass="AllInternshipsTableViewCell" customModule="App_Testing" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="335" height="153"/>
+                                                        <rect key="frame" x="0.0" y="108" width="335" height="153"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yki-ed-lwE" id="HzP-1u-HYK">
                                                             <rect key="frame" x="0.0" y="0.0" width="335" height="153"/>
@@ -1821,6 +1833,8 @@
                     <navigationItem key="navigationItem" style="editor" id="DAb-ln-oyB"/>
                     <connections>
                         <outlet property="internshipsTableView" destination="T7T-q0-D2I" id="zet-vT-CSM"/>
+                        <outlet property="phoneSearchView" destination="jwz-Hm-bkO" id="zq6-nk-Tj6"/>
+                        <outlet property="searchBarContainer" destination="a9c-We-Fos" id="HO7-Nv-6mT"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="cwb-9a-gFD"/>
                     </connections>
                 </viewController>

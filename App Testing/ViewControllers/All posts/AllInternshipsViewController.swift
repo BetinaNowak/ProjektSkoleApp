@@ -12,10 +12,16 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var internshipsTableView: UITableView!
     
-
+    
+    @IBOutlet weak var phoneSearchView: UIView!
+    
+    @IBOutlet weak var searchBarContainer: UIView!
+    
+    
+    
     var PostsArray = [Opslag]()
     
-    var searchController = UISearchController(searchResultsController: nil)
+    var searchResultController = UISearchController(searchResultsController: nil)
     
     var filteredPosts: [Opslag] = []
 
@@ -37,13 +43,16 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         
         // Dynamically create a search controller using anonymous function
-            self.searchController = ({
+            /*self.searchController = ({
                 let controller = UISearchController(searchResultsController: nil)
+                
+                
+                
                 controller.searchResultsUpdater = self
                 
                 controller.delegate = self
 
-                //controller.hidesNavigationBarDuringPresentation = false
+                controller.hidesNavigationBarDuringPresentation = false
                 controller.searchBar.delegate = self
                 controller.searchBar.searchBarStyle = .minimal
                 controller.searchBar.tintColor = UIColor.white
@@ -61,10 +70,47 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
                 self.internshipsTableView.tableHeaderView = controller.searchBar
 
                 return controller
-            })()
+            })()*/
 
+        searchResultController.searchBar.delegate = self
+        
+        view.addSubview(searchBarContainer)
+        
+        self.setupSearchController()
         
     }
+    
+    
+    // Set up search bar
+    func setupSearchController() {
+
+        self.searchResultController = UISearchController(searchResultsController: nil)
+        self.searchResultController.searchResultsUpdater = self
+        self.searchResultController.delegate = self
+        self.searchResultController.hidesNavigationBarDuringPresentation = false
+        self.searchResultController.searchBar.placeholder = "Søg.."
+        self.searchResultController.searchBar.delegate = self
+        self.searchResultController.searchBar.searchBarStyle = .minimal
+        self.searchResultController.searchBar.tintColor = UIColor.white
+        self.phoneSearchView.addSubview(self.searchResultController.searchBar)
+        self.internshipsTableView.tableHeaderView = self.phoneSearchView
+
+    }
+    
+    // Add searchbar to view
+    override func viewWillLayoutSubviews() {
+
+        super.viewWillLayoutSubviews()
+        self.searchResultController.searchBar.sizeToFit()
+        self.searchResultController.searchBar.frame.size.width = self.phoneSearchView.frame.size.width
+        self.searchResultController.searchBar.frame.size.height = self.phoneSearchView.frame.size.height
+
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            filteredPosts = PostsArray
+            internshipsTableView.reloadData()
+        }
 
     
     
@@ -173,3 +219,6 @@ extension AllInternshipsViewController: UISearchResultsUpdating {
     // TO-DO: Implement here
   }
 }
+
+
+
