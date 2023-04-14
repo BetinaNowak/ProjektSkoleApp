@@ -1674,7 +1674,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-We-Fos" userLabel="Phone Search View">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="49"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="49"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         </view>

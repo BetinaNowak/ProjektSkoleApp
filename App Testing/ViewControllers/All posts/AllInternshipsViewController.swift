@@ -42,46 +42,27 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         
-        // Dynamically create a search controller using anonymous function
-            /*self.searchController = ({
-                let controller = UISearchController(searchResultsController: nil)
-                
-                
-                
-                controller.searchResultsUpdater = self
-                
-                controller.delegate = self
-
-                controller.hidesNavigationBarDuringPresentation = false
-                controller.searchBar.delegate = self
-                controller.searchBar.searchBarStyle = .minimal
-                controller.searchBar.tintColor = UIColor.white
-                
-                
-                controller.searchBar.placeholder = "Søg efter praktikpladser"
-                controller.searchBar.sizeToFit()
-
-                controller.obscuresBackgroundDuringPresentation = false
-                
-                navigationItem.searchController = searchController
-                definesPresentationContext = true
-                
-
-                self.internshipsTableView.tableHeaderView = controller.searchBar
-
-                return controller
-            })()*/
-
+        // Search
         searchResultController.searchBar.delegate = self
-        
         view.addSubview(searchBarContainer)
-        
         self.setupSearchController()
         
+        
+        // Create TapGestureRecognizer that dismisses keyboard on tap outside searchbar
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.singleTap(sender:)))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTapGestureRecognizer)
+    }
+    
+    // Function for dismissing keyboard on tap outside searchbar
+    @objc func singleTap(sender: UITapGestureRecognizer) {
+        self.searchResultController.searchBar.resignFirstResponder()
     }
     
     
-    // Set up search bar
+    // Function for setting up the search bar
     func setupSearchController() {
 
         self.searchResultController = UISearchController(searchResultsController: nil)
@@ -94,8 +75,14 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         self.searchResultController.searchBar.tintColor = UIColor.white
         self.phoneSearchView.addSubview(self.searchResultController.searchBar)
         self.internshipsTableView.tableHeaderView = self.phoneSearchView
-
+        //self.searchResultController.navigationItem.hidesSearchBarWhenScrolling = true
+        
+        //self.searchResultController.searchBar.showsCancelButton = false
+        //definesPresentationContext = true
+        
     }
+
+    
     
     // Add searchbar to view
     override func viewWillLayoutSubviews() {
@@ -107,8 +94,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
 
     }
     
-    // When searhc cancel button is clicked
+    // When search cancel button is clicked reload tableview
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
             filteredPosts = PostsArray
             internshipsTableView.reloadData()
         }
@@ -121,10 +110,11 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
       }
       internshipsTableView.reloadData()
     }
+    
+    
 
     
-    
-    
+    // Segue for showing single post
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
         if let destination = seque.destination as? SinglePostViewController {
             destination.post = PostsArray[internshipsTableView.indexPathForSelectedRow!.row]
@@ -138,6 +128,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        // If searching show filtered posts, else show all
         if searchResultController.isActive && searchResultController.searchBar.text != "" {
             return filteredPosts.count
         }
@@ -151,8 +142,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AllInternshipsTableViewCell
         
         
-        let post: Opslag
+        let post: Opslag // error occurs even though the value 'post' is used below?
         
+        // If search is active, show the filtered post in row
         if searchResultController.isActive && searchResultController.searchBar.text != "" {
             post = filteredPosts[indexPath.row]
         } else {
@@ -247,6 +239,5 @@ extension AllInternshipsViewController: UISearchResultsUpdating {
        }
   
 }
-
 
 
