@@ -25,6 +25,13 @@ struct Opslag: Codable {
     var telefon: String?
     var email: String?
     var virksomhedsnavn: String?
+    
+    
+    mutating func setData(title : String)
+        {
+            titel = title
+        }
+    
 }
 
 typealias Posts = [Opslag]

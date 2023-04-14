@@ -7,13 +7,19 @@
 
 import UIKit
 
-class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate {
     
 
     @IBOutlet weak var internshipsTableView: UITableView!
     
 
     var PostsArray = [Opslag]()
+    
+    var searchController = UISearchController(searchResultsController: nil)
+    
+    var filteredPosts: [Opslag] = []
+
+
     
 
     override func viewDidLoad() {
@@ -30,7 +36,36 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         
+        // Dynamically create a search controller using anonymous function
+            self.searchController = ({
+                let controller = UISearchController(searchResultsController: nil)
+                controller.searchResultsUpdater = self
+                
+                controller.delegate = self
+
+                //controller.hidesNavigationBarDuringPresentation = false
+                controller.searchBar.delegate = self
+                controller.searchBar.searchBarStyle = .minimal
+                controller.searchBar.tintColor = UIColor.white
+                
+                
+                controller.searchBar.placeholder = "Søg efter praktikpladser"
+                controller.searchBar.sizeToFit()
+
+                controller.obscuresBackgroundDuringPresentation = false
+                
+                navigationItem.searchController = searchController
+                definesPresentationContext = true
+                
+
+                self.internshipsTableView.tableHeaderView = controller.searchBar
+
+                return controller
+            })()
+
+        
     }
+
     
     
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
@@ -129,4 +164,12 @@ extension UIImageView {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }
+}
+
+
+
+extension AllInternshipsViewController: UISearchResultsUpdating {
+   func updateSearchResults(for searchController: UISearchController) {
+    // TO-DO: Implement here
+  }
 }
