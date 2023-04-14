@@ -1915,9 +1915,21 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="440" id="5KO-by-3oa"/>
                                                 </constraints>
+                                                <view key="tableHeaderView" contentMode="scaleToFill" id="zmC-yc-GdK" userLabel="Search">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYt-9V-HTI" userLabel="Phone Search View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="58"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="153" id="Vuy-U5-CF5" customClass="AllEducationsTableViewCell" customModule="App_Testing" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="335" height="153"/>
+                                                        <rect key="frame" x="0.0" y="108" width="335" height="153"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vuy-U5-CF5" id="wEn-w5-sLg">
                                                             <rect key="frame" x="0.0" y="0.0" width="335" height="153"/>
@@ -2071,6 +2083,8 @@
                     <navigationItem key="navigationItem" style="editor" id="hqG-Ip-UD7"/>
                     <connections>
                         <outlet property="educationsTableView" destination="j4G-x9-Xz4" id="ruj-WR-WIK"/>
+                        <outlet property="phoneSearchView" destination="HYt-9V-HTI" id="5ar-to-xBp"/>
+                        <outlet property="searchBarContainer" destination="zmC-yc-GdK" id="dxa-wm-3Fe"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="tTf-fI-GDe"/>
                     </connections>
                 </viewController>
@@ -2682,8 +2696,8 @@
         <segue reference="YeF-Kt-uCe"/>
         <segue reference="f8U-2a-dwi"/>
         <segue reference="I2J-ZM-Hdb"/>
-        <segue reference="T5x-OO-zJj"/>
-        <segue reference="cwb-9a-gFD"/>
+        <segue reference="vjh-xp-GBf"/>
+        <segue reference="tTf-fI-GDe"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>
