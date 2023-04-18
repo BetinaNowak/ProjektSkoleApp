@@ -111,9 +111,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         }
     
     // Filter out the posts whose titles do not match the typed in search text
-    private func filterPosts(for searchText: String) {
+    func filterPosts(for searchText: String) {
         filteredPosts = PostsArray.filter { post in
-        return post.titel!.lowercased().contains(searchText.lowercased())
+            return post.titel!.lowercased().contains(searchText.lowercased())
       }
       internshipsTableView.reloadData()
     }
@@ -150,22 +150,42 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         let post: Opslag // error occurs even though the value 'post' is used below?
         
+        
         // If search is active, show the filtered post in row
         if searchResultController.isActive && searchResultController.searchBar.text != "" {
             
             post = filteredPosts[indexPath.row]
+            
+            cell.titelLabel.text = filteredPosts[indexPath.row].titel
+            cell.beskrivelseLabel.text = filteredPosts[indexPath.row].beskrivelse
+            cell.varighedLabel.text = filteredPosts[indexPath.row].varighed
+            cell.byLabel.text = filteredPosts[indexPath.row].by
+            
+            let imgUrl = "http://test-postnord.dk" + (filteredPosts[indexPath.row].cover_billede!)
+            cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
+            
+            
         } else {
             post = PostsArray[indexPath.row]
+            
+            cell.titelLabel.text = PostsArray[indexPath.row].titel
+            cell.beskrivelseLabel.text = PostsArray[indexPath.row].beskrivelse
+            cell.varighedLabel.text = PostsArray[indexPath.row].varighed
+            cell.byLabel.text = PostsArray[indexPath.row].by
+            
+            let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
+            cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
+            
         }
         
         
-        cell.titelLabel.text = PostsArray[indexPath.row].titel
+        /*cell.titelLabel.text = PostsArray[indexPath.row].titel
         cell.beskrivelseLabel.text = PostsArray[indexPath.row].beskrivelse
         cell.varighedLabel.text = PostsArray[indexPath.row].varighed
         cell.byLabel.text = PostsArray[indexPath.row].by
         
         let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
-        cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
+        cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)*/
         
         
         // Image styling
