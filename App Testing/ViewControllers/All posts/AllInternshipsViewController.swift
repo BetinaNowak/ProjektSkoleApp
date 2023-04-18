@@ -134,6 +134,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // If searching show filtered posts, else show all
