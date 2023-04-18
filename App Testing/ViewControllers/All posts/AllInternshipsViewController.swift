@@ -112,9 +112,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     // Filter out the posts whose titles do not match the typed in search text
     private func filterPosts(for searchText: String) {
-      filteredPosts = PostsArray.filter { post in
-        return
-          post.titel!.lowercased().contains(searchText.lowercased())
+        filteredPosts = PostsArray.filter { post in
+        return post.titel!.lowercased().contains(searchText.lowercased())
       }
       internshipsTableView.reloadData()
     }
@@ -142,7 +141,6 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         }
         return PostsArray.count
     }
-    
 
     
     
@@ -154,6 +152,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         // If search is active, show the filtered post in row
         if searchResultController.isActive && searchResultController.searchBar.text != "" {
+            
             post = filteredPosts[indexPath.row]
         } else {
             post = PostsArray[indexPath.row]

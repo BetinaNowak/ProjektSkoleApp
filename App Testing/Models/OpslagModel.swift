@@ -27,10 +27,10 @@ struct Opslag: Codable {
     var virksomhedsnavn: String?
     
     
-    mutating func setData(title : String)
+    /*mutating func setData(title : String)
         {
-            titel = title
-        }
+            titel = titel
+        }*/
     
 }
 
