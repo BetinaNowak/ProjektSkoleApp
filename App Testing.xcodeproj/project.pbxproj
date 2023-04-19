@@ -15,7 +15,7 @@
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
 		CF0D3CE129E5360700654FD5 /* InternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */; };
 		CF0D3CE329E5368A00654FD5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */; };
-		CF0D3CE529E536A200654FD5 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE429E536A200654FD5 /* NewsViewController.swift */; };
+		CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE429E536A200654FD5 /* SavedViewController.swift */; };
 		CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */; };
 		CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154529DAE0A600D0409E /* SendAnsoegning.swift */; };
 		CF17154A29DAE1C600D0409E /* AnsoegningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */; };
@@ -48,6 +48,7 @@
 		CFB4F62529CC6AA6006D42AF /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CFB4F62429CC6AA6006D42AF /* SDWebImageMapKit */; };
 		CFB4F62929CDC61A006D42AF /* SinglePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */; };
 		CFB4F62F29CDDED0006D42AF /* PostsCollectionViewCells1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F62E29CDDED0006D42AF /* PostsCollectionViewCells1.swift */; };
+		CFC94EAD29EFF0F80028B833 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC94EAC29EFF0F80028B833 /* FilterViewController.swift */; };
 		CFE60A0329DC4C5C00A572BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0229DC4C5C00A572BF /* ProfileViewController.swift */; };
 		CFE60A0529DC4C7000A572BF /* InspirationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */; };
 		CFE60A0729DD3A4600A572BF /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE60A0629DD3A4600A572BF /* SidebarViewController.swift */; };
@@ -73,7 +74,7 @@
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
 		CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		CF0D3CE429E536A200654FD5 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		CF0D3CE429E536A200654FD5 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		CF17154529DAE0A600D0409E /* SendAnsoegning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendAnsoegning.swift; sourceTree = "<group>"; };
 		CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnsoegningViewController.swift; path = "../../../../../Downloads/ProjektSkoleApp-new_ansoegning 2/App Testing/ViewControllers/AnsoegningViewController.swift"; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		CFB4F61B29CC55FD006D42AF /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostViewController.swift; sourceTree = "<group>"; };
 		CFB4F62E29CDDED0006D42AF /* PostsCollectionViewCells1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCells1.swift; sourceTree = "<group>"; };
+		CFC94EAC29EFF0F80028B833 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		CFE60A0229DC4C5C00A572BF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationViewController.swift; sourceTree = "<group>"; };
 		CFE60A0629DD3A4600A572BF /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */,
 				CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */,
 				CF6E07AE29ED129B00CA7AB5 /* SearchViewController.swift */,
+				CFC94EAC29EFF0F80028B833 /* FilterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -243,7 +246,7 @@
 				CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */,
 				CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */,
 				CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */,
-				CF0D3CE429E536A200654FD5 /* NewsViewController.swift */,
+				CF0D3CE429E536A200654FD5 /* SavedViewController.swift */,
 				CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */,
 			);
 			path = "Menu Controllers";
@@ -376,6 +379,7 @@
 				CF1B11D329E6CED000519F95 /* MainNavigationController.swift in Sources */,
 				CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */,
 				CFF9CDAD29CAF337002ED77D /* SvarModel.swift in Sources */,
+				CFC94EAD29EFF0F80028B833 /* FilterViewController.swift in Sources */,
 				CFB4F62929CDC61A006D42AF /* SinglePostViewController.swift in Sources */,
 				CFAFF3AA29D43C4A00733F3A /* AllEducationsTableViewCell.swift in Sources */,
 				CF17155D29DC41E300D0409E /* SWRevealViewController.m in Sources */,
@@ -414,7 +418,7 @@
 				CF6E07AF29ED129B00CA7AB5 /* SearchViewController.swift in Sources */,
 				CF0D3CE129E5360700654FD5 /* InternshipViewController.swift in Sources */,
 				CFE60A0329DC4C5C00A572BF /* ProfileViewController.swift in Sources */,
-				CF0D3CE529E536A200654FD5 /* NewsViewController.swift in Sources */,
+				CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */,
 				CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */,
 				CF17154F29DC157E00D0409E /* DisplayAnswersViewController.swift in Sources */,
 			);

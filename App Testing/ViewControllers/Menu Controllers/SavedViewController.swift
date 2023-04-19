@@ -7,12 +7,17 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class SavedViewController: UIViewController {
 
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var whiteBackground: UIImageView!
+    
+    
+    @IBOutlet weak var savedTableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
