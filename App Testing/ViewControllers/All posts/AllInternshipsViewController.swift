@@ -158,6 +158,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             cell.varighedLabel.text = filteredPosts[indexPath.row].varighed
             cell.byLabel.text = filteredPosts[indexPath.row].by
             
+            // Save button
+            cell.selectionStyle = .none
+            cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
+            
             let imgUrl = "http://test-postnord.dk" + (filteredPosts[indexPath.row].cover_billede!)
             cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
             
@@ -168,6 +172,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             cell.beskrivelseLabel.text = PostsArray[indexPath.row].beskrivelse
             cell.varighedLabel.text = PostsArray[indexPath.row].varighed
             cell.byLabel.text = PostsArray[indexPath.row].by
+            
+            // Save button
+            cell.selectionStyle = .none
+            cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             
             let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
             cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
@@ -187,6 +195,24 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         
         return cell
+    }
+    
+    // Function for showing saved/not saved button
+    @objc func saveBtnClicked(sender: UIButton) {
+        
+        if sender.isSelected {
+            
+            // Unselect button
+            sender.isSelected = false
+            
+        } else {
+            
+            // Select button
+            sender.isSelected = true
+            
+        }
+        
+        internshipsTableView.reloadData()
     }
     
 
