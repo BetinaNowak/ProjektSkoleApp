@@ -1808,6 +1808,10 @@
                                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                             <state key="normal" image="not-saved"/>
                                                                             <state key="selected" image="saved"/>
+                                                                            <connections>
+                                                                                <action selector="addTapped:" destination="Yki-ed-lwE" eventType="touchUpInside" id="Sok-sP-Stq"/>
+                                                                                <action selector="saveBtn:" destination="Yki-ed-lwE" eventType="touchUpInside" id="bge-vP-9OU"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2475,7 +2479,7 @@
                                             <constraint firstAttribute="height" constant="440" id="k98-po-byG"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="153" id="iwJ-XZ-QbB" customClass="AllEducationsTableViewCell" customModule="App_Testing" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="153" id="iwJ-XZ-QbB" customClass="SavedTableViewCell" customModule="App_Testing" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="335" height="153"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwJ-XZ-QbB" id="T5j-aD-rDc">
@@ -2537,10 +2541,13 @@
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="not-saved" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-Ox-y9v">
-                                                                    <rect key="frame" x="277" y="8" width="30" height="30"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-E2-NgT">
+                                                                    <rect key="frame" x="274" y="0.0" width="41" height="38"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" image="not-saved"/>
+                                                                    <state key="selected" image="saved"/>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2578,12 +2585,13 @@
                                                 </tableViewCellContentView>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <outlet property="beskrivelseLabel" destination="3RI-7E-QfB" id="2zf-vP-6O4"/>
-                                                    <outlet property="byLabel" destination="NJr-oK-5L2" id="JNw-OR-9mu"/>
+                                                    <outlet property="beskrivelseLabel" destination="3RI-7E-QfB" id="OBj-JS-cIM"/>
+                                                    <outlet property="byLabel" destination="NJr-oK-5L2" id="dfK-CJ-Nhk"/>
                                                     <outlet property="cellView" destination="Ndh-gw-30U" id="q5i-KY-OYP"/>
-                                                    <outlet property="educationImageView" destination="SFY-Gp-rDD" id="rH4-zs-KxA"/>
-                                                    <outlet property="titelLabel" destination="XbP-Yg-KMG" id="UKm-fd-NDb"/>
-                                                    <outlet property="varighedLabel" destination="NKy-hR-3Wi" id="9lX-dz-7ND"/>
+                                                    <outlet property="internshipImageView" destination="SFY-Gp-rDD" id="Rwe-u9-T0X"/>
+                                                    <outlet property="saveBtn" destination="pqc-E2-NgT" id="itn-bk-hDf"/>
+                                                    <outlet property="titelLabel" destination="XbP-Yg-KMG" id="UeR-CM-wz4"/>
+                                                    <outlet property="varighedLabel" destination="NKy-hR-3Wi" id="MVz-aF-mHD"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -2640,6 +2648,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBtn" destination="G4i-NY-gXN" id="Di1-BL-Hxz"/>
+                        <outlet property="savedTableView" destination="kUx-Qg-bPM" id="oEz-mH-RKy"/>
                         <outlet property="whiteBackground" destination="IAu-Vs-QMt" id="rSe-5W-GuN"/>
                     </connections>
                 </viewController>

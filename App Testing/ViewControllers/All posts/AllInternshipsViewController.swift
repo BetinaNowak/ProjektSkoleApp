@@ -83,9 +83,6 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         self.phoneSearchView.addSubview(self.searchResultController.searchBar)
         self.internshipsTableView.tableHeaderView = self.phoneSearchView
         
-        //self.searchResultController.navigationItem.searchController = searchResultController
-    
-        //self.searchResultController.searchBar.showsCancelButton = false
         definesPresentationContext = true
         
     }
@@ -150,6 +147,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AllInternshipsTableViewCell
         
+            
+        
         // If search is active, show the filtered post in row
         if searchResultController.isActive && searchResultController.searchBar.text != "" {
             
@@ -161,6 +160,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             // Save button
             cell.selectionStyle = .none
             cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
+            
             
             let imgUrl = "http://test-postnord.dk" + (filteredPosts[indexPath.row].cover_billede!)
             cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
@@ -204,11 +204,13 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             
             // Unselect button
             sender.isSelected = false
+            print("Marked as favorite")
             
         } else {
             
             // Select button
             sender.isSelected = true
+            print("Deselected")
             
         }
         

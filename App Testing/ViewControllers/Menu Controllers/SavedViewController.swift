@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SavedViewController: UIViewController {
 
+class SavedViewController: UIViewController {
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
@@ -19,19 +19,39 @@ class SavedViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //savedTableView.delegate = self
+        //savedTableView.dataSource = self
+        
        
         setMenuBtn(menuBtn)
         
         
-        // Style background
+        // Style custom background
         whiteBackground.layer.shadowRadius = 6
         whiteBackground.layer.shadowOpacity = 1
         whiteBackground.layer.shadowOffset = CGSize(width: 2, height: 2)
         whiteBackground.layer.shadowColor = UIColor.gray.cgColor
         
+        
     }
+    
+    
+    
+    /*
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }*/
+    
+    
     
 
     // Function for menu action
@@ -42,3 +62,7 @@ class SavedViewController: UIViewController {
     }
 
 }
+
+protocol ItemCellDelegate {
+    func itemCell(didTapButton button: UIButton)
+}  

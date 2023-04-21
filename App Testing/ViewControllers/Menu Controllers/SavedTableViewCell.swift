@@ -1,36 +1,32 @@
 //
-//  AllInternshipsTableViewCell.swift
+//  SavedTableViewCell.swift
 //  App Testing
 //
-//  Created by Betina Svendsen on 28/03/2023.
+//  Created by Betina Svendsen on 20/04/2023.
 //
 
 import UIKit
 
-class AllInternshipsTableViewCell: UITableViewCell {
+class SavedTableViewCell: UITableViewCell {
+
     
-    
-    //var PostsArray = [Opslag]()
+    var PostsArray = [Opslag]()
 
     
     @IBOutlet weak var cellView: UIView!
     
-    
     @IBOutlet weak var internshipImageView: UIImageView!
-    
     
     @IBOutlet weak var titelLabel: UILabel!
     
-    
     @IBOutlet weak var beskrivelseLabel: UILabel!
-    
     
     @IBOutlet weak var byLabel: UILabel!
     
     @IBOutlet weak var varighedLabel: UILabel!
     
     @IBOutlet weak var saveBtn: UIButton!
-    
+
 
     
     
@@ -46,3 +42,4 @@ class AllInternshipsTableViewCell: UITableViewCell {
     }
 
 }
+

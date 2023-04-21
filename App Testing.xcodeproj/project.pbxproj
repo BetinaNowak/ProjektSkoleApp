@@ -39,6 +39,7 @@
 		CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */; };
 		CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */; };
 		CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */; };
+		CFA6E64A29F15B120052FB40 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA6E64929F15B120052FB40 /* SavedTableViewCell.swift */; };
 		CFAFF3A829D43C2700733F3A /* AllEducationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */; };
 		CFAFF3AA29D43C4A00733F3A /* AllEducationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAFF3A929D43C4A00733F3A /* AllEducationsTableViewCell.swift */; };
 		CFB4F61829CC5422006D42AF /* OpslagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4F61729CC5422006D42AF /* OpslagModel.swift */; };
@@ -99,6 +100,7 @@
 		CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController2.swift; sourceTree = "<group>"; };
 		CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsViewController.swift; sourceTree = "<group>"; };
 		CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsTableViewCell.swift; sourceTree = "<group>"; };
+		CFA6E64929F15B120052FB40 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEducationsViewController.swift; sourceTree = "<group>"; };
 		CFAFF3A929D43C4A00733F3A /* AllEducationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEducationsTableViewCell.swift; sourceTree = "<group>"; };
 		CFB4F61729CC5422006D42AF /* OpslagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpslagModel.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */,
 				CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */,
 				CF0D3CE429E536A200654FD5 /* SavedViewController.swift */,
+				CFA6E64929F15B120052FB40 /* SavedTableViewCell.swift */,
 				CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */,
 			);
 			path = "Menu Controllers";
@@ -395,6 +398,7 @@
 				CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */,
 				CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */,
 				CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */,
+				CFA6E64A29F15B120052FB40 /* SavedTableViewCell.swift in Sources */,
 				CFF8CCBB29E684F600075989 /* NotificationsViewController.swift in Sources */,
 				2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */,
 				2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */,
