@@ -12,6 +12,7 @@ class AllInternshipsTableViewCell: UITableViewCell {
     
     //var PostsArray = [Opslag]()
 
+    var link: AllInternshipsViewController?
     
     @IBOutlet weak var cellView: UIView!
     
@@ -30,7 +31,13 @@ class AllInternshipsTableViewCell: UITableViewCell {
     @IBOutlet weak var varighedLabel: UILabel!
     
     @IBOutlet weak var saveBtn: UIButton!
-
+    
+    
+    
+    @objc private func handleClickedSaveBtn() {
+        //print("Selected")
+        link?.someMethodIWantToCall(cell: self)
+    }
     
     
     override func awakeFromNib() {
