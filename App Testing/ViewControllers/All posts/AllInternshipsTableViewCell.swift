@@ -29,8 +29,7 @@ class AllInternshipsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var varighedLabel: UILabel!
     
-    @IBOutlet weak var saveIcon: UIImageView!
-    
+    @IBOutlet weak var saveBtn: UIButton!
 
     
     

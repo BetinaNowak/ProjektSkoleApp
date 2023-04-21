@@ -157,14 +157,11 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             cell.varighedLabel.text = filteredPosts[indexPath.row].varighed
             cell.byLabel.text = filteredPosts[indexPath.row].by
             
-<<<<<<< HEAD
             // Save button
-            cell.selectionStyle = .none
-            cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
+            //cell.selectionStyle = .none
+            //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             
-            
-=======
->>>>>>> parent of f875fd3 (Save button changes on click)
+
             let imgUrl = "http://test-postnord.dk" + (filteredPosts[indexPath.row].cover_billede!)
             cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
             
@@ -195,10 +192,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
         return cell
     }
-    
-<<<<<<< HEAD
+
     // Function for showing saved/not saved button
-    @objc func saveBtnClicked(sender: UIButton) {
+    /*@objc func saveBtnClicked(sender: UIButton) {
         
         if sender.isSelected {
             
@@ -215,11 +211,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         }
         
         internshipsTableView.reloadData()
-    }
+    }*/
     
-=======
->>>>>>> parent of f875fd3 (Save button changes on click)
-
 }
 
 
