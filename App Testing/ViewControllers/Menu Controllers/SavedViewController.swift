@@ -17,7 +17,8 @@ class SavedViewController: UIViewController {
     
     @IBOutlet weak var savedTableView: UITableView!
     
-    
+    var savedInternship: Opslag?
+
     
     
     override func viewDidLoad() {

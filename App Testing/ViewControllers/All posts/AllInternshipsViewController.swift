@@ -7,9 +7,10 @@
 
 import UIKit
 
-class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate {
+class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate, CustomCellDelegate {
     
-
+    
+    
     @IBOutlet weak var internshipsTableView: UITableView!
     
     
@@ -24,10 +25,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     var searchResultController = UISearchController(searchResultsController: nil)
     
     var filteredPosts: [Opslag] = []
-
-
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +57,10 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
+
+    
+    
+    
     // Function for dismissing keyboard on tap outside searchbar
     @objc func singleTap(sender: UITapGestureRecognizer) {
         self.searchResultController.searchBar.resignFirstResponder()
@@ -70,7 +74,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     // Function for setting up the search bar
     func setupSearchController() {
-
+        
         self.searchResultController.searchResultsUpdater = self
         self.searchResultController.delegate = self
         self.searchResultController.hidesNavigationBarDuringPresentation = false
@@ -86,38 +90,37 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         definesPresentationContext = true
         
     }
-
+    
     
     
     // Add searchbar to view
     override func viewWillLayoutSubviews() {
-
+        
         super.viewWillLayoutSubviews()
         self.searchResultController.searchBar.sizeToFit()
         self.searchResultController.searchBar.frame.size.width = self.phoneSearchView.frame.size.width
         self.searchResultController.searchBar.frame.size.height = self.phoneSearchView.frame.size.height
-
+        
     }
     
     // When search cancel button is clicked reload tableview
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
-            filteredPosts = PostsArray
-            internshipsTableView.reloadData()
-        }
+        filteredPosts = PostsArray
+        internshipsTableView.reloadData()
+    }
     
     // Filter out the posts whose titles do not match the typed in search text
     private func filterPosts(for searchText: String) {
-      filteredPosts = PostsArray.filter { post in
-        return
-          post.titel!.lowercased().contains(searchText.lowercased())
-      }
-      internshipsTableView.reloadData()
+        filteredPosts = PostsArray.filter { post in
+            return post.titel!.lowercased().contains(searchText.lowercased())
+        }
+        internshipsTableView.reloadData()
     }
     
     
-
+    
     
     // Segue for showing single post
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
@@ -125,6 +128,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             destination.post = PostsArray[internshipsTableView.indexPathForSelectedRow!.row]
         }
     }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showPost", sender: self)
@@ -141,13 +147,13 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         return PostsArray.count
     }
     
-
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AllInternshipsTableViewCell
         
-            
+        
         
         // If search is active, show the filtered post in row
         if searchResultController.isActive && searchResultController.searchBar.text != "" {
@@ -157,28 +163,33 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             cell.varighedLabel.text = filteredPosts[indexPath.row].varighed
             cell.byLabel.text = filteredPosts[indexPath.row].by
             
+            
             // Save button
             cell.selectionStyle = .none
-            cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
+            //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             
             
-            cell.link = self
-
+            
             let imgUrl = "http://test-postnord.dk" + (filteredPosts[indexPath.row].cover_billede!)
             cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
             
             
         } else {
-
+            
             cell.titelLabel.text = PostsArray[indexPath.row].titel
             cell.beskrivelseLabel.text = PostsArray[indexPath.row].beskrivelse
             cell.varighedLabel.text = PostsArray[indexPath.row].varighed
             cell.byLabel.text = PostsArray[indexPath.row].by
             
             
+            //if PostsArray[indexPath.row].gemt_af == true
+            // make button "isSelected"
+            
             // Save button
             cell.selectionStyle = .none
-            cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
+            //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
+            //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked), for: .touchUpInside)
+            
             
             
             let imgUrl = "http://test-postnord.dk" + (PostsArray[indexPath.row].cover_billede!)
@@ -198,42 +209,63 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         cell.cellView.layer.shadowPath = UIBezierPath(roundedRect: cell.cellView.bounds, cornerRadius: 10).cgPath
         
         
+        cell.configure(text: "", delegate: self)
+        
         return cell
     }
+    
+    
+    // Function for when button is tapped in tableview cell
+    func cell(_ cell: AllInternshipsTableViewCell, didTap button: UIButton) {
+        let indexPathTapped = internshipsTableView.indexPath(for: cell)
 
+        // Get id of post
+        let postID = PostsArray[indexPathTapped!.row].id
+        
+        print(postID!)
+        
+        if button.isSelected {
+         // Unselect button
+         button.isSelected = false
+         print("Deselected")
+            
+         
+         } else {
+         // Select button
+         button.isSelected = true
+         print("Marked as favorite")
+
+         }
+    }
+    
+    
+
+    
     // Function for showing saved/not saved button
-    @objc func saveBtnClicked(sender: UIButton) {
+   /* @objc func saveBtnClicked(sender: UIButton) {
+        
         
         if sender.isSelected {
+         // Unselect button
+         sender.isSelected = false
+         print("BLA Deselected")
             
-            // Unselect button
-            sender.isSelected = false
-            print("Deselected")
-            
-        } else {
-            
-            // Select button
-            sender.isSelected = true
-            
-            print("Marked as favorite")
-            
-        }
-        
-        internshipsTableView.reloadData()
+         
+         } else {
+         // Select button
+         sender.isSelected = true
+         print("BLA Marked as favorite")
+
+         }
+         
+         internshipsTableView.reloadData()
+    }*/
+    
+    
     }
     
     
     
-    func someMethodIWantToCall(cell: UITableViewCell) {
-        print("Inside viewcontroller")
-        
-        let indexPathTapped = internshipsTableView.indexPath(for: cell)
-        print(indexPathTapped!)
-    }
-    
-    
-    
-}
 
 
 // Make it possible to round selected corners
