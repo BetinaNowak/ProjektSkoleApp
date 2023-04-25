@@ -986,11 +986,11 @@
             <objects>
                 <viewController id="3qN-e1-pHw" customClass="SinglePostViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yPV-BH-exM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-zh-8PB">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-G4-dLt">
                                         <rect key="frame" x="0.0" y="-103" width="393" height="1200"/>
@@ -1160,40 +1160,6 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-vz-fmH">
-                                                <rect key="frame" x="46" y="172" width="289" height="212"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tak for din ansøgning!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS7-aw-aYT">
-                                                        <rect key="frame" x="60" y="47" width="181" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOZ-D2-ve4">
-                                                        <rect key="frame" x="242" y="8" width="39" height="31"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="closePopUp:" destination="3qN-e1-pHw" eventType="touchUpInside" id="8XA-Al-lc5"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3F-0a-iaf">
-                                                        <rect key="frame" x="37" y="79" width="227" height="95"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <string key="text">Din ansøgning er blevet oprettet som en begivenhed.                                                                                                  Husk at kontakte virksomheden ang. din afsendte ansøgning.</string>
-                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="11"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYJ-IR-1GC">
                                                 <rect key="frame" x="0.0" y="-173" width="396" height="1409"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1219,6 +1185,40 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-vz-fmH">
+                                                <rect key="frame" x="46" y="172" width="289" height="212"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOZ-D2-ve4">
+                                                        <rect key="frame" x="242" y="8" width="39" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="closePopUp:" destination="3qN-e1-pHw" eventType="touchUpInside" id="8XA-Al-lc5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3F-0a-iaf">
+                                                        <rect key="frame" x="37" y="79" width="227" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <string key="text">Din ansøgning er blevet oprettet som en begivenhed.                                                                                                  Husk at kontakte virksomheden ang. din afsendte ansøgning.</string>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tak for din ansøgning!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS7-aw-aYT">
+                                                        <rect key="frame" x="54" y="40" width="181" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -1227,10 +1227,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="3LS-G4-dLt" secondAttribute="bottom" constant="-103" id="1sM-XH-2wq"/>
+                                    <constraint firstAttribute="bottom" secondItem="3LS-G4-dLt" secondAttribute="bottom" constant="-50" id="1sM-XH-2wq"/>
                                     <constraint firstAttribute="trailing" secondItem="3LS-G4-dLt" secondAttribute="trailing" id="Dzu-KA-ttv"/>
                                     <constraint firstItem="3LS-G4-dLt" firstAttribute="leading" secondItem="zQs-zh-8PB" secondAttribute="leading" id="Gvy-sH-6RD"/>
-                                    <constraint firstAttribute="height" constant="1200" id="I2B-vi-hxE"/>
+                                    <constraint firstAttribute="height" constant="1150" id="I2B-vi-hxE"/>
                                     <constraint firstItem="3LS-G4-dLt" firstAttribute="top" secondItem="zQs-zh-8PB" secondAttribute="top" id="XDA-Bh-Ejn"/>
                                     <constraint firstItem="3LS-G4-dLt" firstAttribute="centerX" secondItem="zQs-zh-8PB" secondAttribute="centerX" id="vfG-gp-qus"/>
                                 </constraints>
@@ -1243,11 +1243,12 @@
                             <constraint firstItem="zQs-zh-8PB" firstAttribute="trailing" secondItem="yPV-BH-exM" secondAttribute="trailing" id="75m-Hg-t28"/>
                             <constraint firstAttribute="bottom" secondItem="zQs-zh-8PB" secondAttribute="bottom" id="aOs-cf-tpY"/>
                             <constraint firstItem="3LS-G4-dLt" firstAttribute="width" secondItem="yPV-BH-exM" secondAttribute="width" id="d7h-yj-UB0"/>
+                            <constraint firstItem="zQs-zh-8PB" firstAttribute="top" secondItem="yPV-BH-exM" secondAttribute="topMargin" id="sWF-sO-ssX"/>
                             <constraint firstItem="zQs-zh-8PB" firstAttribute="leading" secondItem="yPV-BH-exM" secondAttribute="leading" id="ufe-3x-iaB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="0vv-vW-gfq"/>
-                    <size key="freeformSize" width="393" height="1200"/>
+                    <size key="freeformSize" width="393" height="1150"/>
                     <connections>
                         <outlet property="adresseLabel" destination="qQ2-Ui-dqd" id="vVT-5N-Ejb"/>
                         <outlet property="ansoegButton" destination="LPs-29-qvg" id="tfE-ou-ksk"/>

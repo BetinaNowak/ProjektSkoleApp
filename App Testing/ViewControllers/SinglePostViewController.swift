@@ -95,6 +95,7 @@ class SinglePostViewController: UIViewController {
                     blurEffectView.tag = 1
                    
                    self.backgroundView.addSubview(blurEffectView)
+                   
                     
                 } else {
                     self.backgroundView.backgroundColor = .black
