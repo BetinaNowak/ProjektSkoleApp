@@ -75,6 +75,15 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             
             destinationVC.post = selectedItem
         }
+        
+        /*if segue.identifier == "showEducation" {
+            guard let destinationVC = segue.destination as?
+                    SingleEducationViewController else {
+                return
+            }
+            
+            destinationVC.post = selectedItem
+        }*/
     }
     
     
@@ -82,10 +91,22 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
         
         if collectionView == self.postsCollectionView1 {
             let selectedPost = PostsArray1[indexPath.item]
-            performSegue(withIdentifier: "showPost", sender: selectedPost)
+            
+            if selectedPost.opslag_type == "praktik" {
+                performSegue(withIdentifier: "showPost", sender: selectedPost)
+            } else if selectedPost.opslag_type == "uddannelse" {
+                performSegue(withIdentifier: "showEducation", sender: selectedPost)
+            }
+            
+            
         } else {
             let selectedPost = PostsArray2[indexPath.item]
-            performSegue(withIdentifier: "showPost", sender: selectedPost)
+            
+            if selectedPost.opslag_type == "praktik" {
+                performSegue(withIdentifier: "showPost", sender: selectedPost)
+            } else if selectedPost.opslag_type == "uddannelse" {
+                performSegue(withIdentifier: "showEducation", sender: selectedPost)
+            }
         }
     }
     
