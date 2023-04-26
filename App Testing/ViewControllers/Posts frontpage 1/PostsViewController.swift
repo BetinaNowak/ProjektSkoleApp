@@ -17,8 +17,6 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var postsCollectionView1: UICollectionView!
     @IBOutlet weak var postsCollectionView2: UICollectionView!
     
-    
-    
     var PostsArray1 = [Opslag]()
     var PostsArray2 = [Opslag]()
 
@@ -83,14 +81,14 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             destinationVC.post = selectedItem
         }
         
-        /*if segue.identifier == "showEducation" {
+        if segue.identifier == "showEducation" {
             guard let destinationVC = segue.destination as?
                     SingleEducationViewController else {
                 return
             }
             
             destinationVC.post = selectedItem
-        }*/
+        }
     }
     
     

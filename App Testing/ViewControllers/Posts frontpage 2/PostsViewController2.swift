@@ -76,14 +76,14 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
             destinationVC.post = selectedItem
         }
         
-        /*if segue.identifier == "showEducation" {
+        if segue.identifier == "showEducation" {
             guard let destinationVC = segue.destination as?
                     SingleEducationViewController else {
                 return
             }
             
             destinationVC.post = selectedItem
-        }*/
+        }
     }
     
     

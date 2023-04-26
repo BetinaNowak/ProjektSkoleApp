@@ -975,6 +975,7 @@
                         <outlet property="postsCollectionView1" destination="4xd-a4-ngI" id="mAd-BZ-sei"/>
                         <outlet property="postsCollectionView2" destination="FkI-hJ-HIm" id="0d7-ox-F21"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="bv4-ew-g67"/>
+                        <segue destination="nHu-Jb-iyS" kind="show" identifier="showEducation" id="bsy-xv-1Ir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gH-W7-p2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1616,6 +1617,7 @@
                         <outlet property="postsCollectionView1" destination="fAb-cI-IRD" id="SLx-yc-wV5"/>
                         <outlet property="postsCollectionView2" destination="mZM-9d-GZL" id="COP-ft-sDt"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="IQ2-D5-HKt"/>
+                        <segue destination="nHu-Jb-iyS" kind="show" identifier="showEducation" id="DYH-ss-36v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AV-Ft-ZbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2211,7 +2213,7 @@
                         <outlet property="educationsTableView" destination="j4G-x9-Xz4" id="ruj-WR-WIK"/>
                         <outlet property="phoneSearchView" destination="HYt-9V-HTI" id="5ar-to-xBp"/>
                         <outlet property="searchBarContainer" destination="zmC-yc-GdK" id="dxa-wm-3Fe"/>
-                        <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="tTf-fI-GDe"/>
+                        <segue destination="nHu-Jb-iyS" kind="show" identifier="showEducation" id="y49-xw-lGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8n-gK-9yi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2955,17 +2957,17 @@
             <objects>
                 <viewController id="nHu-Jb-iyS" customClass="SingleEducationViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qFx-nM-T5c">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-mn-zVg">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="396" height="1500"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-Pc-Hmc">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-Pc-Hmc">
+                                        <rect key="frame" x="0.0" y="-103" width="396" height="1503"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcF-Ky-92h">
-                                                <rect key="frame" x="0.0" y="-103" width="395" height="292"/>
+                                                <rect key="frame" x="0.0" y="-103" width="398" height="292"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2979,7 +2981,7 @@
                                                     <constraint firstAttribute="height" constant="319" id="0QR-Xz-VuA"/>
                                                 </constraints>
                                             </imageView>
-                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-kk-7kf">
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-kk-7kf" userLabel="Blur View">
                                                 <rect key="frame" x="68" y="90" width="257" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="HM0-Lr-xIn">
@@ -3040,7 +3042,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beskrivelse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMk-rT-Wnn" userLabel="beskrivelseLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beskrivelse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMk-rT-Wnn" userLabel="beskrivelseLabel">
                                                 <rect key="frame" x="34" y="324" width="313" height="136"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3051,8 +3053,8 @@
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adgangskrav" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjj-L3-NT3">
-                                                <rect key="frame" x="34" y="514" width="313" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ansøgning og optagelse" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-en-YNr" userLabel="Ansøgning og optagelse">
+                                                <rect key="frame" x="34" y="815" width="191" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -3061,8 +3063,50 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adgangskrav" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXp-ab-N98" userLabel="adgangskravLabel">
-                                                <rect key="frame" x="34" y="545" width="313" height="283"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ansøgning og optagelse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHf-HW-SzE" userLabel="ansoegningLabel">
+                                                <rect key="frame" x="34" y="845" width="313" height="299"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jobmuligheder" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-LN-pjZ">
+                                                <rect key="frame" x="34" y="1171" width="120" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adgangskrav" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-XV-jNE">
+                                                <rect key="frame" x="34" y="494" width="104" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adgangskrav" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jX-pw-IrJ" userLabel="adgangskravLabel">
+                                                <rect key="frame" x="34" y="524" width="313" height="268"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jobmuligheder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fI-PK-2JF" userLabel="jobmulighederLabel">
+                                                <rect key="frame" x="34" y="1201" width="313" height="270"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration">
@@ -3075,32 +3119,42 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="xFu-nN-oFh"/>
+                                            <constraint firstAttribute="height" constant="1503" id="xFu-nN-oFh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="zbP-Pc-Hmc" firstAttribute="leading" secondItem="m5D-mn-zVg" secondAttribute="leading" id="4RH-tY-7sT"/>
-                                    <constraint firstItem="zbP-Pc-Hmc" firstAttribute="centerX" secondItem="m5D-mn-zVg" secondAttribute="centerX" id="9qQ-XT-0UN"/>
-                                    <constraint firstAttribute="bottom" secondItem="zbP-Pc-Hmc" secondAttribute="bottom" constant="-50" id="FIA-90-xmY"/>
-                                    <constraint firstItem="zbP-Pc-Hmc" firstAttribute="top" secondItem="m5D-mn-zVg" secondAttribute="top" id="ere-dV-Xp6"/>
-                                    <constraint firstAttribute="trailing" secondItem="zbP-Pc-Hmc" secondAttribute="trailing" id="hXP-y0-UIH"/>
-                                    <constraint firstAttribute="height" constant="1150" id="uJY-kO-KIW"/>
+                                    <constraint firstAttribute="trailing" secondItem="zbP-Pc-Hmc" secondAttribute="trailing" id="FDY-bi-I1q"/>
+                                    <constraint firstItem="zbP-Pc-Hmc" firstAttribute="leading" secondItem="m5D-mn-zVg" secondAttribute="leading" id="JeX-gz-6IK"/>
+                                    <constraint firstItem="zbP-Pc-Hmc" firstAttribute="top" secondItem="m5D-mn-zVg" secondAttribute="top" id="VP4-hm-bQE"/>
+                                    <constraint firstItem="zbP-Pc-Hmc" firstAttribute="centerX" secondItem="m5D-mn-zVg" secondAttribute="centerX" id="odh-iW-ggf"/>
+                                    <constraint firstAttribute="bottom" secondItem="zbP-Pc-Hmc" secondAttribute="bottom" constant="-3" id="u7f-oY-c3q"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="gcn-Ub-4O4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="m5D-mn-zVg" firstAttribute="top" secondItem="qFx-nM-T5c" secondAttribute="topMargin" id="0ZY-gI-9PM"/>
-                            <constraint firstItem="m5D-mn-zVg" firstAttribute="centerY" secondItem="qFx-nM-T5c" secondAttribute="centerY" id="4Za-Pe-DxJ"/>
-                            <constraint firstItem="m5D-mn-zVg" firstAttribute="leading" secondItem="qFx-nM-T5c" secondAttribute="leading" id="7Ft-aN-TSm"/>
-                            <constraint firstAttribute="bottom" secondItem="m5D-mn-zVg" secondAttribute="bottom" id="sGO-i8-1dj"/>
-                            <constraint firstItem="m5D-mn-zVg" firstAttribute="trailing" secondItem="qFx-nM-T5c" secondAttribute="trailing" id="tme-xz-6hc"/>
+                            <constraint firstItem="m5D-mn-zVg" firstAttribute="bottom" secondItem="qFx-nM-T5c" secondAttribute="bottomMargin" id="4Wc-fq-iND"/>
+                            <constraint firstItem="m5D-mn-zVg" firstAttribute="leading" secondItem="qFx-nM-T5c" secondAttribute="leadingMargin" constant="-16" id="OSN-6v-3jh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m5D-mn-zVg" secondAttribute="trailing" constant="-19" id="UuH-IB-AVS"/>
+                            <constraint firstItem="m5D-mn-zVg" firstAttribute="top" secondItem="qFx-nM-T5c" secondAttribute="topMargin" id="qum-J2-XFt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="JXO-Hf-b0B"/>
-                    <size key="freeformSize" width="393" height="1150"/>
+                    <size key="freeformSize" width="393" height="1500"/>
+                    <connections>
+                        <outlet property="adgangskravLabel" destination="7jX-pw-IrJ" id="RJz-iX-D03"/>
+                        <outlet property="ansoegningLabel" destination="rHf-HW-SzE" id="o9X-Cm-b1V"/>
+                        <outlet property="beskrivelseLabel" destination="xMk-rT-Wnn" id="8bS-Pg-HPD"/>
+                        <outlet property="blurView" destination="KuT-kk-7kf" id="vxH-tF-Jil"/>
+                        <outlet property="containerView" destination="xcF-Ky-92h" id="OjW-5Y-jZt"/>
+                        <outlet property="headerByLabel" destination="caU-9j-7z1" id="s9o-b0-qtL"/>
+                        <outlet property="headerVarighedLabel" destination="tRr-E1-dl0" id="Uvf-3w-M4u"/>
+                        <outlet property="jobmulighederLabel" destination="7fI-PK-2JF" id="6Xn-z3-Uij"/>
+                        <outlet property="scrollView" destination="m5D-mn-zVg" id="mSn-1b-jzY"/>
+                        <outlet property="singleImageView" destination="gEb-iR-PIb" id="a9z-1l-Go0"/>
+                        <outlet property="singleTitelLabel" destination="iQU-0D-NC1" id="Lil-rs-hHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZj-Uo-NFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3108,12 +3162,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="y49-xw-lGD"/>
         <segue reference="yl2-xV-nr1"/>
         <segue reference="YeF-Kt-uCe"/>
-        <segue reference="Y6Q-x5-xXe"/>
-        <segue reference="mcN-jk-YqO"/>
-        <segue reference="PMp-kz-qWn"/>
-        <segue reference="bv4-ew-g67"/>
+        <segue reference="f8U-2a-dwi"/>
+        <segue reference="I2J-ZM-Hdb"/>
+        <segue reference="T5x-OO-zJj"/>
+        <segue reference="cwb-9a-gFD"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="HFF-w5-0Dq"/>
         <segue reference="ccz-Tg-KLu"/>

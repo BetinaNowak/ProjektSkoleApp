@@ -35,6 +35,7 @@
 		CF6E07AF29ED129B00CA7AB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E07AE29ED129B00CA7AB5 /* SearchViewController.swift */; };
 		CF73310129DAC2A200E0F500 /* PostsCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73310029DAC2A200E0F500 /* PostsCollectionViewCell1.swift */; };
 		CF73310529DAC89700E0F500 /* PostsCollectionViewCells2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73310429DAC89700E0F500 /* PostsCollectionViewCells2.swift */; };
+		CF75D49629F8FC3500428A54 /* SingleEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF75D49529F8FC3500428A54 /* SingleEducationViewController.swift */; };
 		CFA3790829D19DDB005F80C3 /* PostsCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790729D19DDB005F80C3 /* PostsCollectionViewCell2.swift */; };
 		CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */; };
 		CFA3790E29D2C61C005F80C3 /* AllInternshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */; };
@@ -96,6 +97,7 @@
 		CF6E07AE29ED129B00CA7AB5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF73310029DAC2A200E0F500 /* PostsCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCell1.swift; sourceTree = "<group>"; };
 		CF73310429DAC89700E0F500 /* PostsCollectionViewCells2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCells2.swift; sourceTree = "<group>"; };
+		CF75D49529F8FC3500428A54 /* SingleEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEducationViewController.swift; sourceTree = "<group>"; };
 		CFA3790729D19DDB005F80C3 /* PostsCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCell2.swift; sourceTree = "<group>"; };
 		CFA3790B29D19FA8005F80C3 /* PostsViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController2.swift; sourceTree = "<group>"; };
 		CFA3790D29D2C61C005F80C3 /* AllInternshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInternshipsViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				CF73310329DAC84C00E0F500 /* Posts frontpage 1 */,
 				CF73310229DAC83800E0F500 /* Posts frontpage 2 */,
 				CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */,
+				CF75D49529F8FC3500428A54 /* SingleEducationViewController.swift */,
 				CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */,
 				CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */,
 				CF6E07AE29ED129B00CA7AB5 /* SearchViewController.swift */,
@@ -411,6 +414,7 @@
 				CFE60A0B29DD4C0F00A572BF /* Users.swift in Sources */,
 				CFE60A0729DD3A4600A572BF /* SidebarViewController.swift in Sources */,
 				CF73310129DAC2A200E0F500 /* PostsCollectionViewCell1.swift in Sources */,
+				CF75D49629F8FC3500428A54 /* SingleEducationViewController.swift in Sources */,
 				CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */,
 				CFAFF3A829D43C2700733F3A /* AllEducationsViewController.swift in Sources */,
 				CF2B5DC729CB31B6006478B4 /* Answers3.swift in Sources */,

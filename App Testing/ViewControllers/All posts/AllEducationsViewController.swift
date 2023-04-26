@@ -117,13 +117,13 @@ class AllEducationsViewController: UIViewController, UITableViewDelegate, UITabl
 
     
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
-        if let destination = seque.destination as? SinglePostViewController {
+        if let destination = seque.destination as? SingleEducationViewController {
             destination.post = PostsArray[educationsTableView.indexPathForSelectedRow!.row]
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPost", sender: self)
+        performSegue(withIdentifier: "showEducation", sender: self)
     }
     
     
