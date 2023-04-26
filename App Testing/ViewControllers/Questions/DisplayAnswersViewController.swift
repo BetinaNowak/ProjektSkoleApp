@@ -70,6 +70,7 @@ extension UIViewController {
             if(button.tag != tag && button.spoergsmaal == spoergsmaal) {
                 button.backgroundColor = UIColor.white
                 button.layer.borderColor = UIColor.white.cgColor
+                //button.setTitleColor(.black, for: .normal)
                 var tempArray = [String:Int]()
                 tempArray = [
                     String("bruger_id"): 1,
@@ -84,8 +85,9 @@ extension UIViewController {
                 
                 view.layoutIfNeeded()
             } else if(button.spoergsmaal == spoergsmaal){
-                button.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-                button.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                button.backgroundColor = #colorLiteral(red: 0.42594558, green: 0.04593158513, blue: 0.9203953147, alpha: 1)
+                button.layer.borderColor = #colorLiteral(red: 0.42594558, green: 0.04593158513, blue: 0.9203953147, alpha: 1)
+                //button.setTitleColor(.white, for: .normal)
                 var tempArray = [String:Int]()
                 tempArray = [
                     String("bruger_id"): 1,
