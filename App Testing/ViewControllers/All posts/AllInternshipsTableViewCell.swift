@@ -31,7 +31,7 @@ class AllInternshipsTableViewCell: UITableViewCell {
     
     
     func configure(text: String, delegate: CustomCellDelegate) {
-            titelLabel.text = text
+            //titelLabel.text = text
             self.delegate = delegate
         }
 

@@ -28,8 +28,9 @@ class SinglePostViewController: UIViewController {
     
     @IBOutlet weak var headerVarighedLabel: UILabel!
     
-    @IBOutlet weak var beskrivelseLabel: UILabel!
+    @IBOutlet weak var headerStartdatoLabel: UILabel!
     
+    @IBOutlet weak var beskrivelseLabel: UILabel!
     
     @IBOutlet weak var virksomhedsnavnLabel: UILabel!
 
@@ -139,6 +140,8 @@ class SinglePostViewController: UIViewController {
         
         headerByLabel.text = post?.by
         headerVarighedLabel.text = post?.varighed
+        //headerStartdatoLabel.text = post?.start_dato
+
         
         
         // Image styling

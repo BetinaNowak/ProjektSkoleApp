@@ -13,6 +13,7 @@ struct Opslag: Codable {
     var opslag_type: String?
     var kategori: String?
     var varighed: String?
+    var start_dato: String?
     var adresse_1: String?
     var adresse_2: String?
     var by: String?
@@ -26,6 +27,7 @@ struct Opslag: Codable {
     var email: String?
     var virksomhedsnavn: String?
     var gemt_af: Bool?
+    
     
 }
 
