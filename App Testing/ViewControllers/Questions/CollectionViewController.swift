@@ -135,14 +135,16 @@ extension CollectionViewController {
             if(SelectedAnswersArrayLocal.contains(tempArray)){
                 sender.backgroundColor = UIColor.white
                 sender.layer.borderColor = UIColor.white.cgColor
+                sender.setTitleColor(.black, for: .normal)
                 SelectedAnswersArrayLocal.removeAll(where: { $0 == tempArray })
                 UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
                 UserDefaults.standard.set(SelectedAnswersArrayLocal, forKey: "SelectedAnswersArray")
             } else if (SelectedAnswersArrayLocal.count == 3){
                 sender.shake()
             } else {
-                sender.backgroundColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
-                sender.layer.borderColor = #colorLiteral(red: 0.9978314042, green: 0.7260365486, blue: 0.009917389601, alpha: 1)
+                sender.backgroundColor = #colorLiteral(red: 0.42594558, green: 0.04593158513, blue: 0.9203953147, alpha: 1)
+                sender.layer.borderColor = #colorLiteral(red: 0.42594558, green: 0.04593158513, blue: 0.9203953147, alpha: 1)
+                sender.setTitleColor(.white, for: .normal)
                 
                 SelectedAnswersArrayLocal.append(tempArray)
                 UserDefaults.standard.removeObject(forKey: "SelectedAnswersArray")
