@@ -25,6 +25,7 @@
 		CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */; };
 		CF1B11D329E6CED000519F95 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D229E6CED000519F95 /* MainNavigationController.swift */; };
 		CF1B11D629E7E27F00519F95 /* SingleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */; };
+		CF29C33F29FA64AB000E148B /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C33E29FA64AB000E148B /* MessagesTableViewCell.swift */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -87,6 +88,7 @@
 		CF1B11D029E6CC8900519F95 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CF1B11D229E6CED000519F95 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProfileViewController.swift; sourceTree = "<group>"; };
+		CF29C33E29FA64AB000E148B /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				CF0D3CE429E536A200654FD5 /* SavedViewController.swift */,
 				CFA6E64929F15B120052FB40 /* SavedTableViewCell.swift */,
 				CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */,
+				CF29C33E29FA64AB000E148B /* MessagesTableViewCell.swift */,
 			);
 			path = "Menu Controllers";
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */,
 				CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */,
 				2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */,
+				CF29C33F29FA64AB000E148B /* MessagesTableViewCell.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
 				CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */,
 				CF2B5DCC29CB354C006478B4 /* Spoergsmaal3ViewController.swift in Sources */,

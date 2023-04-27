@@ -9,6 +9,8 @@ import UIKit
 
 class MessagesViewController: UIViewController {
 
+    @IBOutlet weak var messagesTableView: UITableView!
+    
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var whiteBackground: UIImageView!
