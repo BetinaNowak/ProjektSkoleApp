@@ -66,6 +66,7 @@ class SinglePostViewController: UIViewController {
     var postTitel: String?
     var postEmail: String?
     var postVirksomhedsnavn: String?
+    var postStartdato: String?
     
     var callBack: ((_ status: String)-> Void)?
     
@@ -74,12 +75,14 @@ class SinglePostViewController: UIViewController {
         postTitel = post!.titel!
         postEmail = post!.email!
         postVirksomhedsnavn = post!.virksomhedsnavn!
+        postStartdato = post!.start_dato!
         if let AnsoegningViewController = segue.destination as? AnsoegningViewController {
             print("it runs")
             AnsoegningViewController.postId = self.postId!
             AnsoegningViewController.postTitel = self.postTitel!
             AnsoegningViewController.postEmail = self.postEmail!
             AnsoegningViewController.postVirksomhedsnavn = self.postVirksomhedsnavn!
+            AnsoegningViewController.postStartdato = self.postStartdato!
             
             AnsoegningViewController.callBack = { (status: String) in
                 

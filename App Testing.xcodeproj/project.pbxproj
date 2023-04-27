@@ -26,6 +26,8 @@
 		CF1B11D329E6CED000519F95 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D229E6CED000519F95 /* MainNavigationController.swift */; };
 		CF1B11D629E7E27F00519F95 /* SingleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */; };
 		CF29C33F29FA64AB000E148B /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C33E29FA64AB000E148B /* MessagesTableViewCell.swift */; };
+		CF29C34129FA9002000E148B /* AnsoegningerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C34029FA9002000E148B /* AnsoegningerModel.swift */; };
+		CF29C34329FA91A8000E148B /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C34229FA91A8000E148B /* Applications.swift */; };
 		CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC029CB316C006478B4 /* Questions.swift */; };
 		CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC229CB31A1006478B4 /* Answers1.swift */; };
 		CF2B5DC529CB31AA006478B4 /* Answers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B5DC429CB31AA006478B4 /* Answers2.swift */; };
@@ -89,6 +91,8 @@
 		CF1B11D229E6CED000519F95 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		CF1B11D529E7E27F00519F95 /* SingleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProfileViewController.swift; sourceTree = "<group>"; };
 		CF29C33E29FA64AB000E148B /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		CF29C34029FA9002000E148B /* AnsoegningerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsoegningerModel.swift; sourceTree = "<group>"; };
+		CF29C34229FA91A8000E148B /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
 		CF2B5DC029CB316C006478B4 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CF2B5DC229CB31A1006478B4 /* Answers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers1.swift; sourceTree = "<group>"; };
 		CF2B5DC429CB31AA006478B4 /* Answers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers2.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				CF2B5DC629CB31B6006478B4 /* Answers3.swift */,
 				CF2B5DCD29CB3852006478B4 /* Answers4.swift */,
 				CFB4F61929CC5542006D42AF /* Posts.swift */,
+				CF29C34229FA91A8000E148B /* Applications.swift */,
 				CF17154529DAE0A600D0409E /* SendAnsoegning.swift */,
 				CFE60A0A29DD4C0F00A572BF /* Users.swift */,
 			);
@@ -201,6 +206,7 @@
 				CFF9CDAC29CAF337002ED77D /* SvarModel.swift */,
 				CFB4F61729CC5422006D42AF /* OpslagModel.swift */,
 				CFE60A0829DD4B4100A572BF /* BrugerModel.swift */,
+				CF29C34029FA9002000E148B /* AnsoegningerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				CFF9CDAF29CB0523002ED77D /* Spoergsmaal2ViewController.swift in Sources */,
 				CFB4F61829CC5422006D42AF /* OpslagModel.swift in Sources */,
 				CF1B11D629E7E27F00519F95 /* SingleProfileViewController.swift in Sources */,
+				CF29C34329FA91A8000E148B /* Applications.swift in Sources */,
 				CFA3791029D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift in Sources */,
 				CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */,
 				CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */,
@@ -409,6 +416,7 @@
 				2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */,
 				2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */,
 				CF2B5DD029CB387B006478B4 /* Spoergsmaal4ViewController.swift in Sources */,
+				CF29C34129FA9002000E148B /* AnsoegningerModel.swift in Sources */,
 				2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */,
 				CF29C33F29FA64AB000E148B /* MessagesTableViewCell.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
