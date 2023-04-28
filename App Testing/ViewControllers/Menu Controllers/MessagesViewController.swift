@@ -45,6 +45,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         /*messagesTableView.rowHeight = UITableView.automaticDimension
         messagesTableView.estimatedRowHeight = 200*/
         
+        
     }
     
 
@@ -95,8 +96,17 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
             if application.ansoegning_accepteret == 1 {
                 cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er blevet accepteret!"
             } else {
-                cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er blevet afvist."
+                cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er desværre blevet afvist."
             }
+        
+        
+        cell.cellView.layer.cornerRadius = 10
+        cell.cellView.layer.shadowColor = UIColor.black.cgColor
+        cell.cellView.layer.shadowOpacity = 0.3
+        cell.cellView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.cellView.layer.shadowRadius = 5
+        cell.cellView.layer.shadowPath = UIBezierPath(roundedRect: cell.cellView.bounds, cornerRadius: 10).cgPath
+        
             
             return cell
         }

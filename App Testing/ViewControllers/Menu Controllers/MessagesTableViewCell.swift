@@ -10,6 +10,7 @@ import UIKit
 class MessagesTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var beskedLabel: UILabel!
     
     
