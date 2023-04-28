@@ -19,8 +19,6 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     var ApplicationsArray = [Ansoegning]()
     
-    var filteredApplicationsArray = [Ansoegning]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,14 +60,23 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-       // return ApplicationsArray.count
-
-        let count = ApplicationsArray.filter { application in
-            return application.ansoegning_accepteret == 1 && application.ansoeger_id == 1
-        }.count
+        // Filter ApplicationsArray to get the applications submitted by ansoger_id 1
+            let filteredApplications = ApplicationsArray.filter { application in
+                return application.ansoeger_id == 1
+            }
             
-        return count
-  
+            // Count the number of accepted and rejected applications
+            let acceptedApplications = filteredApplications.filter { application in
+                return application.ansoegning_accepteret == 1
+            }
+            
+            let rejectedApplications = filteredApplications.filter { application in
+                return application.ansoegning_accepteret == 0
+            }
+            
+            // Return the total number of accepted and rejected applications
+            return acceptedApplications.count + rejectedApplications.count
+            
         
     }
     
@@ -78,19 +85,22 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessagesTableViewCell
         
 
-        // Filter ApplicationsArray to get the application object for this row
+        // Filter ApplicationsArray to get the applications submitted by ansoger_id 1
             let filteredApplications = ApplicationsArray.filter { application in
-                return application.ansoegning_accepteret == 1 && application.ansoeger_id == 1
+                return application.ansoeger_id == 1
             }
             
-            // Check if the filteredApplications array contains an application object for this row
-            if indexPath.row < filteredApplications.count {
-                let application = filteredApplications[indexPath.row]
+            // Determine if the application is accepted or rejected
+            let application = filteredApplications[indexPath.row]
+            if application.ansoegning_accepteret == 1 {
                 cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er blevet accepteret!"
+            } else {
+                cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er blevet afvist."
             }
             
             return cell
+        }
+
     }
     
 
-}
