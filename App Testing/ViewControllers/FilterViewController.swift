@@ -48,9 +48,10 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         filterSection.append(FilterSection.init(headerLabel: "Kategori", filterLabel: ["Håndværk", "Konditori"]))
         
         filterSection.append(FilterSection.init(headerLabel: "By", filterLabel: ["Lyngby", "Gladsaxe"]))
+        
+        
+        self.filterTableView.allowsMultipleSelection = true;
     }
-    
-
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,6 +69,8 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         filterTableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
@@ -75,6 +78,8 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         filterTableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
+    
+    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {

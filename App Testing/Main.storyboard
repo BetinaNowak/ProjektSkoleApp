@@ -1668,7 +1668,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Filtrér" id="EhT-gX-4mC">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="fitlerBtnPressed:" destination="Lbj-ID-s1f" id="OdU-X6-1nB"/>
+                                <action selector="applyFilter:" destination="Lbj-ID-s1f" id="irD-rw-Cgl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1679,7 +1679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uy-Y4-9HU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11715" y="1487"/>
+            <point key="canvasLocation" x="11640" y="1571"/>
         </scene>
         <!--All Internships View Controller-->
         <scene sceneID="Io5-y7-gYw">
@@ -1982,7 +1982,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5u-A6-wfK">
-                                                <rect key="frame" x="279" y="34.666666666666657" width="46" height="34.333333333333343"/>
+                                                <rect key="frame" x="279" y="34.333333333333343" width="46" height="34.666666666666657"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="SSz-Tm-FP9"/>
@@ -1997,7 +1997,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-6P-aWi">
-                                                <rect key="frame" x="318" y="34.666666666666657" width="46" height="34.333333333333343"/>
+                                                <rect key="frame" x="318" y="34.333333333333343" width="46" height="34.666666666666657"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="9cf-1T-j5C"/>
