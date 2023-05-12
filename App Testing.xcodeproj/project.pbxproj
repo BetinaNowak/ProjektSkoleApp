@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F27D69629C9A69F0091325A /* NewSpoergsmaalViewController.swift */; };
 		2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F27D69C29CC34360091325A /* CollectionViewController.swift */; };
+		2F7CEA6F2A0E165F0003ED41 /* AnsoegningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7CEA6E2A0E165F0003ED41 /* AnsoegningViewController.swift */; };
 		2F8C857629C99B590051B396 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857529C99B590051B396 /* fonts */; };
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
@@ -18,7 +19,6 @@
 		CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE429E536A200654FD5 /* SavedViewController.swift */; };
 		CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */; };
 		CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154529DAE0A600D0409E /* SendAnsoegning.swift */; };
-		CF17154A29DAE1C600D0409E /* AnsoegningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */; };
 		CF17154F29DC157E00D0409E /* DisplayAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17154E29DC157E00D0409E /* DisplayAnswersViewController.swift */; };
 		CF17155529DC1A2800D0409E /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = CF17155429DC1A2800D0409E /* SideMenu */; };
 		CF17155D29DC41E300D0409E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17155B29DC41E300D0409E /* SWRevealViewController.m */; };
@@ -73,6 +73,7 @@
 /* Begin PBXFileReference section */
 		2F27D69629C9A69F0091325A /* NewSpoergsmaalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpoergsmaalViewController.swift; sourceTree = "<group>"; };
 		2F27D69C29CC34360091325A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		2F7CEA6E2A0E165F0003ED41 /* AnsoegningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnsoegningViewController.swift; sourceTree = "<group>"; };
 		2F8C857529C99B590051B396 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		CF0D3CE429E536A200654FD5 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		CF17154529DAE0A600D0409E /* SendAnsoegning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendAnsoegning.swift; sourceTree = "<group>"; };
-		CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnsoegningViewController.swift; path = "../../../../../Downloads/ProjektSkoleApp-new_ansoegning 2/App Testing/ViewControllers/AnsoegningViewController.swift"; sourceTree = "<group>"; };
 		CF17154E29DC157E00D0409E /* DisplayAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAnswersViewController.swift; sourceTree = "<group>"; };
 		CF17155A29DC41E200D0409E /* App Testing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App Testing-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF17155B29DC41E300D0409E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				CF73310229DAC83800E0F500 /* Posts frontpage 2 */,
 				CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */,
 				CF75D49529F8FC3500428A54 /* SingleEducationViewController.swift */,
-				CF17154929DAE1C600D0409E /* AnsoegningViewController.swift */,
+				2F7CEA6E2A0E165F0003ED41 /* AnsoegningViewController.swift */,
 				CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */,
 				CF6E07AE29ED129B00CA7AB5 /* SearchViewController.swift */,
 				CFC94EAC29EFF0F80028B833 /* FilterViewController.swift */,
@@ -388,7 +388,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */,
-				CF17154A29DAE1C600D0409E /* AnsoegningViewController.swift in Sources */,
 				CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */,
 				2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */,
 				CF1B11D329E6CED000519F95 /* MainNavigationController.swift in Sources */,
@@ -421,6 +420,7 @@
 				CF29C33F29FA64AB000E148B /* MessagesTableViewCell.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
 				CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */,
+				2F7CEA6F2A0E165F0003ED41 /* AnsoegningViewController.swift in Sources */,
 				CF2B5DCC29CB354C006478B4 /* Spoergsmaal3ViewController.swift in Sources */,
 				CFE60A0529DC4C7000A572BF /* InspirationViewController.swift in Sources */,
 				CFE60A0B29DD4C0F00A572BF /* Users.swift in Sources */,

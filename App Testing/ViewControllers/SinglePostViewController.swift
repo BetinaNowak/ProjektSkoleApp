@@ -82,9 +82,9 @@ class SinglePostViewController: UIViewController {
             AnsoegningViewController.postTitel = self.postTitel!
             AnsoegningViewController.postEmail = self.postEmail!
             AnsoegningViewController.postVirksomhedsnavn = self.postVirksomhedsnavn!
-            AnsoegningViewController.postStartdato = self.postStartdato!
+            //AnsoegningViewController.postStartdato = self.postStartdato!
             
-            AnsoegningViewController.callBack = { (status: String) in
+            //AnsoegningViewController.callBack = { (status: String) in
                 
                 
                 //only apply the blur if the user hasn't disabled transparency effects
@@ -121,8 +121,9 @@ class SinglePostViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }*/
         
-    }
-    
+//    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
