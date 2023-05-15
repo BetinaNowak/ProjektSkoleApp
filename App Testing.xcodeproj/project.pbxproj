@@ -14,6 +14,7 @@
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
+		4B64DC5A86D5FBD0C7954D77 /* Pods_App_Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86AC8D7381F3C41B1BC9F16 /* Pods_App_Testing.framework */; };
 		CF0D3CE129E5360700654FD5 /* InternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */; };
 		CF0D3CE329E5368A00654FD5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */; };
 		CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE429E536A200654FD5 /* SavedViewController.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1BC461F1DFA9E942998BAE /* Pods-App Testing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Testing.debug.xcconfig"; path = "Target Support Files/Pods-App Testing/Pods-App Testing.debug.xcconfig"; sourceTree = "<group>"; };
 		2F27D69629C9A69F0091325A /* NewSpoergsmaalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpoergsmaalViewController.swift; sourceTree = "<group>"; };
 		2F27D69C29CC34360091325A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		2F7CEA6E2A0E165F0003ED41 /* AnsoegningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnsoegningViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
+		9A5811EB360C5B0A568DAD4D /* Pods-App Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Testing.release.xcconfig"; path = "Target Support Files/Pods-App Testing/Pods-App Testing.release.xcconfig"; sourceTree = "<group>"; };
+		C86AC8D7381F3C41B1BC9F16 /* Pods_App_Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE429E536A200654FD5 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
@@ -143,12 +147,31 @@
 				CFB4F62529CC6AA6006D42AF /* SDWebImageMapKit in Frameworks */,
 				CF17155529DC1A2800D0409E /* SideMenu in Frameworks */,
 				CFB4F62329CC6AA6006D42AF /* SDWebImage in Frameworks */,
+				4B64DC5A86D5FBD0C7954D77 /* Pods_App_Testing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C81A907C1241725EF2B6C9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BC461F1DFA9E942998BAE /* Pods-App Testing.debug.xcconfig */,
+				9A5811EB360C5B0A568DAD4D /* Pods-App Testing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEB9AF2729AF6B9264149151 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C86AC8D7381F3C41B1BC9F16 /* Pods_App_Testing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF17154D29DC153300D0409E /* Questions */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +295,8 @@
 			children = (
 				CFF9CD8729C451A0002ED77D /* App Testing */,
 				CFF9CD8629C451A0002ED77D /* Products */,
+				2C81A907C1241725EF2B6C9A /* Pods */,
+				CEB9AF2729AF6B9264149151 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF9CD9929C451A2002ED77D /* Build configuration list for PBXNativeTarget "App Testing" */;
 			buildPhases = (
+				FD9B98FBC8200C3FDCDBE5E6 /* [CP] Check Pods Manifest.lock */,
 				CFF9CD8129C451A0002ED77D /* Sources */,
 				CFF9CD8229C451A0002ED77D /* Frameworks */,
 				CFF9CD8329C451A0002ED77D /* Resources */,
+				46833AD8BF78F5F6FD4FD6AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,8 +383,8 @@
 			);
 			mainGroup = CFF9CD7C29C451A0002ED77D;
 			packageReferences = (
-				CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				CF17155329DC1A2800D0409E /* XCRemoteSwiftPackageReference "SideMenu" */,
+				CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage.git" */,
+				CF17155329DC1A2800D0409E /* XCRemoteSwiftPackageReference "SideMenu.git" */,
 			);
 			productRefGroup = CFF9CD8629C451A0002ED77D /* Products */;
 			projectDirPath = "";
@@ -381,6 +408,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46833AD8BF78F5F6FD4FD6AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App Testing/Pods-App Testing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App Testing/Pods-App Testing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App Testing/Pods-App Testing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9B98FBC8200C3FDCDBE5E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App Testing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFF9CD8129C451A0002ED77D /* Sources */ = {
@@ -574,6 +643,7 @@
 		};
 		CFF9CD9A29C451A2002ED77D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F1BC461F1DFA9E942998BAE /* Pods-App Testing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -605,6 +675,7 @@
 		};
 		CFF9CD9B29C451A2002ED77D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5811EB360C5B0A568DAD4D /* Pods-App Testing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -657,7 +728,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CF17155329DC1A2800D0409E /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+		CF17155329DC1A2800D0409E /* XCRemoteSwiftPackageReference "SideMenu.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
 			requirement = {
@@ -665,7 +736,7 @@
 				minimumVersion = 6.0.0;
 			};
 		};
-		CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -678,17 +749,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CF17155429DC1A2800D0409E /* SideMenu */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CF17155329DC1A2800D0409E /* XCRemoteSwiftPackageReference "SideMenu" */;
+			package = CF17155329DC1A2800D0409E /* XCRemoteSwiftPackageReference "SideMenu.git" */;
 			productName = SideMenu;
 		};
 		CFB4F62229CC6AA6006D42AF /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage.git" */;
 			productName = SDWebImage;
 		};
 		CFB4F62429CC6AA6006D42AF /* SDWebImageMapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = CFB4F62129CC6AA5006D42AF /* XCRemoteSwiftPackageReference "SDWebImage.git" */;
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
