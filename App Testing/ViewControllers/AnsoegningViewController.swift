@@ -13,7 +13,6 @@ class AnsoegningViewController: UIViewController {
     @IBOutlet weak var ansoegerSkole: UITextField!
     @IBOutlet weak var ansoegerKlassetrin: UITextField!
     @IBOutlet weak var beskrivelse: UITextView!
-    @IBOutlet weak var ansoegerEmail: UITextField!
     var postId: Int?
     var postTitel: String?
     var postEmail: String?
@@ -24,21 +23,18 @@ class AnsoegningViewController: UIViewController {
         ansoegningArray = [
             String("ansoeger_id"): Int(1),
             String("ansoeger_navn"): String(ansoegerNavn.text!),
-            String("ansoeger_email"): String(ansoegerEmail.text!),
             String("ansoeger_skole"): String(ansoegerSkole.text!),
             String("ansoeger_klassetrin"): String(ansoegerKlassetrin.text!),
             String("ansoeger_beskrivelse"): String(beskrivelse.text!),
             String("praktik_id"): postId!,
             String("praktik_titel"): String(postTitel!),
             String("praktik_email"): String(postEmail!),
-            String("praktik_start_dato"): "2020-02-02",
             String("praktik_virksomhedsnavn"): String(postVirksomhedsnavn!)
-            
         ]
         //print(ansoegningArray)
         
         // Send the responses
-        SendApplication.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-ansoegning-svar.php")!, params: ansoegningArray)
+        SendApplication.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-ansoegning.php")!, params: ansoegningArray)
         _ = navigationController?.popViewController(animated: true)
 
     }

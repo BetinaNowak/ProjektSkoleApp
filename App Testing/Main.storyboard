@@ -1401,7 +1401,7 @@
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="bdG-N6-uA2"/>
                     <connections>
-                        <outlet property="ansoegerEmail" destination="BjD-Et-cHX" id="CYu-bg-Eco"/>
+                        <outlet property="ansoegerEmail" destination="BjD-Et-cHX" id="hvi-fd-BWw"/>
                         <outlet property="ansoegerKlassetrin" destination="f0e-wr-Psc" id="Vcd-NS-2eA"/>
                         <outlet property="ansoegerNavn" destination="Q1b-7d-TdL" id="6LD-bR-68g"/>
                         <outlet property="ansoegerSkole" destination="w4g-CV-Otn" id="fWq-B7-ngq"/>

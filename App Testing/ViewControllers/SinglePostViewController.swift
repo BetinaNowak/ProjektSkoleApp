@@ -121,7 +121,7 @@ class SinglePostViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }*/
         
-    //}
+//    }
 
 
     override func viewDidLoad() {
