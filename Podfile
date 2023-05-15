@@ -3,14 +3,18 @@
 
 target 'App Testing' do
   # Comment the next line if you don't want to use dynamic frameworks
-  #use_frameworks! :linkage => :static
+  use_frameworks! :linkage => :static
 
   # Pods for App Testing
-  pod 'GoogleSignIn'
-  #pod 'Firebase/Core'
-  #pod 'Firebase/Auth'
-  pod 'MessageKit'
-  #pod 'Firebase/Firestore'
-  pod 'SDWebImage'
+  # Add the Firebase pod for Google Analytics
+  pod 'FirebaseAnalytics'
+
+  # For Analytics without IDFA collection capability, use this pod instead
+  # pod ‘Firebase/AnalyticsWithoutAdIdSupport’
+
+  # Add the pods for any other Firebase products you want to use in your app
+  # For example, to use Firebase Authentication and Cloud Firestore
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
 
 end
