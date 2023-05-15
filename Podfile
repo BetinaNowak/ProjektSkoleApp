@@ -3,14 +3,14 @@
 
 target 'App Testing' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  #use_frameworks! :linkage => :static
 
   # Pods for App Testing
   pod 'GoogleSignIn'
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
+  #pod 'Firebase/Core'
+  #pod 'Firebase/Auth'
   pod 'MessageKit'
-  pod 'Firebase/Firestore'
+  #pod 'Firebase/Firestore'
   pod 'SDWebImage'
 
 end
