@@ -8,11 +8,32 @@
 import UIKit
 
 
-class SavedViewController: UIViewController {
+class SavedViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
+    
+    var savedPostsArray = [Opslag]()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return savedPostsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "cellView"
+          let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SavedTableViewCell
+
+          // Fetches the appropriate meal for the data source layout.
+          let savedSinglePost = savedPostsArray[indexPath.row]
+
+          cell.titelLabel.text = savedSinglePost.titel
+          //cell.nameInfo.text = produs.code
+
+          return cell
+    }
+
+    
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
-    @IBOutlet weak var whiteBackground: UIImageView!
+   // @IBOutlet weak var whiteBackground: UIImageView!
     
     
     @IBOutlet weak var savedTableView: UITableView!
@@ -25,32 +46,27 @@ class SavedViewController: UIViewController {
         super.viewDidLoad()
         
         
-        //savedTableView.delegate = self
-        //savedTableView.dataSource = self
+        savedTableView.delegate = self
+        savedTableView.dataSource = self
         
        
         setMenuBtn(menuBtn)
         
         
         // Style custom background
-        whiteBackground.layer.shadowRadius = 6
+      /*  whiteBackground.layer.shadowRadius = 6
         whiteBackground.layer.shadowOpacity = 1
         whiteBackground.layer.shadowOffset = CGSize(width: 2, height: 2)
-        whiteBackground.layer.shadowColor = UIColor.gray.cgColor
+        whiteBackground.layer.shadowColor = UIColor.gray.cgColor */
         
         
+        // Fetch internship posts
+        NetworkServiceSavedPosts.sharedObj.getSavedPosts { (Opslag) in
+            self.savedPostsArray = Opslag
+            self.savedTableView.reloadData()
+        }
+        //self.tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "SavedTableViewCell")
     }
-    
-    
-    
-    /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }*/
     
     
     

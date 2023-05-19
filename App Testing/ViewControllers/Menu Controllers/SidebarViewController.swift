@@ -70,7 +70,7 @@ class SidebarViewController: UIViewController {
     
     
     @IBAction func EventsActionBtn(_ sender: Any) {
-        performSegue(withIdentifier: "events_segue", sender: nil)
+        performSegue(withIdentifier: "events_segue", sender: self)
     }
     
     

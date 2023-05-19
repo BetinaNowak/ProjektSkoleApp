@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0DCA79E3-EC0A-4D7A-9971-1C54F9B72CA4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "516EA755-DDFD-4A60-A310-B67667B9E39A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App Testing/Network/SubmitAnswer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "callPost(url:params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A68509DC-1A2D-4F7E-A8CA-083B1C4EC923"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App Testing/Network/SubmitAnswer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "callPost(url:params:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A68509DC-1A2D-4F7E-A8CA-083B1C4EC923 - ac2845b6e9e88c93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static App_Testing.ApiService.callPost(url: Foundation.URL, params: Swift.Array&lt;Swift.Dictionary&lt;Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Int&gt;&gt;&gt;) -&gt; ()"
+                  moduleName = "App Testing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mediastyle/Documents/GitHub/ProjektSkoleApp/App%20Testing/Network/SubmitAnswer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1004">
+               </Location>
+               <Location
+                  uuid = "A68509DC-1A2D-4F7E-A8CA-083B1C4EC923 - 7ae25c069121c63a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static App_Testing.ApiService.callPost(url: Foundation.URL, params: Swift.Array&lt;Swift.Dictionary&lt;Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Int&gt;&gt;&gt;) -&gt; ()"
+                  moduleName = "App Testing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mediastyle/Documents/GitHub/ProjektSkoleApp/App%20Testing/Network/SubmitAnswer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

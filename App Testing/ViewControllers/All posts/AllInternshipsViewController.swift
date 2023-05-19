@@ -25,8 +25,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     var searchResultController = UISearchController(searchResultsController: nil)
     
     var filteredPosts: [Opslag] = []
-    
-    
+    var savePostParams = [[String? : String?]]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,7 +165,13 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             
             
             // Save button
-            cell.selectionStyle = .none
+            if(filteredPosts[indexPath.row].gemt_af == true){
+                cell.isSelected = true
+                //print(filteredPosts[indexPath.row].gemt_af!)
+            } else {
+                cell.selectionStyle = .none
+                //print(filteredPosts[indexPath.row].gemt_af!)
+            }
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             
             
@@ -186,7 +192,13 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             // make button "isSelected"
             
             // Save button
-            cell.selectionStyle = .none
+            // Save button
+            if(PostsArray[indexPath.row].gemt_af == true){
+                cell.saveBtn.isSelected = true
+            } else {
+                cell.saveBtn.isSelected = false
+                print(PostsArray[indexPath.row].gemt_af!)
+            }
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked), for: .touchUpInside)
             
@@ -222,18 +234,33 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         // Get id of post
         let postID = PostsArray[indexPathTapped!.row].id
         
-        print(postID!)
+        //print(postID!)
         
         if button.isSelected {
          // Unselect button
          button.isSelected = false
          print("Deselected")
             
+        // sent request to API
+            
          
          } else {
          // Select button
-         button.isSelected = true
-         print("Marked as favorite")
+             button.isSelected = true
+             print("Marked as favorite")
+                 
+            // Send request to API
+            var tempArray = [String:String]()
+            tempArray = [
+                 String("opslag_id"): String(postID!),
+                 String("saved"): "true"
+             ]
+             savePostParams.removeAll()
+             savePostParams.append(tempArray)
+             
+             NetworkServiceToggleSavePost.toggleSavePosts( params: savePostParams)
+             
+             //print(savePostParams)
 
          }
     }
