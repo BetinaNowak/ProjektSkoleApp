@@ -69,11 +69,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        // Segue to the second view controller
-        //self.performSegueWithIdentifier("showMessageThread", sender: tableView)}
 
-        
         // Filter ApplicationsArray to get the applications submitted by ansoger_id 1
             let filteredApplications = ApplicationsArray.filter { application in
                 return application.ansoeger_id == 1

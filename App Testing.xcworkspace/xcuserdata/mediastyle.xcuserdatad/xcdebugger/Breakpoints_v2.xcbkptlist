@@ -78,8 +78,24 @@
             filePath = "App Testing/ViewControllers/Menu Controllers/MessageThreadTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MessageThreadTableViewCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "653CBCD8-A438-46AC-ABAC-DCF9B3110713"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App Testing/ViewControllers/Menu Controllers/MessageThreadTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "MessageThreadTableViewCell"
             landmarkType = "3">
          </BreakpointContent>

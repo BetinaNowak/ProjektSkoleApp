@@ -16,6 +16,8 @@
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
 		2FC245032A1CA5FE0053E72C /* MessageThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */; };
 		2FC245052A1CCD3A0053E72C /* MessageThreadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */; };
+		2FC245072A1CD51F0053E72C /* BeskedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245062A1CD51F0053E72C /* BeskedModel.swift */; };
+		2FC245092A1CD6730053E72C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245082A1CD6730053E72C /* Messages.swift */; };
 		CF0D3CE129E5360700654FD5 /* InternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */; };
 		CF0D3CE329E5368A00654FD5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */; };
 		CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE429E536A200654FD5 /* SavedViewController.swift */; };
@@ -82,6 +84,8 @@
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
 		2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadViewController.swift; sourceTree = "<group>"; };
 		2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadTableViewCell.swift; sourceTree = "<group>"; };
+		2FC245062A1CD51F0053E72C /* BeskedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeskedModel.swift; sourceTree = "<group>"; };
+		2FC245082A1CD6730053E72C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE429E536A200654FD5 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 				CF2B5DC629CB31B6006478B4 /* Answers3.swift */,
 				CF2B5DCD29CB3852006478B4 /* Answers4.swift */,
 				CFB4F61929CC5542006D42AF /* Posts.swift */,
+				2FC245082A1CD6730053E72C /* Messages.swift */,
 				CF29C34229FA91A8000E148B /* Applications.swift */,
 				CF17154529DAE0A600D0409E /* SendAnsoegning.swift */,
 				CFE60A0A29DD4C0F00A572BF /* Users.swift */,
@@ -210,6 +215,7 @@
 				CFF9CDAC29CAF337002ED77D /* SvarModel.swift */,
 				CFB4F61729CC5422006D42AF /* OpslagModel.swift */,
 				CFE60A0829DD4B4100A572BF /* BrugerModel.swift */,
+				2FC245062A1CD51F0053E72C /* BeskedModel.swift */,
 				CF29C34029FA9002000E148B /* AnsoegningerModel.swift */,
 			);
 			path = Models;
@@ -426,6 +432,7 @@
 				2F27D69D29CC34360091325A /* CollectionViewController.swift in Sources */,
 				CF29C33F29FA64AB000E148B /* MessagesTableViewCell.swift in Sources */,
 				CF2B5DC129CB316C006478B4 /* Questions.swift in Sources */,
+				2FC245092A1CD6730053E72C /* Messages.swift in Sources */,
 				CFB4F61A29CC5542006D42AF /* Posts.swift in Sources */,
 				2F7CEA6F2A0E165F0003ED41 /* AnsoegningViewController.swift in Sources */,
 				CF2B5DCC29CB354C006478B4 /* Spoergsmaal3ViewController.swift in Sources */,
@@ -444,6 +451,7 @@
 				CFE60A0929DD4B4100A572BF /* BrugerModel.swift in Sources */,
 				CF6E07AF29ED129B00CA7AB5 /* SearchViewController.swift in Sources */,
 				CF0D3CE129E5360700654FD5 /* InternshipViewController.swift in Sources */,
+				2FC245072A1CD51F0053E72C /* BeskedModel.swift in Sources */,
 				CFE60A0329DC4C5C00A572BF /* ProfileViewController.swift in Sources */,
 				CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */,
 				CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */,

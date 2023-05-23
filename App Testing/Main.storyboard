@@ -2825,7 +2825,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="150" id="1vs-1p-srW" customClass="MessagesTableViewCell" customModule="App_Testing" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellMessage" rowHeight="150" id="1vs-1p-srW" customClass="MessageThreadTableViewCell" customModule="App_Testing" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1vs-1p-srW" id="FC6-TD-0U2">
@@ -2848,10 +2848,6 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="beskedLabel" destination="8wF-xr-Myc" id="zdd-nS-wqZ"/>
-                                            <outlet property="cellView" destination="IYu-Ec-CPn" id="GaO-iL-2yL"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2862,6 +2858,7 @@
                     <navigationItem key="navigationItem" id="PSU-4X-CtU"/>
                     <connections>
                         <outlet property="messageThreadTableView" destination="aLq-uE-IJx" id="5Ko-Sd-mt3"/>
+                        <outlet property="whiteBackground" destination="0JU-7s-2IT" id="HEq-dm-8p9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQr-ZF-ZLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
