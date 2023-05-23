@@ -14,6 +14,8 @@
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
+		2FC245032A1CA5FE0053E72C /* MessageThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */; };
+		2FC245052A1CCD3A0053E72C /* MessageThreadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */; };
 		CF0D3CE129E5360700654FD5 /* InternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */; };
 		CF0D3CE329E5368A00654FD5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */; };
 		CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D3CE429E536A200654FD5 /* SavedViewController.swift */; };
@@ -78,6 +80,8 @@
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
+		2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadViewController.swift; sourceTree = "<group>"; };
+		2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadTableViewCell.swift; sourceTree = "<group>"; };
 		CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		CF0D3CE429E536A200654FD5 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
@@ -258,11 +262,13 @@
 				CFE60A0D29E52ADE00A572BF /* EducationsViewController.swift */,
 				CF0D3CE029E5360700654FD5 /* InternshipViewController.swift */,
 				CFE60A0429DC4C7000A572BF /* InspirationViewController.swift */,
+				2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */,
 				CF0D3CE229E5368A00654FD5 /* EventsViewController.swift */,
 				CF0D3CE429E536A200654FD5 /* SavedViewController.swift */,
 				CFA6E64929F15B120052FB40 /* SavedTableViewCell.swift */,
 				CF0D3CE629E536B400654FD5 /* MessagesViewController.swift */,
 				CF29C33E29FA64AB000E148B /* MessagesTableViewCell.swift */,
+				2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */,
 			);
 			path = "Menu Controllers";
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */,
 				2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */,
 				CF1B11D329E6CED000519F95 /* MainNavigationController.swift in Sources */,
+				2FC245032A1CA5FE0053E72C /* MessageThreadViewController.swift in Sources */,
 				CF17154629DAE0A600D0409E /* SendAnsoegning.swift in Sources */,
 				CFF9CDAD29CAF337002ED77D /* SvarModel.swift in Sources */,
 				CFC94EAD29EFF0F80028B833 /* FilterViewController.swift in Sources */,
@@ -440,6 +447,7 @@
 				CFE60A0329DC4C5C00A572BF /* ProfileViewController.swift in Sources */,
 				CF0D3CE529E536A200654FD5 /* SavedViewController.swift in Sources */,
 				CFA3790C29D19FA8005F80C3 /* PostsViewController2.swift in Sources */,
+				2FC245052A1CCD3A0053E72C /* MessageThreadTableViewCell.swift in Sources */,
 				CF17154F29DC157E00D0409E /* DisplayAnswersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

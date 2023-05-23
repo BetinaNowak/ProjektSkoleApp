@@ -1,22 +1,30 @@
 //
-//  MessagesViewController.swift
+//  MessageThreadViewController.swift
 //  App Testing
 //
-//  Created by Betina Svendsen on 11/04/2023.
+//  Created by mediastyle on 23/05/2023.
 //
 
-import UIKit
+import Foundation
 
-class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-
-    @IBOutlet weak var messagesTableView: UITableView!
+class MessageThreadViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
     
-    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessageThreadTableViewCell
+        
+        return cell
+    }
+    
+    
+    //@IBOutlet weak var menuBtn: UIBarButtonItem!
+    @IBOutlet weak var messageThreadTableView: UITableView!
     
     @IBOutlet weak var whiteBackground: UIImageView!
     
-    
+    /*
     var ApplicationsArray = [Ansoegning]()
     
     
@@ -58,21 +66,8 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showMessageThread", sender: nil)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMessageThread" {
-            //do something you want
-        }
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        // Segue to the second view controller
-        //self.performSegueWithIdentifier("showMessageThread", sender: tableView)}
-
         
         // Filter ApplicationsArray to get the applications submitted by ansoger_id 1
             let filteredApplications = ApplicationsArray.filter { application in
@@ -122,9 +117,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         
             
             return cell
-        }
-    
-    
+        }*/
 
     }
     
