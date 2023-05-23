@@ -197,7 +197,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
                 cell.saveBtn.isSelected = true
             } else {
                 cell.saveBtn.isSelected = false
-                print(PostsArray[indexPath.row].gemt_af!)
+                //print(PostsArray[indexPath.row].gemt_af!)
             }
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked), for: .touchUpInside)
@@ -242,6 +242,17 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
          print("Deselected")
             
         // sent request to API
+            // Send request to API
+            var tempArray = [String:String]()
+            tempArray = [
+                 String("opslag_id"): String(postID!),
+                 String("saved"): "false",
+                 String("bruger_id"): "1"
+             ]
+             savePostParams.removeAll()
+             savePostParams.append(tempArray)
+             
+             NetworkServiceToggleSavePost.toggleSavePosts( params: savePostParams)
             
          
          } else {
@@ -253,14 +264,13 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
             var tempArray = [String:String]()
             tempArray = [
                  String("opslag_id"): String(postID!),
-                 String("saved"): "true"
+                 String("saved"): "true",
+                 String("bruger_id"): "1"
              ]
              savePostParams.removeAll()
              savePostParams.append(tempArray)
              
              NetworkServiceToggleSavePost.toggleSavePosts( params: savePostParams)
-             
-             //print(savePostParams)
 
          }
     }

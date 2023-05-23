@@ -134,8 +134,8 @@ class NetworkServiceToggleSavePost {
     }
     
     static func toggleSavePosts(params:[[String? : String?]]) {
-        var sharedObj = NetworkServiceToggleSavePost()
-        let toggleSavePostSession = URLSession.init(configuration: .default)
+        //var sharedObj = NetworkServiceToggleSavePost()
+        //let toggleSavePostSession = URLSession.init(configuration: .default)
         let toggleSavePostUrlPath = URL(string: "http://test-postnord.dk/api-post-save-opslag.php")!
         
         var request = URLRequest(url: URL(string: "http://test-postnord.dk/api-post-save-opslag.php")!)
@@ -146,20 +146,19 @@ class NetworkServiceToggleSavePost {
         request.httpBody = postString.data(using: .utf8)
 
         var result:(message:String, data:Data?) = (message: "Fail", data: nil)
-        let task = toggleSavePostSession.dataTask(with: toggleSavePostUrlPath) {
-          (data, response, error) in
-          DispatchQueue.main.async {
-            if let data = data {
-              do {
-                let decodedata = try JSONDecoder().decode(Posts.self, from: data)
-                //print(decodedata.count)
-                //print(String(data: data, encoding: .utf8 )!)
-                //onSucces(decodedata)
-              } catch {
-                print(error.localizedDescription)
-              }
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+
+            if(error != nil)
+            {
+                result.message = "Fail Error not null : \(error.debugDescription)"
             }
-          }
+            else
+            {
+                result.message = "Success"
+                result.data = data
+            }
+
+            print(result)
         }
         task.resume()
   }
