@@ -11,7 +11,7 @@ struct Besked: Codable {
     var id: Int?
     var chat_id: Int?
     var bruger_fra: Int?
-    var bruger_til: String?
+    var bruger_til: Int?
     var besked: String?
     var dato: String?
 }

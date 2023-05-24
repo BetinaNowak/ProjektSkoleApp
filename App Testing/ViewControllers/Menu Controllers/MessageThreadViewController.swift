@@ -12,8 +12,35 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var messageThreadTableView: UITableView!
     //@IBOutlet weak var menuBtn: UIBarButtonItem!
+    @IBOutlet weak var nyBesked: UITextField!
     @IBOutlet weak var whiteBackground: UIImageView!
 
+    @IBAction func sendBesked(_ sender: Any) {
+        var beskedArray = [String:Any]()
+        beskedArray = [
+            String("chat_id"): Int(1),
+            String("bruger_fra"): Int(1),
+            String("bruger_til"): Int(2),
+            String("besked"): String(nyBesked.text!),
+        ]
+        //print(ansoegningArray)
+        
+        // Send the responses
+        NetworkServicePostMessage.sendBesked(params: beskedArray)
+        
+        var newBesked = Besked()
+        newBesked.chat_id = 1
+        newBesked.bruger_fra = 1
+        newBesked.bruger_til = 2
+        newBesked.besked = String(nyBesked.text!)
+        MessagesArray.append(newBesked)
+
+        messageThreadTableView.beginUpdates()
+        messageThreadTableView.insertRows(at: [IndexPath(row: MessagesArray.count-3, section: 0)], with: .automatic)
+        messageThreadTableView.endUpdates()
+        messageThreadTableView.scrollToRow(at: IndexPath(row: self.MessagesArray.count-3, section: 0), at: .bottom, animated: true)
+    }
+    
     var MessagesArray = [Besked]()
     
     override func viewDidLoad() {
@@ -23,8 +50,9 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
         NetworkServiceMessages.sharedObj.getMessages { (Message) in
             self.MessagesArray = Message
             self.messageThreadTableView.reloadData()
+            self.messageThreadTableView.scrollToRow(at: IndexPath(row: self.MessagesArray.count-3, section: 0), at: .bottom, animated: true)
         }
-        print(MessagesArray)
+        //print(MessagesArray)
 
         messageThreadTableView.delegate = self
         messageThreadTableView.dataSource = self
@@ -63,7 +91,11 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
             }
         let message = filteredMessages[indexPath.row]
         
-        cell.beskedLabel?.text = "message.besked"
+        cell.beskedLabel?.text = message.besked
+        
+        if(message.bruger_fra == 1) {
+            cell.cellView.layer.backgroundColor = #colorLiteral(red: 0.42594558, green: 0.04593158513, blue: 0.9203953147, alpha: 1)
+        }
         
         cell.cellView.layer.cornerRadius = 10
         cell.cellView.layer.shadowColor = UIColor.black.cgColor
