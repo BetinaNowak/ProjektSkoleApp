@@ -27,8 +27,6 @@ struct Opslag: Codable {
     var email: String?
     var virksomhedsnavn: String?
     var gemt_af: Bool?
-    
-    
 }
 
 
