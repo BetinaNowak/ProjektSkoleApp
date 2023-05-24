@@ -2848,6 +2848,10 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="beskedLabel" destination="8wF-xr-Myc" id="EhS-uh-VnZ"/>
+                                            <outlet property="cellView" destination="IYu-Ec-CPn" id="jYD-fx-jyu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
