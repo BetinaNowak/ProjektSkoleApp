@@ -19,8 +19,8 @@ class NetworkServiceApplications {
         if let data = data {
           do {
             let decodedata = try JSONDecoder().decode(Application.self, from: data)
-            print(decodedata.count)
-            print(String(data: data, encoding: .utf8 )!)
+            //print(decodedata.count)
+            //print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)
           } catch {
             print(error.localizedDescription)

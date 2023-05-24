@@ -24,7 +24,8 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
             self.MessagesArray = Message
             self.messageThreadTableView.reloadData()
         }
-        
+        print(MessagesArray)
+
         messageThreadTableView.delegate = self
         messageThreadTableView.dataSource = self
         
@@ -46,13 +47,23 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        let filteredMessages = MessagesArray.filter { message in
+            return message.chat_id == 1
+        }
+        
+        return filteredMessages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellMessage", for: indexPath) as! MessageThreadTableViewCell
         
-        cell.beskedLabel?.text = "test"
+        // Filter MessagesArray to get the messages from chat 1
+            let filteredMessages = MessagesArray.filter { message in
+                return message.chat_id == 1
+            }
+        let message = filteredMessages[indexPath.row]
+        
+        cell.beskedLabel?.text = "message.besked"
         
         cell.cellView.layer.cornerRadius = 10
         cell.cellView.layer.shadowColor = UIColor.black.cgColor
