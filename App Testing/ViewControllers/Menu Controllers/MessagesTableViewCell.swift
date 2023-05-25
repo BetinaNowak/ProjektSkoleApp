@@ -13,6 +13,12 @@ class MessagesTableViewCell: UITableViewCell {
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var beskedLabel: UILabel!
     
+  /*  var postId: Int? = nil
+
+    func configure(post: Ansoegning) {
+        postId = post.id
+        // configure the labels, etc in the cell
+    }*/
     
     override func awakeFromNib() {
         super.awakeFromNib()

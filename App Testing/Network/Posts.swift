@@ -20,7 +20,7 @@ class NetworkServicePosts {
         if let data = data {
           do {
             let decodedata = try JSONDecoder().decode(Posts.self, from: data)
-            //print(decodedata.count)
+            print(decodedata.count)
             print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)
           } catch {
@@ -48,8 +48,8 @@ class NetworkServicePostsInternship {
         if let data = data {
           do {
             let decodedata = try JSONDecoder().decode(Posts.self, from: data)
-            //print(decodedata.count)
-            //print(String(data: data, encoding: .utf8 )!)
+            print(decodedata.count)
+            print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)
           } catch {
             print(error.localizedDescription)

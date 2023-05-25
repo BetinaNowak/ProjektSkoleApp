@@ -14,11 +14,13 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
     //@IBOutlet weak var menuBtn: UIBarButtonItem!
     @IBOutlet weak var nyBesked: UITextField!
     @IBOutlet weak var whiteBackground: UIImageView!
+    
+    var chatId: Int?
 
     @IBAction func sendBesked(_ sender: Any) {
         var beskedArray = [String:Any]()
         beskedArray = [
-            String("chat_id"): Int(1),
+            String("chat_id"): Int(chatId!),
             String("bruger_fra"): Int(1),
             String("bruger_til"): Int(2),
             String("besked"): String(nyBesked.text!),
@@ -29,16 +31,17 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
         NetworkServicePostMessage.sendBesked(params: beskedArray)
         
         var newBesked = Besked()
-        newBesked.chat_id = 1
+        newBesked.chat_id = chatId
         newBesked.bruger_fra = 1
         newBesked.bruger_til = 2
         newBesked.besked = String(nyBesked.text!)
         MessagesArray.append(newBesked)
 
         messageThreadTableView.beginUpdates()
-        messageThreadTableView.insertRows(at: [IndexPath(row: MessagesArray.count-3, section: 0)], with: .automatic)
+        messageThreadTableView.insertRows(at: [IndexPath(row: MessagesArray.count-1, section: 0)], with: .automatic)
         messageThreadTableView.endUpdates()
-        messageThreadTableView.scrollToRow(at: IndexPath(row: self.MessagesArray.count-3, section: 0), at: .bottom, animated: true)
+        messageThreadTableView.scrollToRow(at: IndexPath(row: self.MessagesArray.count-1, section: 0), at: .bottom, animated: true)
+        nyBesked.text = ""
     }
     
     var MessagesArray = [Besked]()
@@ -46,17 +49,24 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(self.chatId!)
         
-        NetworkServiceMessages.sharedObj.getMessages { (Message) in
+        
+        NetworkServiceMessages.sharedObj.getMessages (id: self.chatId!){ (Message) in
             self.MessagesArray = Message
             self.messageThreadTableView.reloadData()
-            self.messageThreadTableView.scrollToRow(at: IndexPath(row: self.MessagesArray.count-3, section: 0), at: .bottom, animated: true)
+            if(self.MessagesArray.count > 0) {
+                self.messageThreadTableView.scrollToRow(at: IndexPath(row: self.MessagesArray.count-1, section: 0), at: .bottom, animated: true)
+            }
+            
         }
         //print(MessagesArray)
 
         messageThreadTableView.delegate = self
         messageThreadTableView.dataSource = self
         
+        messageThreadTableView.estimatedRowHeight = 20.0
+        messageThreadTableView.rowHeight = UITableView.automaticDimension
 
         //setMenuBtn(menuBtn)
         
@@ -76,18 +86,22 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let filteredMessages = MessagesArray.filter { message in
-            return message.chat_id == 1
+            return message.chat_id == chatId
         }
         
         return filteredMessages.count
     }
+    
+   // func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+     //   return UITableView.automaticDimension
+    //}
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellMessage", for: indexPath) as! MessageThreadTableViewCell
         
         // Filter MessagesArray to get the messages from chat 1
             let filteredMessages = MessagesArray.filter { message in
-                return message.chat_id == 1
+                return message.chat_id == chatId
             }
         let message = filteredMessages[indexPath.row]
         

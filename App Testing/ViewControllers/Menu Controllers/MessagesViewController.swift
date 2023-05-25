@@ -65,6 +65,15 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMessageThread" {
             //do something you want
+            print("__________")
+            let id = messagesTableView.indexPathForSelectedRow
+            print(id![1])
+            print(ApplicationsArray[id![1]].id!)
+            print("__________")
+            if let MessageThreadViewController = segue.destination as? MessageThreadViewController {
+                MessageThreadViewController.chatId = ApplicationsArray[id![1]].id!
+            }
+
         }
     }
     
@@ -93,7 +102,8 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessagesTableViewCell
-        
+      //  cell.configure(post: ApplicationsArray[indexPath.row])
+
 
         // Filter ApplicationsArray to get the applications submitted by ansoger_id 1
             let filteredApplications = ApplicationsArray.filter { application in
@@ -102,11 +112,12 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
             
             // Determine if the application is accepted or rejected
             let application = filteredApplications[indexPath.row]
-            if application.ansoegning_accepteret == 1 {
-                cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er blevet accepteret!"
+            cell.beskedLabel?.text = "Din ansøgning til " + application.praktik_virksomhedsnavn! + " for " + application.praktik_titel!
+            /*if application.ansoegning_accepteret == 1 {
+                cell.beskedLabel?.text = "Din ansøgning til " + application.praktik_virksomhedsnavn! + " for " + application.praktik_titel!
             } else {
-                cell.beskedLabel?.text = "Din ansøgning fra " + application.praktik_virksomhedsnavn! + " er desværre blevet afvist."
-            }
+                cell.beskedLabel?.text = "Din ansøgning til " + application.praktik_virksomhedsnavn! + " er desværre blevet afvist."
+            }*/
         
         
         cell.cellView.layer.cornerRadius = 10

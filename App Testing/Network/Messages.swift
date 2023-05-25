@@ -12,9 +12,10 @@ import Foundation
 class NetworkServiceMessages {
   static var sharedObj = NetworkServiceMessages()
   let messageSession = URLSession.init(configuration: .default)
-  let messageUrlPath = URL(string: "http://test-postnord.dk/api-get-beskeder.php")!
-  func getMessages(onSucces: @escaping(Message) -> Void) {
-    let task = messageSession.dataTask(with: messageUrlPath) {
+  
+    func getMessages(id: Int?, onSucces: @escaping(Message) -> Void) {
+      let messageUrlPath = URL(string: "http://test-postnord.dk/api-get-beskeder.php?chat_id="+String(id!))
+      let task = messageSession.dataTask(with: messageUrlPath!) {
       (data, response, error) in
       DispatchQueue.main.async {
         if let data = data {

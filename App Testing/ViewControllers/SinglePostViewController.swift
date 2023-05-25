@@ -85,7 +85,7 @@ class SinglePostViewController: UIViewController {
             //AnsoegningViewController.postStartdato = self.postStartdato!
             
             //AnsoegningViewController.callBack = { (status: String) in
-                
+             
                 
                 //only apply the blur if the user hasn't disabled transparency effects
                if !UIAccessibility.isReduceTransparencyEnabled {
