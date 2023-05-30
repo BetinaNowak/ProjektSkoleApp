@@ -46,6 +46,9 @@ class SidebarViewController: UIViewController {
         
     }
     
+    @IBAction func HomeActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "home_segue", sender: nil)
+    }
     
     
     @IBAction func ProfileActionBtn(_ sender: Any) {

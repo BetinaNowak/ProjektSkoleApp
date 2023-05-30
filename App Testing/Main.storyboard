@@ -189,8 +189,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ProfileActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="65u-0Z-oTr"/>
-                                    <segue destination="F3a-kM-YeD" kind="show" id="0WB-ei-kKT"/>
+                                    <action selector="HomeActionBtn:" destination="zpa-KY-9Jn" eventType="touchUpInside" id="wdR-Ul-RmQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -210,11 +209,12 @@
                         <segue destination="AC4-IT-7Ie" kind="custom" identifier="news_segue" customClass="SWRevealViewControllerSeguePushController" id="XVV-Nx-EUg"/>
                         <segue destination="C4C-4e-y1M" kind="custom" identifier="events_segue" customClass="SWRevealViewControllerSeguePushController" id="A0P-1W-Lan"/>
                         <segue destination="bh0-6I-uVU" kind="custom" identifier="messages_segue" customClass="SWRevealViewControllerSeguePushController" id="7dY-Jr-BtI"/>
+                        <segue destination="F3a-kM-YeD" kind="custom" identifier="home_segue" id="Z9d-bX-KVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nP-4l-B3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2361.0687022900761" y="1592.9577464788733"/>
+            <point key="canvasLocation" x="5805" y="887"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="L9d-a6-Afp">
@@ -366,18 +366,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sub label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c80-if-E0I">
-                                <rect key="frame" x="53" y="237" width="304" height="21"/>
+                                <rect key="frame" x="20" y="237" width="304" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="books.vertical" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Du7-Er-Oi3">
-                                <rect key="frame" x="20" y="235.66666666666663" width="25" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1K-DO-Etq">
                                 <rect key="frame" x="60" y="758" width="273" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -406,7 +400,6 @@
                     <connections>
                         <outlet property="SpoergsmaalLabel" destination="4dN-hv-yQQ" id="V6b-9e-bKT"/>
                         <outlet property="SpoergsmaalSubLabel" destination="c80-if-E0I" id="tdD-CX-8aP"/>
-                        <outlet property="SpoergsmaalSubLabelIcon" destination="Du7-Er-Oi3" id="X8f-8r-g8E"/>
                         <outlet property="stackView" destination="dx6-p4-DNZ" id="XUQ-Hc-YwZ"/>
                         <segue destination="ATU-0S-knh" kind="show" identifier="" id="12s-Zc-Ttw"/>
                     </connections>
@@ -786,7 +779,7 @@
             <objects>
                 <viewController id="3qN-e1-pHw" customClass="SinglePostViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yPV-BH-exM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="731"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-zh-8PB">
@@ -1079,7 +1072,7 @@
             <objects>
                 <viewController id="Qge-sD-rpI" customClass="AnsoegningViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XHN-EI-HKw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ansøg praktikplads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgH-9G-Xxf">
@@ -1196,7 +1189,7 @@
             <objects>
                 <viewController id="a83-KP-cJM" customClass="NotificationsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oei-ag-cST">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dine notifikationer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-NF-8dU">
@@ -1235,7 +1228,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeNavID" id="F3a-kM-YeD" customClass="PostsViewController2" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eIS-6q-nVW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Klar til udforskning!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ly-iT-LG7">
@@ -1378,7 +1371,7 @@
             <objects>
                 <viewController id="Lbj-ID-s1f" customClass="FilterViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gCi-NZ-OMc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JHY-Fu-Mr1">
@@ -1435,11 +1428,11 @@
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="WHH-5c-Yda" customClass="AllInternshipsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hgC-16-H6w">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVC-Y1-CO9">
-                                <rect key="frame" x="0.0" y="-69" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsi-ni-7VD">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -1691,18 +1684,18 @@
         <scene sceneID="pqX-pb-nRQ">
             <objects>
                 <viewController id="P7h-Bb-yW3" customClass="AllEducationsViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="F3E-wi-bMO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F3E-wi-bMO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUd-IP-bcK">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyY-M8-xti">
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyY-M8-xti">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5u-A6-wfK">
-                                                <rect key="frame" x="279" y="34" width="46" height="35.333333333333343"/>
+                                                <rect key="frame" x="279" y="34.333333333333343" width="46" height="34.666666666666657"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="SSz-Tm-FP9"/>
@@ -1717,7 +1710,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-6P-aWi">
-                                                <rect key="frame" x="318" y="34" width="46" height="35.333333333333343"/>
+                                                <rect key="frame" x="318" y="34.333333333333343" width="46" height="34.666666666666657"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="46" id="9cf-1T-j5C"/>
@@ -1739,7 +1732,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uddannelse- og jobmuligheder" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA5-wC-a0g">
-                                                <rect key="frame" x="32" y="8" width="174" height="83.333333333333329"/>
+                                                <rect key="frame" x="32" y="8" width="174" height="83"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="83" id="CJP-7i-xbJ"/>
                                                 </constraints>
@@ -1748,7 +1741,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bliv klogere på dine uddannelsesmuligheder samt hvilke job du kan få efterfølgende." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sT0-fW-l9V">
-                                                <rect key="frame" x="35" y="97.333333333333329" width="329" height="58.999999999999986"/>
+                                                <rect key="frame" x="35" y="97" width="329" height="59"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="NwL-1N-ZHp"/>
                                                 </constraints>
@@ -1757,7 +1750,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j4G-x9-Xz4">
-                                                <rect key="frame" x="29" y="173.33333333333337" width="335" height="503"/>
+                                                <rect key="frame" x="29" y="173" width="335" height="503"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -3154,11 +3147,11 @@
         <segue reference="DYH-ss-36v"/>
         <segue reference="mB0-KM-ORo"/>
         <segue reference="YeF-Kt-uCe"/>
-        <segue reference="f8U-2a-dwi"/>
-        <segue reference="I2J-ZM-Hdb"/>
-        <segue reference="0WB-ei-kKT"/>
+        <segue reference="Y6Q-x5-xXe"/>
+        <segue reference="mcN-jk-YqO"/>
+        <segue reference="Z9d-bX-KVs"/>
         <segue reference="vjh-xp-GBf"/>
-        <segue reference="IQ2-D5-HKt"/>
+        <segue reference="cwb-9a-gFD"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="Lb3-7B-MQG"/>
     </inferredMetricsTieBreakers>
@@ -3168,7 +3161,6 @@
         <image name="bookmark-not-saved" width="76" height="95"/>
         <image name="bookmark-saved" width="76" height="95"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
-        <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
