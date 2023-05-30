@@ -209,7 +209,7 @@
                         <segue destination="AC4-IT-7Ie" kind="custom" identifier="news_segue" customClass="SWRevealViewControllerSeguePushController" id="XVV-Nx-EUg"/>
                         <segue destination="C4C-4e-y1M" kind="custom" identifier="events_segue" customClass="SWRevealViewControllerSeguePushController" id="A0P-1W-Lan"/>
                         <segue destination="bh0-6I-uVU" kind="custom" identifier="messages_segue" customClass="SWRevealViewControllerSeguePushController" id="7dY-Jr-BtI"/>
-                        <segue destination="F3a-kM-YeD" kind="custom" identifier="home_segue" id="Z9d-bX-KVs"/>
+                        <segue destination="F3a-kM-YeD" kind="custom" identifier="home_segue" customClass="SWRevealViewControllerSeguePushController" id="Z9d-bX-KVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nP-4l-B3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
