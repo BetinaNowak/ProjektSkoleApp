@@ -52,7 +52,7 @@ class SidebarViewController: UIViewController {
     }
     
     @IBAction func ProfileActionBtn(_ sender: Any) {
-        performSegue(withIdentifier: "profile_segue", sender: nil)
+      //  performSegue(withIdentifier: "profile_segue", sender: nil)
     }
     
     

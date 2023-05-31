@@ -2707,7 +2707,7 @@
                         <viewLayoutGuide key="safeArea" id="dRA-30-cEv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="KGw-Rm-kbF"/>
+                    <navigationItem key="navigationItem" id="KGw-Rm-kbF"/>
                     <connections>
                         <outlet property="adressTextField" destination="ESP-4q-DvB" id="tEt-KQ-FpL"/>
                         <outlet property="containerView" destination="Gcp-N0-Hsl" id="7Cw-ip-k7l"/>
