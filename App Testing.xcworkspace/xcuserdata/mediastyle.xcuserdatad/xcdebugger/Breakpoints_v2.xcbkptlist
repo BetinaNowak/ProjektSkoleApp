@@ -100,5 +100,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3835F179-8890-4789-8E51-D2C18AB472FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App Testing/ViewControllers/Menu Controllers/SavedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3835F179-8890-4789-8E51-D2C18AB472FA - d3824d65c0316c76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "App_Testing.SavedViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "App Testing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mediastyle/Documents/GitHub/ProjektSkoleApp/App%20Testing/ViewControllers/Menu%20Controllers/SavedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "724">
+               </Location>
+               <Location
+                  uuid = "3835F179-8890-4789-8E51-D2C18AB472FA - 6c704f7801b47e30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;App_Testing.Opslag&gt;) -&gt; () in App_Testing.SavedViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "App Testing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mediastyle/Documents/GitHub/ProjektSkoleApp/App%20Testing/ViewControllers/Menu%20Controllers/SavedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

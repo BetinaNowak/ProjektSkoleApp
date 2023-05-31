@@ -197,7 +197,8 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
                 cell.saveBtn.isSelected = true
             } else {
                 cell.saveBtn.isSelected = false
-                //print(PostsArray[indexPath.row].gemt_af!)
+                print("_________")
+                print(PostsArray[indexPath.row].gemt_af!)
             }
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked(sender:)), for: .touchUpInside)
             //cell.saveBtn.addTarget(self, action: #selector(saveBtnClicked), for: .touchUpInside)

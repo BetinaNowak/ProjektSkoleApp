@@ -22,12 +22,15 @@ class SingleProfileViewController: UIViewController {
     
     @IBOutlet weak var whiteBackground: UIImageView!
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     //var user: Bruger?
     var user = [Bruger]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setMenuBtn(menuBtn) 
         
         // Fetch user
         NetworkServiceUsers.sharedObj.getUsers { (Users) in
@@ -69,8 +72,16 @@ class SingleProfileViewController: UIViewController {
         whiteBackground.layer.shadowColor = UIColor.gray.cgColor
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        
+     
+        // Function for menu action
+        func setMenuBtn(_ menuBar: UIBarButtonItem) {
+            menuBar.target = revealViewController()
+            menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
+    
+   
 
 }
 

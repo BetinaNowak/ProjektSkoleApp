@@ -94,7 +94,7 @@ class NetworkServicePostsEducation {
 class NetworkServiceSavedPosts {
   static var sharedObj = NetworkServiceSavedPosts()
   let savedPostSession = URLSession.init(configuration: .default)
-  let savedPostUrlPath = URL(string: "http://test-postnord.dk/api-get-opslag.php?user_id=1&saved=true")!
+  let savedPostUrlPath = URL(string: "http://test-postnord.dk/api-get-opslag.php?user-id=1&saved=true")!
   
     func getSavedPosts(onSucces: @escaping(Posts) -> Void) {
     let task = savedPostSession.dataTask(with: savedPostUrlPath) {

@@ -24,7 +24,14 @@ class SavedViewController: UIViewController,  UITableViewDelegate, UITableViewDa
           let savedSinglePost = savedPostsArray[indexPath.row]
 
           cell.titelLabel.text = savedSinglePost.titel
-          //cell.nameInfo.text = produs.code
+          cell.beskrivelseLabel.text = savedSinglePost.beskrivelse
+          cell.byLabel.text = savedSinglePost.by
+          cell.varighedLabel.text = savedSinglePost.varighed
+        
+        let imgUrl = "http://test-postnord.dk" + (savedSinglePost.cover_billede!)
+        cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
+        cell.saveBtn.isSelected = true
+
 
           return cell
     }
