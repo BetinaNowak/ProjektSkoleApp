@@ -9,7 +9,7 @@ import UIKit
 
 class NotificationsViewController: UIViewController {
 
-    //@IBOutlet weak var menuBtn: UIBarButtonItem!
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var whiteBackground: UIImageView!
     

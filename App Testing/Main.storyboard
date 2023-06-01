@@ -1216,15 +1216,6 @@
                         <color key="backgroundColor" red="0.42594558000564575" green="0.045931585133075714" blue="0.92039531469345093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="ke3-ho-V04">
-                        <centerItemGroups>
-                            <barButtonItemGroup customizationDisposition="fixed" id="Ubt-0f-fTO">
-                                <barButtonItems>
-                                    <barButtonItem title="Item" id="uFb-PA-i8n"/>
-                                </barButtonItems>
-                            </barButtonItemGroup>
-                        </centerItemGroups>
-                    </navigationItem>
                     <connections>
                         <outlet property="whiteBackground" destination="ifL-oH-VB6" id="Ky4-J4-88w"/>
                     </connections>
@@ -3083,7 +3074,7 @@
         <segue reference="I2J-ZM-Hdb"/>
         <segue reference="jGU-04-XwO"/>
         <segue reference="T5x-OO-zJj"/>
-        <segue reference="cwb-9a-gFD"/>
+        <segue reference="IQ2-D5-HKt"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="Lb3-7B-MQG"/>
     </inferredMetricsTieBreakers>
