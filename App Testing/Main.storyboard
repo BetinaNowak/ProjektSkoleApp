@@ -1216,7 +1216,7 @@
                         <color key="backgroundColor" red="0.42594558000564575" green="0.045931585133075714" blue="0.92039531469345093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ke3-ho-V04">
+                    <navigationItem key="navigationItem" style="editor" id="ke3-ho-V04">
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="Ubt-0f-fTO">
                                 <barButtonItems>
