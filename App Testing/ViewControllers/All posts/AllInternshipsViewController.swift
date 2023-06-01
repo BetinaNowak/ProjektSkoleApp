@@ -13,6 +13,7 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBOutlet weak var internshipsTableView: UITableView!
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var phoneSearchView: UIView!
     
@@ -30,6 +31,9 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setMenuBtn(menuBtn)
+
         
         NetworkServicePostsInternship.sharedObj.getInternshipPosts { (Opslag) in
             self.PostsArray = Opslag
@@ -55,6 +59,12 @@ class AllInternshipsViewController: UIViewController, UITableViewDelegate, UITab
         singleTapGestureRecognizer.cancelsTouchesInView = false
         self.view.addGestureRecognizer(singleTapGestureRecognizer)
         
+    }
+    
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
 

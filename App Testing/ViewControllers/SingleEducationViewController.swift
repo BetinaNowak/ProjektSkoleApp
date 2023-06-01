@@ -32,6 +32,8 @@ class SingleEducationViewController: UIViewController {
     
     @IBOutlet weak var jobmulighederLabel: UILabel!
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
     
     
     var post: Opslag?
@@ -40,6 +42,8 @@ class SingleEducationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setMenuBtn(menuBtn)
+
 
         view.insetsLayoutMarginsFromSafeArea = false
         
@@ -82,6 +86,11 @@ class SingleEducationViewController: UIViewController {
         
     }
 
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
 
 }
 

@@ -17,7 +17,7 @@ class NotificationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setMenuBtn(menuBtn)
+        setMenuBtn(menuBtn)
         
         
         // Style background

@@ -12,6 +12,7 @@ class AllEducationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var educationsTableView: UITableView!
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var phoneSearchView: UIView!
     
@@ -28,6 +29,8 @@ class AllEducationsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setMenuBtn(menuBtn)
+
         NetworkServicePostsEducation.sharedObj.getEducationPosts { (Opslag) in
             self.PostsArray = Opslag
             self.educationsTableView.reloadData()
@@ -51,6 +54,12 @@ class AllEducationsViewController: UIViewController, UITableViewDelegate, UITabl
         singleTapGestureRecognizer.cancelsTouchesInView = false
         self.view.addGestureRecognizer(singleTapGestureRecognizer)
         
+    }
+    
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
     // Function for dismissing keyboard on tap outside searchbar

@@ -1047,7 +1047,11 @@
                             <constraint firstItem="zQs-zh-8PB" firstAttribute="leading" secondItem="yPV-BH-exM" secondAttribute="leading" id="ufe-3x-iaB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="0vv-vW-gfq"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" style="editor" id="0vv-vW-gfq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="sxT-kG-Hjo">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="393" height="895"/>
                     <connections>
                         <outlet property="adresseLabel" destination="qQ2-Ui-dqd" id="vVT-5N-Ejb"/>
@@ -1061,6 +1065,7 @@
                         <outlet property="emailLabel" destination="H4X-sO-bTD" id="PFD-1t-uA8"/>
                         <outlet property="headerByLabel" destination="LGf-Rv-kw0" id="b4e-oQ-3T2"/>
                         <outlet property="headerVarighedLabel" destination="UMZ-ow-uOL" id="uc0-B7-bKf"/>
+                        <outlet property="menuBtn" destination="sxT-kG-Hjo" id="bgT-Di-R4B"/>
                         <outlet property="postnrLabel" destination="Dav-jq-K0w" id="xrA-pI-hcH"/>
                         <outlet property="scrollView" destination="zQs-zh-8PB" id="afp-Lt-WFC"/>
                         <outlet property="singleImageView" destination="uF9-ak-2iU" id="gWB-Yh-kRt"/>
@@ -1216,7 +1221,14 @@
                         <color key="backgroundColor" red="0.42594558000564575" green="0.045931585133075714" blue="0.92039531469345093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" style="editor" id="3Vc-vN-PqT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CH5-Rl-C2Q"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="eJz-Zw-D7G">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="menuBtn" destination="eJz-Zw-D7G" id="cvE-L7-qpR"/>
                         <outlet property="whiteBackground" destination="ifL-oH-VB6" id="Ky4-J4-88w"/>
                     </connections>
                 </viewController>
@@ -1669,9 +1681,14 @@
                             <constraint firstItem="hVC-Y1-CO9" firstAttribute="leading" secondItem="hgC-16-H6w" secondAttribute="leading" id="eYu-Kr-PfR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="DAb-ln-oyB"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" style="editor" id="DAb-ln-oyB">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="e6V-5i-bj5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="internshipsTableView" destination="T7T-q0-D2I" id="zet-vT-CSM"/>
+                        <outlet property="menuBtn" destination="e6V-5i-bj5" id="g8Y-Sb-Zfa"/>
                         <outlet property="phoneSearchView" destination="jwz-Hm-bkO" id="zq6-nk-Tj6"/>
                         <outlet property="searchBarContainer" destination="a9c-We-Fos" id="HO7-Nv-6mT"/>
                         <segue destination="3qN-e1-pHw" kind="show" identifier="showPost" id="cwb-9a-gFD"/>
@@ -1922,9 +1939,14 @@
                             <constraint firstItem="RyY-M8-xti" firstAttribute="width" secondItem="F3E-wi-bMO" secondAttribute="width" id="sOg-0i-mvl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="hqG-Ip-UD7"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" style="editor" id="hqG-Ip-UD7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="Agm-fE-kOm">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="educationsTableView" destination="j4G-x9-Xz4" id="ruj-WR-WIK"/>
+                        <outlet property="menuBtn" destination="Agm-fE-kOm" id="gJc-xM-1pd"/>
                         <outlet property="phoneSearchView" destination="HYt-9V-HTI" id="5ar-to-xBp"/>
                         <outlet property="searchBarContainer" destination="zmC-yc-GdK" id="dxa-wm-3Fe"/>
                         <segue destination="nHu-Jb-iyS" kind="show" identifier="showEducation" id="y49-xw-lGD"/>
@@ -2926,7 +2948,11 @@
                             <constraint firstItem="m5D-mn-zVg" firstAttribute="top" secondItem="qFx-nM-T5c" secondAttribute="topMargin" id="qum-J2-XFt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="JXO-Hf-b0B"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" style="editor" id="JXO-Hf-b0B">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="wwc-Ux-CLT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="393" height="1500"/>
                     <connections>
                         <outlet property="adgangskravLabel" destination="7jX-pw-IrJ" id="RJz-iX-D03"/>
@@ -2937,6 +2963,7 @@
                         <outlet property="headerByLabel" destination="caU-9j-7z1" id="s9o-b0-qtL"/>
                         <outlet property="headerVarighedLabel" destination="tRr-E1-dl0" id="Uvf-3w-M4u"/>
                         <outlet property="jobmulighederLabel" destination="7fI-PK-2JF" id="6Xn-z3-Uij"/>
+                        <outlet property="menuBtn" destination="wwc-Ux-CLT" id="p0q-Bo-UBe"/>
                         <outlet property="scrollView" destination="m5D-mn-zVg" id="mSn-1b-jzY"/>
                         <outlet property="singleImageView" destination="gEb-iR-PIb" id="a9z-1l-Go0"/>
                         <outlet property="singleTitelLabel" destination="iQU-0D-NC1" id="Lil-rs-hHi"/>
@@ -3069,12 +3096,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DYH-ss-36v"/>
+        <segue reference="y49-xw-lGD"/>
         <segue reference="f8U-2a-dwi"/>
         <segue reference="I2J-ZM-Hdb"/>
         <segue reference="jGU-04-XwO"/>
         <segue reference="T5x-OO-zJj"/>
-        <segue reference="IQ2-D5-HKt"/>
+        <segue reference="c5J-Oi-RVF"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="Lb3-7B-MQG"/>
     </inferredMetricsTieBreakers>

@@ -54,6 +54,9 @@ class SinglePostViewController: UIViewController {
     
     @IBOutlet weak var closePopUpButton: UIButton!
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+
+    
     @IBAction func closePopUp(_ sender: Any) {
         successPopUp.isHidden = true
         backgroundView.isHidden = true
@@ -127,6 +130,8 @@ class SinglePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setMenuBtn(menuBtn)
+        
         successPopUp.isHidden = true
         
         view.insetsLayoutMarginsFromSafeArea = false
@@ -173,6 +178,13 @@ class SinglePostViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
+    }
+    
+    // Function for menu action
+    func setMenuBtn(_ menuBar: UIBarButtonItem) {
+        menuBar.target = revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 }
 
