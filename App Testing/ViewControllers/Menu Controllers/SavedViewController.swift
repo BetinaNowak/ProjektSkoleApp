@@ -35,6 +35,13 @@ class SavedViewController: UIViewController,  UITableViewDelegate, UITableViewDa
 
           return cell
     }
+    
+    // Segue for showing single post
+    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+        if let destination = seque.destination as? SinglePostViewController {
+            destination.post = savedPostsArray[savedTableView.indexPathForSelectedRow!.row]
+        }
+    }
 
     
     

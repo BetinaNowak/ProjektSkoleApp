@@ -9,7 +9,7 @@ import UIKit
 
 class NotificationsViewController: UIViewController {
 
-    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    //@IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var whiteBackground: UIImageView!
     
@@ -17,7 +17,7 @@ class NotificationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setMenuBtn(menuBtn)
+        //setMenuBtn(menuBtn)
         
         
         // Style background
