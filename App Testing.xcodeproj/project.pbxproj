@@ -13,6 +13,7 @@
 		2F82AE752A2F2DB0008A0EFE /* AllCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82AE742A2F2DB0008A0EFE /* AllCompaniesViewController.swift */; };
 		2F82AE772A2F3201008A0EFE /* VirksomhedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82AE762A2F3201008A0EFE /* VirksomhedModel.swift */; };
 		2F82AE792A2F5418008A0EFE /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82AE782A2F5418008A0EFE /* Companies.swift */; };
+		2F82AE7B2A2F59DE008A0EFE /* AllCompaniesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F82AE7A2A2F59DE008A0EFE /* AllCompaniesTableViewCell.swift */; };
 		2F8C857629C99B590051B396 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857529C99B590051B396 /* fonts */; };
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
@@ -84,6 +85,7 @@
 		2F82AE742A2F2DB0008A0EFE /* AllCompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCompaniesViewController.swift; sourceTree = "<group>"; };
 		2F82AE762A2F3201008A0EFE /* VirksomhedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirksomhedModel.swift; sourceTree = "<group>"; };
 		2F82AE782A2F5418008A0EFE /* Companies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Companies.swift; sourceTree = "<group>"; };
+		2F82AE7A2A2F59DE008A0EFE /* AllCompaniesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCompaniesTableViewCell.swift; sourceTree = "<group>"; };
 		2F8C857529C99B590051B396 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				2F82AE742A2F2DB0008A0EFE /* AllCompaniesViewController.swift */,
 				CFA3790F29D2C7EB005F80C3 /* AllInternshipsTableViewCell.swift */,
 				CFAFF3A729D43C2700733F3A /* AllEducationsViewController.swift */,
+				2F82AE7A2A2F59DE008A0EFE /* AllCompaniesTableViewCell.swift */,
 				CFAFF3A929D43C4A00733F3A /* AllEducationsTableViewCell.swift */,
 			);
 			path = "All posts";
@@ -435,6 +438,7 @@
 				CF0D3CE729E536B400654FD5 /* MessagesViewController.swift in Sources */,
 				CFF9CD9F29C45216002ED77D /* TestModel.swift in Sources */,
 				2F82AE772A2F3201008A0EFE /* VirksomhedModel.swift in Sources */,
+				2F82AE7B2A2F59DE008A0EFE /* AllCompaniesTableViewCell.swift in Sources */,
 				CFA6E64A29F15B120052FB40 /* SavedTableViewCell.swift in Sources */,
 				CFF8CCBB29E684F600075989 /* NotificationsViewController.swift in Sources */,
 				2F27D69729C9A69F0091325A /* NewSpoergsmaalViewController.swift in Sources */,

@@ -9,18 +9,18 @@ import Foundation
 
 
 // Get all opslag
-class NetworkServicePosts {
-  static var sharedObj = NetworkServicePosts()
+class NetworkServiceCompanies {
+  static var sharedObj = NetworkServiceCompanies()
   let postSession = URLSession.init(configuration: .default)
-  let postsUrlPath = URL(string: "http://test-postnord.dk/api-get-opslag.php?user_id=1")!
+  let postsUrlPath = URL(string: "http://test-postnord.dk/api-get-virksomhed.php")!
   
-    func getPosts(onSucces: @escaping(Posts) -> Void) {
+    func getCompanies(onSucces: @escaping(Company) -> Void) {
     let task = postSession.dataTask(with: postsUrlPath) {
       (data, response, error) in
       DispatchQueue.main.async {
         if let data = data {
           do {
-            let decodedata = try JSONDecoder().decode(Posts.self, from: data)
+            let decodedata = try JSONDecoder().decode(Company.self, from: data)
             print(decodedata.count)
             print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)

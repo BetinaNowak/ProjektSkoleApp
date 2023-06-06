@@ -22,27 +22,27 @@ class AllCompaniesViewController: UIViewController,  UITableViewDelegate, UITabl
           let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AllCompaniesTableViewCell
 
           // Fetches the appropriate meal for the data source layout.
-          let savedSingleCompany = allCompanies[indexPath.row]
+          let singleCompany = allCompanies[indexPath.row]
 
-          cell.navnLabel.text = savedSingleCompany.navn
-          cell.kortBeskrivelseLabel.text = savedSingleCompany.kort_beskrivelse
-          cell.addresseLabel.text = savedSingleCompany.adresse
-          cell.typeLabel.text = savedSingleCompany.type
+          cell.navnLabel.text = singleCompany.navn
+          cell.kortBeskrivelseLabel.text = singleCompany.kort_beskrivelse
+          cell.adresseLabel.text = singleCompany.adresse
+          cell.typeLabel.text = singleCompany.type
         
-        let imgUrl = "http://test-postnord.dk" + (savedSingleCompany.billede!)
-        cell.internshipImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
-        cell.saveBtn.isSelected = true
+        let imgUrl = "http://test-postnord.dk" + (singleCompany.billede!)
+        cell.companyImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
+       // cell.saveBtn.isSelected = true
 
 
           return cell
     }
     
-    // Segue for showing single post
-    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
-        if let destination = seque.destination as? SinglePostViewController {
+    // Segue for showing single post TODO
+    /*override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+        if let destination = seque.destination as? SingleCompanyViewController {
             destination.post = allCompanies[AllCompaniesTableView.indexPathForSelectedRow!.row]
         }
-    }
+    }*/
 
     
     
@@ -53,7 +53,7 @@ class AllCompaniesViewController: UIViewController,  UITableViewDelegate, UITabl
     
     @IBOutlet weak var AllCompaniesTableView: UITableView!
     
-    var savedInternship: Opslag?
+    //var savedInternship: Opslag?
 
     
     
@@ -95,7 +95,7 @@ class AllCompaniesViewController: UIViewController,  UITableViewDelegate, UITabl
 
 }
 
-protocol ItemCellDelegate {
-    func itemCell(didTapButton button: UIButton)
-}
+//protocol ItemCellDelegate {
+  //  func itemCell(didTapButton button: UIButton)
+//}
 
