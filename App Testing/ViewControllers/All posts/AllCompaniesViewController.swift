@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class AllCompaniesViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
+class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate  {
     
     var allCompanies = [Virksomhed]()
     

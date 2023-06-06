@@ -1388,7 +1388,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aTQ-LZ-Fud" kind="show" id="DH0-jI-voj"/>
+                                    <segue destination="aTQ-LZ-Fud" kind="show" id="Ylu-Eg-mD0"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="chevron.forward.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yU3-Ya-8yl">
@@ -2128,7 +2128,7 @@
         <!--All Companies View Controller-->
         <scene sceneID="4IS-9G-egf">
             <objects>
-                <viewController id="aTQ-LZ-Fud" customClass="AllCompaniesViewController" sceneMemberID="viewController">
+                <viewController id="aTQ-LZ-Fud" customClass="AllCompaniesViewController" customModule="App_Testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b1u-KW-O9f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2249,10 +2249,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="P7h-Bb-yW3" id="nC4-SC-fOY"/>
-                                    <outlet property="delegate" destination="P7h-Bb-yW3" id="NKu-41-96W"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Ia-gF-yPd"/>
@@ -2265,7 +2261,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="AllCompaniesTableView" destination="jhy-F2-Dxo" id="cr9-6H-bLL"/>
-                        <outlet property="menuBtn" destination="GMJ-WP-ulA" id="0Us-5G-JYR"/>
+                        <outlet property="menuBtn" destination="GMJ-WP-ulA" id="kov-vS-yD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPn-ot-sjR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3281,13 +3277,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DYH-ss-36v"/>
-        <segue reference="DH0-jI-voj"/>
+        <segue reference="y49-xw-lGD"/>
+        <segue reference="Ylu-Eg-mD0"/>
         <segue reference="f8U-2a-dwi"/>
         <segue reference="I2J-ZM-Hdb"/>
         <segue reference="jGU-04-XwO"/>
         <segue reference="vjh-xp-GBf"/>
-        <segue reference="IQ2-D5-HKt"/>
+        <segue reference="c5J-Oi-RVF"/>
         <segue reference="0B9-wA-cIs"/>
         <segue reference="Lb3-7B-MQG"/>
     </inferredMetricsTieBreakers>
