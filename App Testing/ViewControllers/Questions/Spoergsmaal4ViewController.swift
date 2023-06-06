@@ -29,7 +29,7 @@ class Spoergsmaal4ViewController: UIViewController {
         if(segue.identifier == "collectingUserAnswers4"){
             let SelectedAnswersArray = UserDefaults.standard.object(forKey: "SelectedAnswersArray") as? [[String? : Int?]]
                 // Send the responses to the DB
-            ApiService.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-svar.php")!, params: SelectedAnswersArray!)
+            ApiService.callPost(url: URL(string: "http://test-postnord.dk/api-post-svar.php")!, params: SelectedAnswersArray!)
             }
       }
     
