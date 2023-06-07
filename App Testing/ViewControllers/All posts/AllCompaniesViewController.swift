@@ -18,6 +18,10 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
         return allCompanies.count
     }
     
+    //func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //    return 100.0;//Choose your custom row height
+    //}
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         print("here!")
@@ -85,7 +89,7 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
         
         
        
-        //self.tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "AllCompaniesTableView")
+        //self.tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "cellViewCompanies")
     }
     
     
