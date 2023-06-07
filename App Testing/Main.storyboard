@@ -2148,16 +2148,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n7M-H7-TZX">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7M-H7-TZX">
                                                     <rect key="frame" x="10" y="11" width="335" height="131"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-ea-6zV" userLabel="Education Image View">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-ea-6zV" userLabel="Company Image View">
                                                             <rect key="frame" x="0.0" y="0.0" width="101" height="131"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="101" id="bSR-2R-UMG"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="kortBeskrivelseLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMl-tr-wms" userLabel="beskrivelseLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kortBeskrivelseLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMl-tr-wms" userLabel="kortBeskrivelseLabel">
                                                             <rect key="frame" x="110" y="30" width="197" height="42"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="42" id="bzm-bS-J1w"/>
@@ -2166,7 +2166,7 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="adresseLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVs-MU-l3Z">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="adresseLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVs-MU-l3Z" userLabel="adresseLabel">
                                                             <rect key="frame" x="133" y="81" width="187" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="187" id="hLF-yf-trJ"/>
@@ -2176,7 +2176,7 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mappin.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-9f-aCe">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-9f-aCe">
                                                             <rect key="frame" x="110" y="81" width="13" height="18"/>
                                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -2184,7 +2184,7 @@
                                                                 <constraint firstAttribute="height" constant="19.333333333333329" id="vcc-Wa-HHm"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="navnLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9x-el-1b7" userLabel="titelLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="navnLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9x-el-1b7" userLabel="navnLabel">
                                                             <rect key="frame" x="110" y="8" width="205" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="205" id="8aX-Pl-ug6"/>
@@ -2193,11 +2193,11 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="luY-Wc-Zbh">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="luY-Wc-Zbh">
                                                             <rect key="frame" x="110" y="103" width="13" height="19.666666666666671"/>
                                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="typeLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzP-Dr-0zG">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="typeLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzP-Dr-0zG" userLabel="typeLabel">
                                                             <rect key="frame" x="133" y="103" width="187" height="19"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="13"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2243,7 +2243,6 @@
                                             <outlet property="beskrivelseLabel" destination="cMl-tr-wms" id="uTR-lN-Epr"/>
                                             <outlet property="byLabel" destination="cVs-MU-l3Z" id="Pd6-SP-oGm"/>
                                             <outlet property="cellView" destination="n7M-H7-TZX" id="ROc-tz-PtX"/>
-                                            <outlet property="internshipImageView" destination="aAB-ea-6zV" id="dQY-LN-yGB"/>
                                             <outlet property="titelLabel" destination="C9x-el-1b7" id="u6l-WN-6l0"/>
                                             <outlet property="varighedLabel" destination="RzP-Dr-0zG" id="Uej-p9-NCR"/>
                                         </connections>
