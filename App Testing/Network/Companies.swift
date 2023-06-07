@@ -21,8 +21,8 @@ class NetworkServiceCompanies {
         if let data = data {
           do {
             let decodedata = try JSONDecoder().decode(Company.self, from: data)
-            print(decodedata.count)
-            print(String(data: data, encoding: .utf8 )!)
+            //print(decodedata.count)
+            //print(String(data: data, encoding: .utf8 )!)
             onSucces(decodedata)
           } catch {
             print(error.localizedDescription)

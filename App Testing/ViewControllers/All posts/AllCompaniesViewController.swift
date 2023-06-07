@@ -14,17 +14,20 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
     var allCompanies = [Virksomhed]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(allCompanies.count)
         return allCompanies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "cellViewCompanies"
-          let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AllCompaniesTableViewCell
+        
+        print("here!")
+
+          let cell = tableView.dequeueReusableCell(withIdentifier: "cellViewCompanies", for: indexPath) as! AllCompaniesTableViewCell
 
           // Fetches the appropriate meal for the data source layout.
           let singleCompany = allCompanies[indexPath.row]
 
-          cell.navnLabel.text = singleCompany.navn
+          cell.navnLabel.text = "singleCompany.navn"
           cell.kortBeskrivelseLabel.text = singleCompany.kort_beskrivelse
           cell.adresseLabel.text = singleCompany.adresse
           cell.typeLabel.text = singleCompany.type
@@ -32,7 +35,6 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
         let imgUrl = "http://test-postnord.dk" + (singleCompany.billede!)
         cell.companyImageView.downloadedimg(from: imgUrl, contentMode: .scaleAspectFill)
        // cell.saveBtn.isSelected = true
-
 
           return cell
     }
@@ -59,7 +61,14 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Fetch internship posts
+        NetworkServiceCompanies.sharedObj.getCompanies { (Virksomhed) in
+            self.allCompanies = Virksomhed
+            self.AllCompaniesTableView.reloadData()
+            print("here")
+
+        }
         
         AllCompaniesTableView.delegate = self
         AllCompaniesTableView.dataSource = self
@@ -75,12 +84,8 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
         whiteBackground.layer.shadowColor = UIColor.gray.cgColor */
         
         
-        // Fetch internship posts
-        NetworkServiceCompanies.sharedObj.getCompanies { (Virksomhed) in
-            self.allCompanies = Virksomhed
-            self.AllCompaniesTableView.reloadData()
-        }
-        //self.tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "SavedTableViewCell")
+       
+        //self.tableView.register(UITableViewCell.self, forCellWithReuseIdentifier: "AllCompaniesTableView")
     }
     
     

@@ -12,7 +12,7 @@ import UIKit
 class AllCompaniesTableViewCell: UITableViewCell {
 
     
-    var CompaniesArray = [Virksomhed]()
+    //var CompaniesArray = [Virksomhed]()
 
     
     @IBOutlet weak var cellView: UIView!
@@ -37,10 +37,10 @@ class AllCompaniesTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    //override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+   // }
 
 }
