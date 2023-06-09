@@ -34,7 +34,7 @@ class NetworkServiceMessages {
   }
 }
 
-// Post save/unsave opslag
+// Post besked
 class NetworkServicePostMessage {
   
     static func getPostString(params:[String? : Any?]) -> String
