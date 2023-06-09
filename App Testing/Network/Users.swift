@@ -71,6 +71,7 @@ class NetworkServiceUsersPost {
                 result.data = data
                 let defaults = UserDefaults.standard
                 defaults.set(params["brugernavn"]!, forKey: "brugernavn")
+                defaults.set(params["fornavn"]!, forKey: "fornavn")
                 print(defaults.string(forKey: "brugernavn")!)
                 // save to user locals
                 // let defaults = UserDefaults.standard

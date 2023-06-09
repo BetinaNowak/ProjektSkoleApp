@@ -31,6 +31,9 @@ class LoginViewController: UIViewController{
         
         //print(currentUserBrugernavn!)
         
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "VelkommenVC") as! VelkommenViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        
     }
         
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +48,7 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.removeObject(forKey: "brugernavn")
+        UserDefaults.standard.removeObject(forKey: "fornavn")
 
         // read the identifier for vendor
         //print(UIDevice.current.identifierForVendor!.uuidString)
@@ -58,8 +62,9 @@ class LoginViewController: UIViewController{
                 (Users) in
                 print(Users)
                 if(!Users.isEmpty){
-                    print("not empty")
+                    print(Users[0].fornavn!)
                     self.defaults.set(self.brugernavn, forKey: "brugernavn")
+                    self.defaults.set(Users[0].fornavn!, forKey: "fornavn")
                     let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeNavID") as! PostsViewController2
                     self.navigationController?.pushViewController(nextViewController, animated: true)
                 }
