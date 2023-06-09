@@ -49,7 +49,7 @@ class PostsViewController2: UIViewController, UICollectionViewDelegate, UICollec
         postsCollectionView2.dataSource = self
         
         
-        setMenuBtn(menuBtn)
+       // setMenuBtn(menuBtn)
         
     }
     

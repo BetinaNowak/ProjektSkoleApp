@@ -18,6 +18,7 @@
 		2F8C857829C9A4FB0051B396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C857729C9A4FB0051B396 /* Main.storyboard */; };
 		2FAA43FD29C83A0C00C2C0F7 /* SpoergsmaalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */; };
 		2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */; };
+		2FBA5C982A31E925007E036E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA5C972A31E925007E036E /* LoginViewController.swift */; };
 		2FC245032A1CA5FE0053E72C /* MessageThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */; };
 		2FC245052A1CCD3A0053E72C /* MessageThreadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */; };
 		2FC245072A1CD51F0053E72C /* BeskedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC245062A1CD51F0053E72C /* BeskedModel.swift */; };
@@ -90,6 +91,7 @@
 		2F8C857729C9A4FB0051B396 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2FAA43FC29C83A0C00C2C0F7 /* SpoergsmaalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoergsmaalModel.swift; sourceTree = "<group>"; };
 		2FAD5A1029D1B7B000C12AEC /* SubmitAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnswer.swift; sourceTree = "<group>"; };
+		2FBA5C972A31E925007E036E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FC245022A1CA5FE0053E72C /* MessageThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadViewController.swift; sourceTree = "<group>"; };
 		2FC245042A1CCD390053E72C /* MessageThreadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadTableViewCell.swift; sourceTree = "<group>"; };
 		2FC245062A1CD51F0053E72C /* BeskedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeskedModel.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				CFB4F62829CDC61A006D42AF /* SinglePostViewController.swift */,
 				CF75D49529F8FC3500428A54 /* SingleEducationViewController.swift */,
 				2F7CEA6E2A0E165F0003ED41 /* AnsoegningViewController.swift */,
+				2FBA5C972A31E925007E036E /* LoginViewController.swift */,
 				CFF8CCBA29E684F600075989 /* NotificationsViewController.swift */,
 				CF6E07AE29ED129B00CA7AB5 /* SearchViewController.swift */,
 				CFC94EAC29EFF0F80028B833 /* FilterViewController.swift */,
@@ -411,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBA5C982A31E925007E036E /* LoginViewController.swift in Sources */,
 				CF2B5DC329CB31A1006478B4 /* Answers1.swift in Sources */,
 				CF1B11D129E6CC8900519F95 /* MainTabBarController.swift in Sources */,
 				2FAD5A1129D1B7B000C12AEC /* SubmitAnswer.swift in Sources */,

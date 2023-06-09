@@ -35,6 +35,7 @@ class AllCompaniesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        print("here!!")
     }
 
     //override func setSelected(_ selected: Bool, animated: Bool) {

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate  {
+class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     var allCompanies = [Virksomhed]()
     
@@ -26,7 +26,7 @@ class AllCompaniesViewController:  UIViewController, UITableViewDelegate, UITabl
         
         print("here!")
 
-          let cell = tableView.dequeueReusableCell(withIdentifier: "cellViewCompanies", for: indexPath) as! AllCompaniesTableViewCell
+          let cell = tableView.dequeueReusableCell(withIdentifier: "cellViewCompanies", for: indexPath) as! AllCompaniesTableViewCell 
 
           // Fetches the appropriate meal for the data source layout.
           let singleCompany = allCompanies[indexPath.row]
