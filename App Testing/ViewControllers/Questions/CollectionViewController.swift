@@ -65,7 +65,7 @@ extension CollectionViewController {
             super.init(frame: frame)
             backgroundView = {
                 let view = UIView(frame: frame)
-                //view.backgroundColor = .systemTeal
+                //view.backgroundColor = .white
                 //view.layer.cornerRadius = 8
                 return view
             }()

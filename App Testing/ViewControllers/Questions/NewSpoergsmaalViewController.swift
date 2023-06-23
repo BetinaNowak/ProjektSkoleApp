@@ -83,7 +83,7 @@ class NewSpoergsmaalViewController: UIViewController{
         
       
         
-        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationController?.navigationBar.tintColor = UIColor.white
 
 
     }

@@ -11,12 +11,14 @@ import UIKit
 class VelkommenViewController: UIViewController{
     
     
-    @IBOutlet weak var velkommenTekst: UILabel!
+   // @IBOutlet weak var velkommenTekst: UILabel!
     
     override func viewDidLoad() {
-        let defaults = UserDefaults.standard
+        super.viewDidLoad()
+
+        //let defaults = UserDefaults.standard
         
-        velkommenTekst.text = defaults.string(forKey: "fornavn")
+       // velkommenTekst.text = "Hej, bruger!"//defaults.string(forKey: "fornavn")
     }
     
 }

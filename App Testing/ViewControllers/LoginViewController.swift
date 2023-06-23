@@ -27,7 +27,7 @@ class LoginViewController: UIViewController{
 
         ]
         
-        NetworkServiceUsersPost.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-bruger.php")!, params: userArray)
+        //NetworkServiceUsersPost.callPost(url: URL(string: "http://test-postnord.dk.linux21.curanetserver.dk/api-post-bruger.php")!, params: userArray)
         
         //print(currentUserBrugernavn!)
         
@@ -47,6 +47,8 @@ class LoginViewController: UIViewController{
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
         UserDefaults.standard.removeObject(forKey: "brugernavn")
         UserDefaults.standard.removeObject(forKey: "fornavn")
 
@@ -65,11 +67,25 @@ class LoginViewController: UIViewController{
                     print(Users[0].fornavn!)
                     self.defaults.set(self.brugernavn, forKey: "brugernavn")
                     self.defaults.set(Users[0].fornavn!, forKey: "fornavn")
-                    let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeNavID") as! PostsViewController2
-                    self.navigationController?.pushViewController(nextViewController, animated: true)
+                    //let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeNavID") as! PostsViewController2
+                    //self.navigationController?.pushViewController(nextViewController, animated: true)
                 }
             }
         }
 
+    }
+    
+}
+
+// Put this piece of code anywhere you like
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
