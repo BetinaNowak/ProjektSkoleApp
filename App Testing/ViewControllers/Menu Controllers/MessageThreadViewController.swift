@@ -48,7 +48,8 @@ class MessageThreadViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
+
         print(self.chatId!)
         
         
